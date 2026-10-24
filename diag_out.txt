@@ -1,0 +1,59 @@
+﻿rows: 10 | columns: ['date', 'anime_title', 'trend_interest', 'batch', 'reference_mean', 'reference_max', 'reference_count', 'reference_ratio', 'reference_index', 'anilist_id', 'mal_id', 'title_romaji', 'title_english', 'title_native', 'format', 'status', 'description', 'start_year', 'start_month', 'start_day', 'season', 'season_year', 'episodes', 'duration_minutes', 'country_of_origin', 'source_material', 'genres', 'tags', 'average_score', 'mean_score', 'popularity', 'favourites', 'studios', 'is_adult', 'url', 'duration', 'source', 'site_url', 'display_title', 'anilist_match', 'members', 'score', 'title_key', 'trend_mean', 'trend_recent_mean', 'trend_nonzero_pct', 'trend_momentum', 'trend_observations', 'youtube_video_count', 'youtube_views_sum', 'youtube_views_max', 'youtube_likes_sum', 'youtube_latest_publish', 'search_score', 'momentum_score', 'youtube_engagement_score', 'metadata_popularity_score', 'rating_score', 'market_potential_score', 'search_signal_status', 'interpretation']
+
+rating_score value counts:
+rating_score
+NaN      5
+30.0     2
+60.0     1
+80.0     1
+100.0    1
+Name: count, dtype: int64
+
+matched to anime.csv: 10 of 10
+              rating_score  mal_rating  mal_members
+rating_score          1.00        0.67         0.72
+mal_rating            0.67        1.00         0.16
+mal_members           0.72        0.16         1.00
+              mal_rating  mal_members
+rating_score                         
+30.0                8.42     675806.5
+60.0                7.81     683297.0
+80.0                8.71    1013917.0
+100.0               9.26     793665.0
+
+MISSING titles and their anime.csv match:
+  Shingeki no Kyojin -> Shingeki no Kyojin
+  Code Geass: Hangyaku no Lelouch -> Code Geass: Hangyaku no Lelouch
+  Sword Art Online -> Sword Art Online
+  Steins;Gate -> Steins;Gate
+  Mirai Nikki (TV) -> Mirai Nikki (TV)
+
+Columns for missing rows:
+                                    3  ...                 9
+date                       2021-10-24  ...        2021-10-24
+anime_title        Shingeki no Kyojin  ...  Mirai Nikki (TV)
+trend_interest                      0  ...                 0
+batch                               1  ...                 3
+reference_mean              62.237548  ...         62.237548
+reference_max                     100  ...               100
+reference_count                   261  ...               261
+reference_ratio                   0.0  ...               0.0
+reference_index                   0.0  ...               0.0
+anilist_id                        NaN  ...               NaN
+mal_id                            NaN  ...               NaN
+title_romaji                      NaN  ...               NaN
+title_english                     NaN  ...               NaN
+title_native                      NaN  ...               NaN
+format                            NaN  ...               NaN
+status                            NaN  ...               NaN
+description                       NaN  ...               NaN
+start_year                        NaN  ...               NaN
+start_month                       NaN  ...               NaN
+start_day                         NaN  ...               NaN
+season                            NaN  ...               NaN
+season_year                       NaN  ...               NaN
+episodes                          NaN  ...               NaN
+duration_minutes                  NaN  ...               NaN
+country_of_origin                 NaN  ...               NaN
+
+[25 rows x 5 columns]

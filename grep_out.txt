@@ -1,0 +1,11 @@
+﻿mirai_pipeline.py:356: result["rating_score"] = percentile_score(result["average_score"].fillna(result["mean_score"]))
+mirai_pipeline.py:364: + 0.10 * result["rating_score"].fillna(0)
+prediction_engine.py:32: "rating_score",
+prediction_engine.py:53: "rating_score": 0.10,
+prediction_engine.py:60: "rating_score": 0.10,
+prediction_engine.py:67: "rating_score": 0.10,
+prediction_engine.py:105: "rating_score": "ratings",
+check_rating.py:5: print("rating_score missing:", df["rating_score"].isna().sum())
+check_rating.py:6: print(df["rating_score"].describe())
+check_rating.py:8: print(df[df["rating_score"].isna()][t].head(15).tolist())
+check_rating.py:9: print(df[df["rating_score"].notna()][[t, "rating_score"]].head(10))

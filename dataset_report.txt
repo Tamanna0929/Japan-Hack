@@ -1,0 +1,216 @@
+
+======================================================================
+FILE: airing_anime.csv
+ROWS: 188
+COLUMNS: ['anime_id', 'mal_id', 'title', 'english_title', 'japanese_title', 'user_preferred_title', 'type', 'episodes', 'duration', 'status', 'source', 'season', 'season_year', 'studios', 'main_studios', 'genres', 'tags', 'rating', 'score', 'mean_score', 'scored_by', 'rank', 'popularity', 'popularity_rank', 'members', 'favorites', 'watching', 'completed', 'on_hold', 'dropped', 'plan_to_watch', 'start_date', 'end_date', 'broadcast_day', 'broadcast_time', 'synopsis', 'country_of_origin', 'is_licensed', 'hashtag', 'cover_image_large', 'cover_image_color', 'banner_image', 'trailer_site', 'trailer_id', 'main_characters', 'main_staff', 'streaming_sites', 'is_adult', 'synonyms', 'site_url', 'updated_at', 'next_airing_episode_at', 'next_episode_number', 'collected_at', 'data_source']
+MISSING VALUES:
+anime_id                    0
+mal_id                     11
+title                       0
+english_title             105
+japanese_title              0
+user_preferred_title        0
+type                        0
+episodes                  126
+duration                   67
+status                      0
+source                      1
+season                      0
+season_year                 0
+studios                     3
+main_studios               21
+genres                      3
+tags                       32
+rating                    188
+score                      57
+mean_score                 22
+scored_by                   0
+rank                        0
+popularity                  0
+popularity_rank             0
+members                     0
+favorites                   0
+watching                    0
+completed                   0
+on_hold                     0
+dropped                     0
+plan_to_watch               0
+start_date                  0
+end_date                  171
+broadcast_day             188
+broadcast_time            188
+synopsis                   22
+country_of_origin           0
+is_licensed                 0
+hashtag                    83
+cover_image_large           0
+cover_image_color           8
+banner_image              126
+trailer_site               80
+trailer_id                 80
+main_characters            53
+main_staff                 21
+streaming_sites            67
+is_adult                    0
+synonyms                   92
+site_url                    0
+updated_at                  0
+next_airing_episode_at      0
+next_episode_number         0
+collected_at                0
+data_source                 0
+DUPLICATES: 0
+FIRST 3 ROWS:
+ anime_id  mal_id                                    title english_title             japanese_title                     user_preferred_title type  episodes  duration    status source      season  season_year                          studios main_studios genres                                                                                               tags  rating  score  mean_score  scored_by  rank  popularity  popularity_rank  members  favorites  watching  completed  on_hold  dropped  plan_to_watch start_date end_date  broadcast_day  broadcast_time                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                synopsis country_of_origin  is_licensed hashtag                                                                        cover_image_large cover_image_color                                                                     banner_image trailer_site trailer_id main_characters                                                                  main_staff streaming_sites  is_adult                                           synonyms                        site_url  updated_at  next_airing_episode_at  next_episode_number                     collected_at data_source
+   184810 60494.0            Immoral Routine The Animation           NaN   インモラルーティーン The Animation            Immoral Routine The Animation  OVA       NaN      30.0 RELEASING  MANGA WINTER 2025         2025             Pink Pineapple;Seven        Seven Hentai                                               Masturbation;Public Sex;School;Heterosexual;Sex Toys     NaN   71.0        76.0          0     0        1682                0     1682         84       389        389      162       47            695 2025-03-28      NaN            NaN             NaN                                                                                                                                                                                                                                                                                         <i>Routine</i><br> When Shouta saw his classmate Nao masturbating in the classroom, he couldn't help but ask her <i>"Do you wanna do that... together?"</i>, and since then, they have been masturbating together in the school building early in the mornings. Seeking some excitement in their daily routine, which had become monotonous and routine, the two decide to "get down to it for real"...<br> <br> (Source: PinkPineapple, translated and edited)                JP         True     NaN https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx184810-BJhp0LMwWKpP.png           #c95086                                                                              NaN          NaN        NaN      Shouta;Nao                             Alp (Original Creator);Saishin Saide (Director)             NaN      True                                                NaN https://anilist.co/anime/184810  1792717340                       0                    0 2026-10-23T08:55:15.005579+00:00     anilist
+   185506 60553.0      Nonohara Yuka no Himitsu no Haishin           NaN             野々原柚花のヒミツのハイシン      Nonohara Yuka no Himitsu no Haishin  OVA       NaN      16.0 RELEASING  OTHER WINTER 2025         2025 Bunny Walker;Lune Pictures;T-REX        T-REX Hentai Filmmaking;Female Protagonist;Sex Toys;Masturbation;Large Breasts;Drugs;Boobjob;Nakadashi;Fellatio     NaN   67.0        70.0          0     0        1623                0     1623         86       395        378      142       54            654 2025-02-28      NaN            NaN             NaN                                                                                                        Yuka spends her days in an uncomfortable classroom, eating lunch alone, and thinking only about the time she would sex stream at home. One day, she finds what appears to be a love letter in her shoe locker! When she opens it with high hopes, she finds a screenshot of her latest stream and a letter calling her... The man who called her uses the fact that her stream was exposed as a pretext to pressure her into sex streaming in front of him. Rather than being assaulted... she does as he says and does it until she climaxes, but the man assaults Yuka right after she has climaxed!?<br> <br> (Source: Lune-soft, translated)                JP         True     NaN https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx185506-e6BT2M2TFz3i.png           #f1bbae https://s4.anilist.co/file/anilistcdn/media/anime/banner/185506-qYsK2nLRalpJ.jpg          NaN        NaN   Yuka Nonohara Siokonbu (Original Creator);Ken Raika (Director);Megane Sagari (Storyboard)             NaN      True                  Yuka Nonohara's Secret Livestream https://anilist.co/anime/185506  1792688557                       0                    0 2026-10-23T08:55:15.005618+00:00     anilist
+   185001 60390.0 Shiranai Koto Shiritai no? The Animation           NaN 知らないこと知りたいの？ The Animation Shiranai Koto Shiritai no? The Animation  OVA       NaN      20.0 RELEASING  MANGA WINTER 2025         2025             Pink Pineapple;Seven        Seven Hentai                                                                   Large Breasts;Nakadashi;Fellatio     NaN   65.0        69.0          0     0        1297                0     1297         61       260        352       99       41            545 2025-02-28      NaN            NaN             NaN <i>Pla-Pura</i><br> When the protagonist's grandfather, who runs a plastic model shop, falls ill, he ends up taking over the business. A regular customer, busty plastic model otaku Risa, appears as a part-timer! Thanks to the strict but reliable Risa, the shop reopens safely, and one day the protagonist discovers a solvent his grandfather made himself. As the protagonist and Risa are chatting after work, he is surprised when Risa starts to get changed without any protection, and ends up spilling the solvent he has on her body! As the protagonist panics, Risa's mood changes and she becomes sexier! As her whole body throbs, the busty girl begs him, "Please... calm me down?" ♪<br> <br> (Source: Pinkpineapple, translated)                JP         True     NaN https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx185001-ueqGXlmN8iVe.png           #e45d6b                                                                              NaN          NaN        NaN             NaN                                            Midori Tokiwa (Original Creator)             NaN      True Don't you wanna learn something new? The Animation https://anilist.co/anime/185001  1792699360                       0                    0 2026-10-23T08:55:15.005795+00:00     anilist
+
+======================================================================
+FILE: anilist_seasonal_20261023.csv
+ROWS: 938
+COLUMNS: ['anime_id', 'mal_id', 'title', 'english_title', 'japanese_title', 'user_preferred_title', 'type', 'episodes', 'duration', 'status', 'source', 'season', 'season_year', 'studios', 'main_studios', 'genres', 'tags', 'rating', 'score', 'mean_score', 'scored_by', 'rank', 'popularity', 'popularity_rank', 'members', 'favorites', 'watching', 'completed', 'on_hold', 'dropped', 'plan_to_watch', 'start_date', 'end_date', 'broadcast_day', 'broadcast_time', 'synopsis', 'country_of_origin', 'is_licensed', 'hashtag', 'cover_image_large', 'cover_image_color', 'banner_image', 'trailer_site', 'trailer_id', 'main_characters', 'main_staff', 'streaming_sites', 'is_adult', 'synonyms', 'site_url', 'updated_at', 'next_airing_episode_at', 'next_episode_number', 'collected_at', 'data_source']
+MISSING VALUES:
+anime_id                    0
+mal_id                     40
+title                       0
+english_title             321
+japanese_title              0
+user_preferred_title        0
+type                        0
+episodes                  129
+duration                   85
+status                      0
+source                      6
+season                      0
+season_year                 0
+studios                    28
+main_studios               63
+genres                      9
+tags                       85
+rating                    938
+score                     157
+mean_score                 23
+scored_by                   0
+rank                        0
+popularity                  0
+popularity_rank             0
+members                     0
+favorites                   0
+watching                    0
+completed                   0
+on_hold                     0
+dropped                     0
+plan_to_watch               0
+start_date                  0
+end_date                  172
+broadcast_day             938
+broadcast_time            938
+synopsis                   49
+country_of_origin           0
+is_licensed                 0
+hashtag                   222
+cover_image_large           0
+cover_image_color          44
+banner_image              432
+trailer_site              161
+trailer_id                161
+main_characters            97
+main_staff                 29
+streaming_sites           113
+is_adult                    0
+synonyms                  262
+site_url                    0
+updated_at                  0
+next_airing_episode_at      0
+next_episode_number         0
+collected_at                0
+data_source                 0
+DUPLICATES: 0
+FIRST 3 ROWS:
+ anime_id  mal_id                                                      title                                  english_title                               japanese_title                                       user_preferred_title type  episodes  duration   status      source      season  season_year                                                                                                  studios              main_studios                   genres                                                                                                               tags  rating  score  mean_score  scored_by  rank  popularity  popularity_rank  members  favorites  watching  completed  on_hold  dropped  plan_to_watch start_date   end_date  broadcast_day  broadcast_time                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  synopsis country_of_origin  is_licensed                hashtag                                                                        cover_image_large cover_image_color                                                                     banner_image trailer_site  trailer_id                                                      main_characters                                                                                                                                                                main_staff                                                                    streaming_sites  is_adult                                                                                                                                                                          synonyms                        site_url  updated_at  next_airing_episode_at  next_episode_number                     collected_at data_source
+   176496 58567.0 Ore dake Level Up na Ken: Season 2 - Arise from the Shadow Solo Leveling Season 2 -Arise from the Shadow- 俺だけレベルアップな件 Season 2 -Arise from the Shadow- Ore dake Level Up na Ken: Season 2 - Arise from the Shadow   TV      13.0      24.0 FINISHED       OTHER WINTER 2025         2025                                       Aniplex;A-1 Pictures;Netmarble;D&C MEDIA;Kakao piccoma;Crunchyroll              A-1 Pictures Action;Adventure;Fantasy     Urban Fantasy;Dungeon;Male Protagonist;Necromancy;Magic;Super Power;Cultivation;Creature Taming;Swordplay;Gore     NaN   84.0        84.0          0   103      317446              126   317446      14217     41632     243878     1578     1878          28480 2025-01-05 2025-03-30            NaN             NaN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Mastering his new abilities in secret, Jin-U must battle humanity's toughest foes to save his mother.<br><br>  (Source: Crunchyroll News)                JP         True     #俺レベ #SoloLeveling https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176496-9BDMjAZGEbq4.png           #e45093 https://s4.anilist.co/file/anilistcdn/media/anime/banner/176496-5oY4k2NRqlYs.jpg      youtube byJ7pxxhaDY            Jin-U Seong;Jin-Ho Yu;Hae-In Cha;Yun-Ho Baek;Jong-In Choi          Chu-Gong (Original Story);Hyeon-Gun (Original Story);Seong-Rak Jang (Original Character Design);Shunsuke Nakashige (Director);Noboru Kimura (Series Composition) Twitter;Twitter;Official Site;Crunchyroll;TikTok;iQ;Bilibili TV;Instagram;Facebook     False                                          Na Honjaman Level Up 2;나 혼자만 레벨업 2;俺だけレベルアップな件 第2期;Ore dake Level Up na Ken 2nd Season;Solo Leveling 2ª Temporada -Ergam-se das Sombras- https://anilist.co/anime/176496  1792742458                       0                    0 2026-10-23T08:55:15.003352+00:00     anilist
+   177709 58939.0                                              SAKAMOTO DAYS                                  SAKAMOTO DAYS                                SAKAMOTO DAYS                                              SAKAMOTO DAYS  ONA      11.0      24.0 FINISHED       MANGA WINTER 2025         2025                                                    TMS Entertainment;TMS Entertainment;Shueisha;TV Tokyo         TMS Entertainment            Action;Comedy Assassins;Urban;Found Family;Konbini;Crime;Primarily Adult Cast;Super Power;Male Protagonist;Family Life;Slapstick     NaN   76.0        76.0          0     0      225881                6   225881       5044     38104     115421     7460    11253          53643 2025-01-11 2025-03-15            NaN             NaN                                                                                                                                                                                                                                                                                                                                                                           When Sakamoto meets Aoi, the convenience store clerk, it’s love at first sight — and just like that, he retires. <br><br> Sakamoto gets married, has a daughter, opens a mom-and-pop store in a quiet town, and completely transforms … into a plus-size man. To ensure a peaceful life with his beloved family, the legendary ex–hit man bands together with comrades to face off against the looming threat of assassins. <br><br> (Source: Netflix TUDUM) <br><br> <i>Note: The series streamed a week in advance on Netflix Japan starting with episode 2 released alongside episode 1.</i>                JP         True #サカモトデイズ #SAKAMOTODAYS https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx177709-e5Qx6RlsBgD5.png           #c9f1f1 https://s4.anilist.co/file/anilistcdn/media/anime/banner/177709-yeZ7ciQULJRx.jpg      youtube CdnMoPIgC5s Tarou Sakamoto;Shin Asakura;Shaotang Lu;Aoi Sakamoto;Heisuke Mashimo       Yuuto  Suzuki (Original Creator);Masaki Watanabe (Director);Akihiro Saitou (Assistant Director);Taku Kishimoto (Series Composition);You Moriyama (Character Design)                                                      Twitter;Official Site;Netflix     False                                                                                                                                 サカモト デイズ;أيام ساكاموتو;사카모토 데이즈;坂本日常;Дни Сакамото https://anilist.co/anime/177709  1792742468                       0                    0 2026-10-23T08:55:15.003482+00:00     anilist
+   176301 58514.0                          Kusuriya no Hitorigoto 2nd Season                The Apothecary Diaries Season 2                                 薬屋のひとりごと 第2期                          Kusuriya no Hitorigoto 2nd Season   TV      24.0      24.0 FINISHED LIGHT_NOVEL WINTER 2025         2025 Toho;TOHO animation STUDIO;OLM;Nippon Television Network;Imagica Infos;OLM;Dentsu;Shogakukan;Square Enix TOHO animation STUDIO;OLM            Drama;Mystery      Female Protagonist;Medicine;Royal Affairs;Detective;Historical;Politics;Ancient China;Foreign;Work;Conspiracy     NaN   88.0        88.0          0    18      213015              244   213015      11091     35851     129105     3877     1379          42803 2025-01-10 2025-07-04            NaN             NaN Using her wit and vast knowledge of medicines and poisons alike, Maomao played a pivotal role in solving a series of mysteries and conspiracies that plagued the imperial court. Having recently come to terms with the secrets of her parents, she returns to fulfill her normal duties on behalf of the emperor's highest-ranking consorts. Maomao also works alongside the eunuch Jinshi to better the consorts' many ladies-in-waiting, including helping them learn to read. <br><br> However, with the arrival of a merchant caravan comes a new wave of intrigue. A pattern of strange coincidences involving the visitors and their wares unsettles Maomao, driving her to investigate the puzzling circumstances behind the convoy. As dangers from both outside and within threaten the balance between the imperial concubines, Maomao continues to utilize her cunning and medical expertise to keep the women safe from harm. <br><br> (Source: MAL Rewrite)                JP         True        #薬屋のひとりごと #薬屋２期 https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176301-TIGmldLffQGX.jpg           #e4bb50 https://s4.anilist.co/file/anilistcdn/media/anime/banner/176301-GkuTF1YTT6b2.jpg      youtube 3BYutu3Pf_0                                Maomao;Jinshi;Rouran;Gaoshun;Gyokuyou Natsu Hyuuga (Original Story);Touko Shino (Original Character Design);Norihiro Naganuma (Chief Director);Akinori Fudesaka (Director);Wataru Nakagawa (Assistant Director)                                   Official Site;Twitter;Crunchyroll;TikTok;Netflix     False Die Tagebücher der Apothekerin Season 2;Diários de uma Apotecária 2ª Temporada;Монолог фармацевта 2;Les Carnets de l'apothicaire Saison 2;Los diarios de la boticaria temporada 2 https://anilist.co/anime/176301  1792742425                       0                    0 2026-10-23T08:55:15.003536+00:00     anilist
+
+======================================================================
+FILE: anime.csv
+ROWS: 12294
+COLUMNS: ['anime_id', 'name', 'genre', 'type', 'episodes', 'rating', 'members']
+MISSING VALUES:
+anime_id      0
+name          0
+genre        62
+type         25
+episodes      0
+rating      230
+members       0
+DUPLICATES: 0
+FIRST 3 ROWS:
+ anime_id                             name                                                        genre  type episodes  rating  members
+    32281                   Kimi no Na wa.                         Drama, Romance, School, Supernatural Movie        1    9.37   200630
+     5114 Fullmetal Alchemist: Brotherhood  Action, Adventure, Drama, Fantasy, Magic, Military, Shounen    TV       64    9.26   793665
+    28977                         Gintama° Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen    TV       51    9.25   114262
+
+======================================================================
+FILE: jikan_seasonal_20260826.csv
+ROWS: 25
+COLUMNS: ['anime_id', 'title', 'english_title', 'japanese_title', 'type', 'episodes', 'duration', 'status', 'source', 'season', 'studios', 'producers', 'genres', 'rating', 'score', 'scored_by', 'rank', 'popularity', 'members', 'favorites', 'watching', 'completed', 'on_hold', 'dropped', 'plan_to_watch', 'start_date', 'end_date', 'broadcast_day', 'broadcast_time', 'synopsis', 'trailer_url', 'image_url', 'approved', 'explicit_genres', 'themes', 'demographics']
+MISSING VALUES:
+anime_id            0
+title               0
+english_title       0
+japanese_title      0
+type                0
+episodes            1
+duration            0
+status              0
+source              0
+season              0
+studios             0
+producers           0
+genres              0
+rating              0
+score               0
+scored_by           0
+rank                0
+popularity          0
+members             0
+favorites           0
+watching            0
+completed           0
+on_hold             0
+dropped             0
+plan_to_watch       0
+start_date          0
+end_date            3
+broadcast_day       3
+broadcast_time      3
+synopsis            0
+trailer_url        25
+image_url           0
+approved            0
+explicit_genres    25
+themes              6
+demographics       11
+DUPLICATES: 0
+FIRST 3 ROWS:
+ anime_id                                    title                           english_title japanese_title type  episodes  duration          status source      season  studios                                                                                                                                     producers                        genres                         rating  score  scored_by  rank  popularity  members  favorites  watching  completed  on_hold  dropped  plan_to_watch start_date   end_date broadcast_day broadcast_time                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               synopsis  trailer_url                                                 image_url  approved  explicit_genres                  themes demographics
+    59978             Sousou no Frieren 2nd Season  Frieren: Beyond Journey's End Season 2   葬送のフリーレン 第2期   TV      10.0        24 Finished Airing  Manga winter 2026 Madhouse Aniplex;Dentsu;Shogakukan-Shueisha Productions;Nippon Television Network;TOHO animation;Sound Team Don Juan;Miracle Bus;Shogakukan;TOHO Music       Adventure;Drama;Fantasy      PG-13 - Teens 13 or older   8.86     266535    31         436        0       7627         0          0        0        0              0 2026-01-16 2026-03-27       Fridays          23:00                                                                                                                                                                                    Following the First-Class Mage Exam, the trio—elven mage Frieren, warrior Stark, and first-class mage Fern—gains access to the dangerous Northern Plateau. As the party presses onward toward Aureole, formidable adversaries force Stark to confront his insecurities, solidifying his resolve and his role as the party's frontliner. Meanwhile, Fern continues to cherish the gifts she has been blessed with throughout her life, each a reminder of those she holds dear.  Frieren—still honoring her vow to understand humanity—revisits memories of her journey with the Hero's party and her fleeting encounter with a legendary figure. As she reflects on the passage of time, the elven mage quietly questions whether she has truly changed, yet in the small, almost subtle choices that she makes, there are signs that she might have become more human than she realizes.  [Written by MAL Rewrite]          NaN https://cdn.myanimelist.net/images/anime/1921/154528l.jpg      True              NaN                     NaN      Shounen
+    57658 Jujutsu Kaisen: Shimetsu Kaiyuu - Zenpen Jujutsu Kaisen: The Culling Game Part 1 呪術廻戦 「死滅回游 前編」   TV      12.0        23 Finished Airing  Manga winter 2026    MAPPA                                                                 Mainichi Broadcasting System;TOHO animation;Shueisha;dugout;TOHO Music;Sumzap           Action;Supernatural R - 17+ (violence & profanity)   8.61     268965   106         475        0       4240         0          0        0        0              0 2026-01-09 2026-03-27       Fridays          00:26 Kenjaku, the one known as Noritoshi Kamo and most recently as Suguru Getou, has initiated the next step in his destructive, thousand-year plan of ordinary humans' evolution and eventual eradication. The jujutsu world higher-ups reinstate 15-year-old Yuuji Itadori's execution, as Satoru Gojou is incapacitated as a result of Kenjaku's master plan in Shibuya. While Yuuji is unaware of this, he patrols the abandoned Tokyo streets with Chousou, exterminating any and all cursed spirits in his way.  Meanwhile, the bigoted and arrogant Naoya Zenin's pride takes a hit when Megumi Fushiguro is selected as the Zenin Clan's next head. To draw out Megumi and eliminate him, he goes after Yuuji—but Yuuta Okkotsu is set on being Yuuji's executioner. Kenjaku's "Culling Game"—a rigorous battle royale spanning throughout Japan and forcing the jujutsu competitors to kill each other—is set in motion, and the young jujutsu sorcerers join the fray to settle old scores, free Gojou, and liberate the jujutsu world from the threat that is Kenjaku.  [Written by MAL Rewrite]          NaN https://cdn.myanimelist.net/images/anime/1659/154920l.jpg      True              NaN                     NaN      Shounen
+    55825                    Jigokuraku 2nd Season                Hell's Paradise Season 2         地獄楽第二期   TV      12.0        24 Finished Airing  Manga winter 2026    MAPPA                                                                                                          Fujipacific Music;Twin Engine;dugout Action;Adventure;Supernatural R - 17+ (violence & profanity)   8.16     147981   512         678        0       3066         0          0        0        0              0 2026-01-11 2026-03-29       Sundays          23:45                                                                                                                                                                                                                                                                                                                                                                                                                Seeking the key to the elixir of immortality, the group arrives at the fortress of the island's monstrous ruler, the "Tensen." To survive and escape the island, cooperation becomes essential—regardless of whether one is a condemned criminal or an executioner.  Meanwhile, the shogunate orders additional landings on the island of the Immortal Realm, led by Shugen Yamada Asayemon. Among them are the Ishigakure clan, who share a past with Gabimaru.  Desperate to find the elixir and escape the island, Gabimaru and his companions face the Tensen in a battle that escalates into an all-out confrontation between humans and immortals!  (Source: Twin Engine, edited)          NaN https://cdn.myanimelist.net/images/anime/1772/154456l.jpg      True              NaN Gore;Historical;Samurai      Shounen
+
+======================================================================
+FILE: rating.csv
+ROWS: 7813737
+COLUMNS: ['user_id', 'anime_id', 'rating']
+MISSING VALUES:
+user_id     0
+anime_id    0
+rating      0
+DUPLICATES: 1
+FIRST 3 ROWS:
+ user_id  anime_id  rating
+       1        20      -1
+       1        24      -1
+       1        79      -1

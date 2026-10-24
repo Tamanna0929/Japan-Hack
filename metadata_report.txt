@@ -1,0 +1,193 @@
+
+============================================================
+FILE: anime.csv
+Shape: (12294, 7)
+Columns:
+- anime_id
+- name
+- genre
+- type
+- episodes
+- rating
+- members
+
+First 2 rows:
+ anime_id                             name                               genre  type episodes  rating  members
+    32281                   Kimi no Na wa. Drama, Romance, School, Supernat... Movie        1    9.37   200630
+     5114 Fullmetal Alchemist: Brotherhood Action, Adventure, Drama, Fantas...    TV       64    9.26   793665
+
+============================================================
+FILE: airing_anime.csv
+Shape: (188, 55)
+Columns:
+- anime_id
+- mal_id
+- title
+- english_title
+- japanese_title
+- user_preferred_title
+- type
+- episodes
+- duration
+- status
+- source
+- season
+- season_year
+- studios
+- main_studios
+- genres
+- tags
+- rating
+- score
+- mean_score
+- scored_by
+- rank
+- popularity
+- popularity_rank
+- members
+- favorites
+- watching
+- completed
+- on_hold
+- dropped
+- plan_to_watch
+- start_date
+- end_date
+- broadcast_day
+- broadcast_time
+- synopsis
+- country_of_origin
+- is_licensed
+- hashtag
+- cover_image_large
+- cover_image_color
+- banner_image
+- trailer_site
+- trailer_id
+- main_characters
+- main_staff
+- streaming_sites
+- is_adult
+- synonyms
+- site_url
+- updated_at
+- next_airing_episode_at
+- next_episode_number
+- collected_at
+- data_source
+
+First 2 rows:
+ anime_id  mal_id                               title english_title           japanese_title                user_preferred_title  ...                        site_url  updated_at  next_airing_episode_at next_episode_number                     collected_at data_source
+   184810 60494.0       Immoral Routine The Animation           NaN インモラルーティーン The Animation       Immoral Routine The Animation  ... https://anilist.co/anime/184810  1792717340                       0                   0 2026-10-23T08:55:15.005579+00:00     anilist
+   185506 60553.0 Nonohara Yuka no Himitsu no Haishin           NaN           野々原柚花のヒミツのハイシン Nonohara Yuka no Himitsu no Haishin  ... https://anilist.co/anime/185506  1792688557                       0                   0 2026-10-23T08:55:15.005618+00:00     anilist
+
+============================================================
+FILE: anilist_seasonal_20261023.csv
+Shape: (938, 55)
+Columns:
+- anime_id
+- mal_id
+- title
+- english_title
+- japanese_title
+- user_preferred_title
+- type
+- episodes
+- duration
+- status
+- source
+- season
+- season_year
+- studios
+- main_studios
+- genres
+- tags
+- rating
+- score
+- mean_score
+- scored_by
+- rank
+- popularity
+- popularity_rank
+- members
+- favorites
+- watching
+- completed
+- on_hold
+- dropped
+- plan_to_watch
+- start_date
+- end_date
+- broadcast_day
+- broadcast_time
+- synopsis
+- country_of_origin
+- is_licensed
+- hashtag
+- cover_image_large
+- cover_image_color
+- banner_image
+- trailer_site
+- trailer_id
+- main_characters
+- main_staff
+- streaming_sites
+- is_adult
+- synonyms
+- site_url
+- updated_at
+- next_airing_episode_at
+- next_episode_number
+- collected_at
+- data_source
+
+First 2 rows:
+ anime_id  mal_id                               title                       english_title                      japanese_title                user_preferred_title  ...                        site_url  updated_at  next_airing_episode_at next_episode_number                     collected_at data_source
+   176496 58567.0 Ore dake Level Up na Ken: Season... Solo Leveling Season 2 -Arise fr... 俺だけレベルアップな件 Season 2 -Arise from... Ore dake Level Up na Ken: Season...  ... https://anilist.co/anime/176496  1792742458                       0                   0 2026-10-23T08:55:15.003352+00:00     anilist
+   177709 58939.0                       SAKAMOTO DAYS                       SAKAMOTO DAYS                       SAKAMOTO DAYS                       SAKAMOTO DAYS  ... https://anilist.co/anime/177709  1792742468                       0                   0 2026-10-23T08:55:15.003482+00:00     anilist
+
+============================================================
+FILE: jikan_seasonal_20260826.csv
+Shape: (25, 36)
+Columns:
+- anime_id
+- title
+- english_title
+- japanese_title
+- type
+- episodes
+- duration
+- status
+- source
+- season
+- studios
+- producers
+- genres
+- rating
+- score
+- scored_by
+- rank
+- popularity
+- members
+- favorites
+- watching
+- completed
+- on_hold
+- dropped
+- plan_to_watch
+- start_date
+- end_date
+- broadcast_day
+- broadcast_time
+- synopsis
+- trailer_url
+- image_url
+- approved
+- explicit_genres
+- themes
+- demographics
+
+First 2 rows:
+ anime_id                               title                       english_title japanese_title type  episodes  ...  trailer_url                           image_url approved explicit_genres themes demographics
+    59978        Sousou no Frieren 2nd Season Frieren: Beyond Journey's End Se...   葬送のフリーレン 第2期   TV      10.0  ...          NaN https://cdn.myanimelist.net/imag...     True             NaN    NaN      Shounen
+    57658 Jujutsu Kaisen: Shimetsu Kaiyuu ... Jujutsu Kaisen: The Culling Game... 呪術廻戦 「死滅回游 前編」   TV      12.0  ...          NaN https://cdn.myanimelist.net/imag...     True             NaN    NaN      Shounen

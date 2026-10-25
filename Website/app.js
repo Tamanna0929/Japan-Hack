@@ -7,7 +7,7 @@
    localization, revenue math) is computed from the real data, in the open.
    ===================================================================== */
 
-const GEMINI_KEY = import.meta.env.VITE_GEMINI_KEY;
+const GEMINI_KEY = "";
 const GEMINI_MODELS = [
   "gemini-2.5-flash",
   "gemini-2.0-flash",
@@ -539,7 +539,7 @@ async function loadAll() {
     ["market", "data/market.json"],
     ["social", "data/social.json"],
     ["catalog", "data/catalog_meta.json"],
-    ["trends", "data/trends_regional.json"],
+    ["trends", "data/trends.json"],
   ];
   let done = 0;
   for (const [key, path] of files) {

@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIRAI Merchandise Dojo</title>
+<style>html,body{margin:0;padding:0;background:#0e1126;}</style>
+<script>
+/* Standalone data layer: replaces the dashboard host. Data is embedded below. */
+(function(){
+  var D = {"survey_facts": [{"key": "sample", "label": "Respondents", "value": 1200}, {"key": "cities", "label": "Cities", "value": 8}, {"key": "age_min", "label": "Youngest age", "value": 15}, {"key": "age_max", "label": "Oldest age", "value": 39}, {"key": "band_size", "label": "Respondents per age band", "value": 400}, {"key": "fieldwork", "label": "Fieldwork", "value": "Dec 2025–Jan 2026"}], "survey_categories": [{"id": "apparel", "category": "Apparel", "examples": "T-shirts, hoodies", "jp": "アパレル", "badge": "衣", "group": "Everyday use", "pct": 72.1, "reading": "Highest reported category", "use": "Wearable day-to-day"}, {"id": "stationery", "category": "Stationery", "examples": "Notebooks, pens, bookmarks, files, stickers", "jp": "文房具", "badge": "文", "group": "Everyday use", "pct": 66.7, "reading": "High everyday-use category", "use": "Used daily at school or work"}, {"id": "accessories", "category": "Accessories", "examples": "Keychains, jewelry, wristbands, badges, pins", "jp": "アクセサリー", "badge": "飾", "group": "Everyday use", "pct": 56.3, "reading": "Wearable and portable products", "use": "Carried or worn"}, {"id": "bags", "category": "Bags / backpacks", "examples": "Bags and backpacks", "jp": "バッグ", "badge": "鞄", "group": "Everyday use", "pct": 55.8, "reading": "Practical carry items", "use": "Practical carry items"}, {"id": "cards", "category": "Trading cards", "examples": "Collectible cards", "jp": "トレカ", "badge": "札", "group": "Collector / display", "pct": 37.9, "reading": "Collectible category", "use": "Collected, traded or kept"}, {"id": "figures", "category": "Figures / plastic models", "examples": "Figures and plastic model kits", "jp": "フィギュア", "badge": "像", "group": "Collector / display", "pct": 31.3, "reading": "Display and collectible category", "use": "Displayed on a shelf"}, {"id": "plush", "category": "Plushies", "examples": "Plush character toys", "jp": "ぬいぐるみ", "badge": "ぬ", "group": "Collector / display", "pct": 31.1, "reading": "Collectible and character merchandise", "use": "Character merchandise"}, {"id": "acrylic", "category": "Acrylic stands", "examples": "Acrylic character stands", "jp": "アクスタ", "badge": "立", "group": "Collector / display", "pct": 18.7, "reading": "Display-oriented; lowest of the eight listed", "use": "Display-oriented"}], "spend_bands": [{"id": "wp_common", "group": "Working professionals", "jp": "社会人", "kind": "Most common band", "band": "₹1,500–₹2,000", "low_inr": 1500, "high_inr": 2000, "pct": 35.3}, {"id": "wp_heavy", "group": "Working professionals", "jp": "社会人", "kind": "Heavy spenders", "band": "₹6,000 or more", "low_inr": 6000, "high_inr": null, "pct": 2.1}, {"id": "sh_common", "group": "Students and homemakers", "jp": "学生・主婦", "kind": "Most common band", "band": "₹500–₹1,000", "low_inr": 500, "high_inr": 1000, "pct": 36.8}, {"id": "sh_heavy", "group": "Students and homemakers", "jp": "学生・主婦", "kind": "Heavy spenders", "band": "₹6,000 or more", "low_inr": 6000, "high_inr": null, "pct": 2.9}], "market_data": [{"id": "im_out_2024", "series": "india_market", "label": "Outlook Respawn (Bandai Namco article)", "year": 2024, "value": 1098, "unit": "USD M", "source": "Outlook Respawn, 12 May 2026", "confidence": "News report", "note": "Underlying source not named in the text read.", "cagr": null}, {"id": "im_ken_2024", "series": "india_market", "label": "Ken Research", "year": 2024, "value": 1861, "unit": "USD M", "source": "Ken Research", "confidence": "Analyst report", "note": "All revenue streams: streaming, theatrical, manga, merchandise.", "cagr": null}, {"id": "im_imarc_2025", "series": "india_market", "label": "IMARC Group (cited secondhand)", "year": 2025, "value": 1200, "unit": "USD M", "source": "IMARC, as cited by MyAnimeThoughts", "confidence": "Analyst report", "note": "Reported as over US$1.2B; plotted at the floor.", "cagr": null}, {"id": "im_ken_2025", "series": "india_market", "label": "Ken Research", "year": 2025, "value": 2107, "unit": "USD M", "source": "Ken Research", "confidence": "Analyst report", "note": "All revenue streams.", "cagr": null}, {"id": "im_ken_2031", "series": "india_market", "label": "Ken Research forecast", "year": 2031, "value": 4447, "unit": "USD M", "source": "Ken Research", "confidence": "Analyst report", "note": "Forecast.", "cagr": 13.26}, {"id": "im_imarc_2034", "series": "india_market", "label": "IMARC Group forecast (cited secondhand)", "year": 2034, "value": 3300, "unit": "USD M", "source": "IMARC, as cited by MyAnimeThoughts", "confidence": "Analyst report", "note": "Reported as about US$3.3B.", "cagr": 11.26}, {"id": "gm_gvr_2025", "series": "global_merch", "label": "Grand View Research", "year": 2025, "value": 12038.9, "unit": "USD M", "source": "Grand View Research", "confidence": "Analyst report", "note": "Global anime merchandising.", "cagr": null}, {"id": "gm_gvr_2026", "series": "global_merch", "label": "Grand View Research", "year": 2026, "value": 13253.7, "unit": "USD M", "source": "Grand View Research", "confidence": "Analyst report", "note": "Global anime merchandising.", "cagr": null}, {"id": "gm_gvr_2033", "series": "global_merch", "label": "Grand View Research", "year": 2033, "value": 23942.4, "unit": "USD M", "source": "Grand View Research", "confidence": "Analyst report", "note": "Global anime merchandising forecast.", "cagr": 8.8}, {"id": "gm_rm_2025", "series": "global_merch", "label": "Research and Markets (cited secondhand)", "year": 2025, "value": 11190, "unit": "USD M", "source": "Research and Markets, as cited by MyAnimeThoughts", "confidence": "Analyst report", "note": "Global anime merchandising.", "cagr": null}, {"id": "gm_rm_2033", "series": "global_merch", "label": "Research and Markets (cited secondhand)", "year": 2033, "value": 22890, "unit": "USD M", "source": "Research and Markets, as cited by MyAnimeThoughts", "confidence": "Analyst report", "note": "Global forecast.", "cagr": 9.36}, {"id": "imerch_2025", "series": "india_merch", "label": "India anime merchandise (reported)", "year": 2025, "value": 256, "unit": "USD M", "source": "Outlook Respawn, 18 Aug 2025, attributing to Grand View Research", "confidence": "News report", "note": "Reported as the current value; a 2025 base is assumed. Not found on Grand View Research's public page.", "cagr": null}, {"id": "imerch_2030", "series": "india_merch", "label": "India anime merchandise (reported)", "year": 2030, "value": 528, "unit": "USD M", "source": "Outlook Respawn, 18 Aug 2025, attributing to Grand View Research", "confidence": "News report", "note": "Projection as reported.", "cagr": null}, {"id": "nt_2025", "series": "naruto_total", "label": "India Naruto merchandise", "year": 2025, "value": 25.3, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "One franchise only.", "cagr": null}, {"id": "nt_2033", "series": "naruto_total", "label": "India Naruto merchandise", "year": 2033, "value": 61.8, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Projection.", "cagr": 11.8}, {"id": "ns_0_2026", "series": "naruto_segment", "label": "Apparel", "year": 2026, "value": 10.8, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor estimate for one franchise.", "cagr": 10.5}, {"id": "ns_0_2033", "series": "naruto_segment", "label": "Apparel", "year": 2033, "value": 21.7, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor projection for one franchise.", "cagr": 10.5}, {"id": "ns_1_2026", "series": "naruto_segment", "label": "Toys, figures and collectibles", "year": 2026, "value": 5.8, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor estimate for one franchise.", "cagr": 13.5}, {"id": "ns_1_2033", "series": "naruto_segment", "label": "Toys, figures and collectibles", "year": 2033, "value": 14.2, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor projection for one franchise.", "cagr": 13.5}, {"id": "ns_2_2026", "series": "naruto_segment", "label": "Footwear", "year": 2026, "value": 2.9, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor estimate for one franchise.", "cagr": 14.1}, {"id": "ns_2_2033", "series": "naruto_segment", "label": "Footwear", "year": 2033, "value": 7.4, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor projection for one franchise.", "cagr": 14.1}, {"id": "ns_3_2026", "series": "naruto_segment", "label": "Bags and travel accessories", "year": 2026, "value": 2.6, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor estimate for one franchise.", "cagr": 13.1}, {"id": "ns_3_2033", "series": "naruto_segment", "label": "Bags and travel accessories", "year": 2033, "value": 6.2, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor projection for one franchise.", "cagr": 13.1}, {"id": "ns_4_2026", "series": "naruto_segment", "label": "Mobile covers and accessories", "year": 2026, "value": 2.3, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor estimate for one franchise.", "cagr": 11.5}, {"id": "ns_4_2033", "series": "naruto_segment", "label": "Mobile covers and accessories", "year": 2033, "value": 4.8, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor projection for one franchise.", "cagr": 11.5}, {"id": "ns_5_2026", "series": "naruto_segment", "label": "Stationery and lifestyle", "year": 2026, "value": 1.9, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor estimate for one franchise.", "cagr": 9.9}, {"id": "ns_5_2033", "series": "naruto_segment", "label": "Stationery and lifestyle", "year": 2033, "value": 3.7, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor projection for one franchise.", "cagr": 9.9}, {"id": "ns_6_2026", "series": "naruto_segment", "label": "Others", "year": 2026, "value": 1.9, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor estimate for one franchise.", "cagr": 9.9}, {"id": "ns_6_2033", "series": "naruto_segment", "label": "Others", "year": 2033, "value": 3.7, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Vendor projection for one franchise.", "cagr": 9.9}, {"id": "nc_0_2033", "series": "naruto_channel", "label": "Brand-owned online stores", "year": 2033, "value": 21.0, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Projected 2033 sales; no earlier channel values published.", "cagr": 12.8}, {"id": "nc_1_2033", "series": "naruto_channel", "label": "E-commerce marketplaces", "year": 2033, "value": 17.3, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Projected 2033 sales; no earlier channel values published.", "cagr": 13.2}, {"id": "nc_2_2033", "series": "naruto_channel", "label": "Specialty anime stores", "year": 2033, "value": 9.3, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Projected 2033 sales; no earlier channel values published.", "cagr": 11.0}, {"id": "nc_3_2033", "series": "naruto_channel", "label": "Toy and collectible retailers", "year": 2033, "value": 5.6, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Projected 2033 sales; no earlier channel values published.", "cagr": 10.5}, {"id": "nc_4_2033", "series": "naruto_channel", "label": "Offline fashion and lifestyle stores", "year": 2033, "value": 3.4, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Projected 2033 sales; no earlier channel values published.", "cagr": 7.2}, {"id": "nc_5_2033", "series": "naruto_channel", "label": "Pop culture events and conventions", "year": 2033, "value": 3.4, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Projected 2033 sales; no earlier channel values published.", "cagr": 13.0}, {"id": "nc_6_2033", "series": "naruto_channel", "label": "Others", "year": 2033, "value": 1.9, "unit": "USD M", "source": "MetaStat Insight, June 2026", "confidence": "Analyst report", "note": "Projected 2033 sales; no earlier channel values published.", "cagr": 5.6}, {"id": "fig_jp_usd", "series": "pricing", "label": "Figurine price in Japan or the US", "year": 2025, "value": 40, "unit": "USD", "source": "Outlook Respawn, 18 Aug 2025", "confidence": "News report", "note": "Example price used in the article.", "cagr": null}, {"id": "fig_in_inr", "series": "pricing", "label": "Figurine retail price in India (over)", "year": 2025, "value": 5000, "unit": "INR", "source": "Outlook Respawn, 18 Aug 2025", "confidence": "News report", "note": "Reported as over ₹5,000.", "cagr": null}, {"id": "fig_in_usd", "series": "pricing", "label": "Same price in US dollars (about)", "year": 2025, "value": 60, "unit": "USD", "source": "Outlook Respawn, 18 Aug 2025", "confidence": "News report", "note": "Reported as about US$60.", "cagr": null}, {"id": "duty_low", "series": "pricing", "label": "Import duty uplift, low end", "year": 2025, "value": 40, "unit": "PCT", "source": "Outlook Respawn, 18 Aug 2025", "confidence": "News report", "note": "Anime figures cost 40–45% more than Japanese retail prices.", "cagr": null}, {"id": "duty_high", "series": "pricing", "label": "Import duty uplift, high end", "year": 2025, "value": 45, "unit": "PCT", "source": "Outlook Respawn, 18 Aug 2025", "confidence": "News report", "note": "Anime figures cost 40–45% more than Japanese retail prices.", "cagr": null}], "landscape": [{"kind": "retail", "group": "Big-box retail", "name": "Landmark, Crossword", "detail": "Began importing anime merchandise and manga in the mid-2000s.", "source": "Outlook Respawn, Aug 2025", "label": "News report", "date": "", "ord": 0}, {"kind": "retail", "group": "Marketplaces", "name": "Flipkart, Amazon India, Myntra", "detail": "Added pop-culture categories; sell imported Funko Pops, Bandai models and plushies.", "source": "Outlook Respawn, Aug 2025", "label": "News report", "date": "", "ord": 0}, {"kind": "retail", "group": "Pop-culture specialists", "name": "The Souled Store", "detail": "Mumbai, founded 2013. A leading Indian pop-culture retailer reports more than 6 million customers.", "source": "Ken Research", "label": "Analyst report", "date": "", "ord": 0}, {"kind": "retail", "group": "Pop-culture specialists", "name": "ComicSense", "detail": "Founded 2016.", "source": "Ken Research", "label": "Analyst report", "date": "", "ord": 0}, {"kind": "retail", "group": "Pop-culture specialists", "name": "Anime India", "detail": "Mumbai, founded 2024.", "source": "Ken Research", "label": "Analyst report", "date": "", "ord": 0}, {"kind": "retail", "group": "Pop-culture specialists", "name": "The Entertainment Store", "detail": "Standalone site serving fans with licensed and fan-made products.", "source": "Outlook Respawn, Aug 2025", "label": "News report", "date": "", "ord": 0}, {"kind": "retail", "group": "Fashion collaborations", "name": "Uniqlo, Celio", "detail": "Brought anime-themed clothing collections to India.", "source": "Outlook Respawn, Aug 2025", "label": "News report", "date": "", "ord": 0}, {"kind": "retail", "group": "Independents", "name": "Anime Devta", "detail": "Home-grown brand making locally inspired anime merchandise.", "source": "Outlook Respawn, Aug 2025", "label": "News report", "date": "", "ord": 0}, {"kind": "retail", "group": "Independents", "name": "F-Bloc, Kolkata", "detail": "Clothing is most of its sales; collectibles have declined, partly attributed to counterfeits. One retailer's account.", "source": "Outlook Respawn, Aug 2025", "label": "News report", "date": "", "ord": 0}, {"kind": "retail", "group": "Collector import", "name": "PlayAsia", "detail": "Imports directly from Japan for dedicated collectors.", "source": "Outlook Respawn, Aug 2025", "label": "News report", "date": "", "ord": 0}, {"kind": "retail", "group": "Publisher-owned", "name": "Bandai Namco India Pvt. Ltd.", "detail": "Est. 2015. Imports figurines, Gunpla kits and collectibles through Fat Cat Collectibles and Wizplex; Mumbai game centre; pop-ups at Nexus Seawoods Mall and Mumbai Comic Con.", "source": "Outlook Respawn, 12 May 2026", "label": "News report", "date": "", "ord": 0}, {"kind": "retail", "group": "Events and clubs", "name": "Comic Con events, anime clubs", "detail": "22.3% of surveyed viewers reported attending anime events and 20.7% joining anime clubs. Activities, not purchases.", "source": "Hakuhodo release, 18 Jun 2026", "label": "Published survey finding", "date": "", "ord": 0}, {"kind": "timeline", "group": "Timeline", "name": "Imports reach big-box retail", "detail": "Landmark and Crossword begin importing anime merchandise and manga.", "source": "Outlook Respawn, Aug 2025", "label": "News report", "date": "Mid-2000s", "ord": 1}, {"kind": "timeline", "group": "Timeline", "name": "Bandai Namco India established", "detail": "Bandai Namco India Pvt. Ltd. set up as the Indian subsidiary.", "source": "Outlook Respawn, 12 May 2026", "label": "News report", "date": "2015", "ord": 2}, {"kind": "timeline", "group": "Timeline", "name": "Crunchyroll licensing partnership", "detail": "Crunchyroll appoints Black White Orange to manage licensed merchandise in India, covering 35+ titles. BWO cites a Rakuten Digital Commerce study that Indian anime enthusiasts are inclined to spend 40% more on licensed products than the national average (study not independently located).", "source": "Indian Retailer / FranchiseTV", "label": "News report", "date": "13 Oct 2023", "ord": 3}, {"kind": "timeline", "group": "Timeline", "name": "Made-in-India apparel plan reported", "detail": "Per people familiar, Bandai Namco plans local apparel, India-exclusive designs and fan retail spaces in tier-one cities. No launch date, prices or factory partners given.", "source": "Outlook Respawn, 12 May 2026", "label": "News report", "date": "12 May 2026", "ord": 4}], "confidence_register": [{"claim": "1,200 respondents aged 15–39 in eight cities, Dec 2025–Jan 2026", "label": "Published survey finding", "source": "Hakuhodo release", "section": 1}, {"claim": "Apparel purchased by 72.1%; stationery 66.7%; accessories 56.3%; bags 55.8%", "label": "Published survey finding", "source": "Hakuhodo release", "section": 2}, {"claim": "Trading cards 37.9%, figures 31.3%, plushies 31.1%, acrylic stands 18.7%", "label": "Published survey finding", "source": "Hakuhodo release", "section": 2}, {"claim": "Most common six-month anime spending band: ₹1,500–₹2,000 (35.3%) for working professionals; ₹500–₹1,000 (36.8%) for students and homemakers", "label": "Published survey finding", "source": "Hakuhodo release", "section": 4}, {"claim": "22.3% attended anime events; 20.7% joined anime clubs", "label": "Published survey finding", "source": "Hakuhodo release", "section": 10}, {"claim": "Global anime merchandising about US$12.0B in 2025, US$23.9B by 2033 (8.8% CAGR)", "label": "Analyst report", "source": "Grand View Research", "section": 5}, {"claim": "India anime market US$1,861M (2024) and US$2,107M (2025), all revenue streams", "label": "Analyst report", "source": "Ken Research", "section": 5}, {"claim": "India anime market over US$1.2B (2025)", "label": "Analyst report", "source": "IMARC Group, cited by MyAnimeThoughts", "section": 5}, {"claim": "India Naruto merchandise US$25.3M (2025) to US$61.8M (2033); apparel largest category", "label": "Analyst report", "source": "MetaStat Insight", "section": 6}, {"claim": "India anime merchandise US$256M now, US$528M by 2030", "label": "News report", "source": "Outlook Respawn, attributing to Grand View Research (unconfirmed)", "section": 5}, {"claim": "A US$40 figurine can retail above ₹5,000 (about US$60) in India", "label": "News report", "source": "Outlook Respawn", "section": 9}, {"claim": "Import duties make figures 40–45% dearer than Japanese retail prices", "label": "News report", "source": "Outlook Respawn", "section": 9}, {"claim": "Bandai Namco plans India-made apparel and India-exclusive designs", "label": "News report", "source": "Outlook Respawn, unnamed sources", "section": 8}, {"claim": "Indian anime enthusiasts inclined to spend 40% more on licensed products", "label": "News report", "source": "Claim by Black White Orange citing a Rakuten study", "section": 8}, {"claim": "India merchandise growth of roughly 15–16% a year implied by the US$256M and US$528M pair", "label": "Derived", "source": "Arithmetic on reported figures", "section": 5}, {"claim": "A ₹5,000 figurine equals about 15–20 months of typical working-professional anime spend", "label": "Derived", "source": "Arithmetic on Hakuhodo bands (assumes band is total spend)", "section": 9}, {"claim": "Brand-owned online stores plus marketplaces are about 62% of projected 2033 Naruto merchandise sales", "label": "Derived", "source": "Arithmetic on MetaStat figures", "section": 6}, {"claim": "India anime-market estimates for the same year differ by up to about 1.8 times", "label": "Derived", "source": "Arithmetic on published estimates", "section": 5}, {"claim": "Price and import duty may limit collectible purchases", "label": "Hypothesis", "source": "MIRAI hypothesis, untested", "section": 9}, {"claim": "Counterfeit and grey-market goods may substitute for authentic collectibles", "label": "Hypothesis", "source": "MIRAI hypothesis, untested", "section": 9}, {"claim": "Online-first distribution is where MIRAI recommendations are most actionable", "label": "Hypothesis", "source": "MIRAI hypothesis, untested", "section": 12}, {"claim": "Title or genre drives which product category a fan buys", "label": "Hypothesis", "source": "MIRAI hypothesis, untested", "section": 12}]};
+  var calcs = {}, cbs = [];
+  window.dash = {
+    data: function(id){ if (calcs[id]) return {status:'ok', data:calcs[id]}; if (D[id]) return {status:'ok', data:D[id]}; return {status:'missing', data:[]}; },
+    calc: function(id, o){ calcs[id] = o.fn.apply(null, o.inputs.map(function(i){ return D[i]; })); },
+    onData: function(fn){ cbs.push(fn); fn(); },
+    setLink: function(){}, params: function(){ return {}; }, setParams: function(){}, colors: []
+  };
+  window.addEventListener('resize', function(){ cbs.forEach(function(f){ f(); }); });
+})();
+</script>
+</head>
+<body>
+<div id="dash-root">
+<style>
+#dash-root { --dash-gutter: 0; }
+.mj {
+  /* Layout: night-festival (matsuri) board. Header with sun disc and falling petals, kanji tab bar, asymmetric ema-plaque panels. */
+  --ink: #0e1126; --ink2: #161a38; --ink3: #1f2450; --line: #343b73;
+  --text: #f4efe4; --muted: #b0b6da; --sakura: #f5a8bf; --shu: #ee5a43; --kin: #f2b84b;
+  --sora: #63b6e6; --matcha: #9ccb6c; --fuji: #b9a8e8;
+  --serif: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", "Noto Serif CJK JP", "Source Han Serif", var(--font-anthropic-serif), serif;
+  --sans: var(--font-anthropic-sans), "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Noto Sans CJK JP", system-ui, sans-serif;
+  position: relative; color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.5;
+  background: radial-gradient(120% 60% at 85% 0%, #2a2160 0%, transparent 60%), linear-gradient(180deg, #121634 0%, var(--ink) 40%);
+  overflow: hidden; min-height: 70vh;
+}
+.mj *, .mj *::before, .mj *::after { box-sizing: border-box; }
+.mj button { font: inherit; color: inherit; cursor: pointer; }
+.mj :focus-visible { outline: 2px solid var(--kin); outline-offset: 2px; }
+.mj p, .mj h1, .mj h2, .mj h3 { margin: 0; }
+.mj b { font-weight: 600; }
+
+/* header */
+.mj-head { position: relative; padding: 28px max(16px, 4vw) 0; overflow: hidden; }
+.mj-sun { position: absolute; right: -70px; top: -90px; width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 32%, #ff9a7b 0%, var(--shu) 55%, #a82c1c 100%); opacity: .88; }
+.mj-petals { position: absolute; inset: 0; pointer-events: none; }
+.mj-petal { position: absolute; top: -16px; width: 13px; height: 9px; background: var(--sakura); border-radius: 85% 0 85% 0; opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .mj-petal { animation: mj-fall var(--d) linear var(--dl) infinite; }
+}
+@keyframes mj-fall {
+  0% { transform: translate3d(0, 0, 0) rotate(0); opacity: 0; }
+  10% { opacity: .85; }
+  90% { opacity: .7; }
+  100% { transform: translate3d(var(--x), 250px, 0) rotate(520deg); opacity: 0; }
+}
+.mj-brand { position: relative; display: flex; gap: 20px; align-items: flex-start; max-width: calc(1100px - 2 * max(16px, 4vw)); margin: 0 auto; }
+.mj-kanji { font-family: var(--serif); font-size: clamp(44px, 7vw, 66px); line-height: .98; display: flex; flex-direction: column; align-items: center;
+  color: var(--sakura); text-shadow: 0 2px 0 rgba(0,0,0,.35); flex: none; }
+.mj-kana { font-family: var(--serif); color: var(--kin); font-size: 14px; letter-spacing: .12em; }
+.mj-title { font-family: var(--serif); font-weight: 600; font-size: clamp(26px, 4.6vw, 42px); line-height: 1.15; margin-top: 2px; text-wrap: balance; }
+.mj-take { margin-top: 10px; max-width: 52ch; color: var(--text); font-size: 16px; text-wrap: pretty; }
+.mj-wave { position: relative; height: 30px; margin: 18px calc(-1 * max(16px, 4vw)) 0;
+  background:
+    radial-gradient(circle at 50% 100%, transparent 38%, rgba(99,182,230,.35) 39% 44%, transparent 45% 58%, rgba(99,182,230,.35) 59% 64%, transparent 65% 78%, rgba(99,182,230,.35) 79% 84%, transparent 85%) 0 0 / 60px 30px,
+    radial-gradient(circle at 50% 100%, transparent 38%, rgba(185,168,232,.28) 39% 44%, transparent 45% 58%, rgba(185,168,232,.28) 59% 64%, transparent 65% 78%, rgba(185,168,232,.28) 79% 84%, transparent 85%) 30px 15px / 60px 30px; }
+
+/* tabs */
+.mj-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 14px max(16px, 4vw) 10px; max-width: 1100px; margin: 0 auto; scrollbar-width: thin; }
+.mj-tab { flex: none; display: grid; justify-items: center; gap: 0; min-width: 86px; padding: 8px 14px 7px; background: var(--ink2);
+  border: 1px solid var(--line); border-radius: 4px 16px 4px 16px; transition: background .2s, border-color .2s; }
+.mj-tab span:first-child { font-family: var(--serif); font-size: 22px; line-height: 1.15; color: var(--sakura); }
+.mj-tab span:last-child { font-size: 12px; color: var(--muted); }
+.mj-tab:hover { border-color: var(--sakura); }
+.mj-tab[aria-selected="true"] { background: var(--shu); border-color: var(--shu); }
+.mj-tab[aria-selected="true"] span { color: #fff; }
+
+/* page */
+.mj-main { max-width: 1100px; margin: 0 auto; padding: 10px max(16px, 4vw) 36px; }
+.mj-page { display: grid; gap: 16px; }
+.mj-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+.mj-card { background: var(--ink2); border: 1px solid var(--line); border-radius: 6px 22px 6px 22px; padding: 18px 20px; min-width: 0; }
+.mj-card h3 { font-family: var(--serif); font-size: 19px; font-weight: 600; }
+.mj-card .sub { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.mj-sec { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.mj-sec .k { font-family: var(--serif); font-size: 34px; color: var(--sakura); line-height: 1; }
+.mj-sec h2 { font-family: var(--serif); font-size: 24px; font-weight: 600; }
+.mj-sec p { color: var(--muted); width: 100%; max-width: 70ch; }
+.mj-ctl { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 12px 0 6px; }
+.mj-chip { padding: 5px 13px; background: transparent; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 13px; }
+.mj-chip:hover { border-color: var(--sakura); color: var(--text); }
+.mj-chip[aria-pressed="true"] { background: var(--sakura); border-color: var(--sakura); color: #2a1020; font-weight: 600; }
+.mj-sel { background: var(--ink3); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 5px 9px; font: inherit; font-size: 13px; }
+.mj-lbl { color: var(--muted); font-size: 13px; }
+
+/* kpi */
+.mj-kpis { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+.mj-kpi { background: linear-gradient(160deg, var(--ink3), var(--ink2)); border: 1px solid var(--line); border-radius: 6px 22px 6px 22px; padding: 14px 18px; position: relative; overflow: hidden; }
+.mj-kpi .jp { position: absolute; right: 10px; top: 4px; font-family: var(--serif); font-size: 44px; color: rgba(245,168,191,.16); line-height: 1; pointer-events: none; }
+.mj-kpi .n { font-family: var(--serif); font-size: 38px; line-height: 1.1; color: var(--text); font-variant-numeric: tabular-nums; display: block; }
+.mj-kpi .l { color: var(--muted); font-size: 13px; }
+
+/* bars */
+.mj-bars { display: grid; gap: 4px; margin-top: 10px; }
+.mj-row { display: grid; grid-template-columns: minmax(7rem, 13rem) 1fr 4.6rem; gap: 12px; align-items: center; width: 100%; text-align: left; background: transparent; border: 0; border-radius: 10px; padding: 6px 8px; }
+button.mj-row:hover, .mj-row[aria-pressed="true"] { background: rgba(255,255,255,.06); }
+.mj-lab { display: flex; gap: 9px; align-items: center; min-width: 0; font-size: 14px; }
+.mj-lab i { font-style: normal; flex: none; width: 26px; height: 26px; display: grid; place-items: center; font-family: var(--serif); font-size: 15px; color: #2a1020; background: var(--sakura); border-radius: 3px 9px 3px 9px; }
+.mj-lab span { overflow-wrap: anywhere; }
+.mj-track { height: 16px; background: rgba(255,255,255,.07); border-radius: 8px 2px 8px 2px; overflow: hidden; }
+.mj-fill { height: 100%; width: 0; border-radius: 8px 2px 8px 2px; background: var(--c, var(--sakura)); transition: width .7s cubic-bezier(.2,.8,.2,1); }
+.mj-val { white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.mj-row.sm .mj-track { height: 10px; }
+.mj-row.sm { padding-block: 2px; }
+.mj-legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; font-size: 13px; color: var(--muted); }
+.mj-legend em { font-style: normal; display: inline-flex; align-items: center; gap: 6px; }
+.mj-legend em::before { content: ""; width: 11px; height: 11px; border-radius: 3px 6px 3px 6px; background: var(--c); }
+@media (prefers-reduced-motion: reduce) { .mj-fill { transition: none; } }
+@media (max-width: 540px) {
+  .mj-row { grid-template-columns: 1fr 4.2rem; row-gap: 4px; }
+  .mj-row .mj-lab { grid-column: 1 / -1; }
+  .mj-row .mj-track { grid-column: 1; }
+  .mj-row .mj-val { grid-column: 2; }
+  .mj-sun { width: 190px; height: 190px; right: -60px; top: -60px; opacity: .6; }
+  .mj-brand { gap: 12px; }
+}
+
+/* detail */
+.mj-detail { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; }
+.mj-stamp { width: 84px; height: 84px; display: grid; place-items: center; font-family: var(--serif); font-size: 46px; color: #fff; background: var(--shu); border-radius: 6px 22px 6px 22px; box-shadow: inset 0 0 0 3px rgba(255,255,255,.22); }
+.mj-big { font-family: var(--serif); font-size: 44px; line-height: 1; font-variant-numeric: tabular-nums; }
+.mj-detail p { color: var(--muted); }
+.mj-detail .jpn { font-family: var(--serif); color: var(--kin); font-size: 18px; }
+@media (max-width: 480px) { .mj-detail { grid-template-columns: 1fr; } }
+
+/* seal */
+.mj-seal { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text); white-space: nowrap; }
+.mj-seal b { width: 22px; height: 22px; display: grid; place-items: center; font-family: var(--serif); font-weight: 600; font-size: 13px; color: #1a1020; background: var(--c); border-radius: 3px 8px 3px 8px; }
+
+/* simulator */
+.mj-sim { display: grid; gap: 14px; }
+.mj-range { width: 100%; accent-color: var(--shu); }
+.mj-out { font-family: var(--serif); font-size: 36px; line-height: 1.1; font-variant-numeric: tabular-nums; color: var(--kin); }
+.mj-note { color: var(--muted); font-size: 13px; }
+.mj-seg { display: inline-flex; background: var(--ink3); border: 1px solid var(--line); border-radius: 12px; padding: 3px; gap: 2px; flex-wrap: wrap; }
+.mj-seg button { background: transparent; border: 0; border-radius: 9px; padding: 6px 14px; color: var(--muted); font-size: 14px; }
+.mj-seg button[aria-pressed="true"] { background: var(--sora); color: #07202e; font-weight: 600; }
+
+/* callout */
+.mj-call { border-left: 4px solid var(--kin); background: rgba(242,184,75,.08); padding: 10px 14px; border-radius: 0 12px 12px 0; }
+.mj-call b { font-family: var(--serif); font-size: 24px; color: var(--kin); font-variant-numeric: tabular-nums; }
+
+/* cards list */
+.mj-list { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); margin-top: 8px; }
+.mj-item { background: var(--ink3); border: 1px solid var(--line); border-radius: 4px 16px 4px 16px; padding: 12px 14px; display: grid; gap: 6px; min-width: 0; align-content: start; }
+.mj-item h4 { margin: 0; font-family: var(--serif); font-size: 16px; font-weight: 600; }
+.mj-item .g { color: var(--kin); font-size: 12px; }
+.mj-item p { color: var(--muted); font-size: 13.5px; }
+.mj-item .src { color: var(--muted); font-size: 12px; opacity: .85; }
+.mj-time { display: grid; gap: 0; margin-top: 8px; border-left: 2px solid var(--line); margin-left: 8px; }
+.mj-ev { position: relative; padding: 0 0 18px 22px; }
+.mj-ev::before { content: ""; position: absolute; left: -9px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--shu); border: 3px solid var(--ink2); }
+.mj-ev .d { font-family: var(--serif); color: var(--sakura); font-size: 16px; }
+.mj-ev h4 { margin: 0; font-size: 15px; }
+.mj-ev p { color: var(--muted); font-size: 13.5px; max-width: 70ch; }
+
+/* register */
+.mj-reg { display: grid; gap: 8px; margin-top: 10px; }
+.mj-claim { display: grid; grid-template-columns: 10.5rem 1fr; gap: 14px; align-items: start; background: var(--ink3); border: 1px solid var(--line); border-radius: 4px 14px 4px 14px; padding: 10px 14px; }
+.mj-claim p { font-size: 14px; }
+.mj-claim .s { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+@media (max-width: 560px) { .mj-claim { grid-template-columns: 1fr; gap: 6px; } }
+.mj-stack { display: flex; height: 22px; border-radius: 11px 3px 11px 3px; overflow: hidden; gap: 2px; margin-top: 12px; }
+.mj-stack div { background: var(--c); min-width: 6px; }
+
+/* tooltip */
+.mj-tip { position: absolute; z-index: 20; pointer-events: none; background: #0a0c1d; color: var(--text); border: 1px solid var(--sakura); border-radius: 8px; padding: 6px 10px; font-size: 12.5px; max-width: 18rem; box-shadow: 0 6px 18px rgba(0,0,0,.5); opacity: 0; transition: opacity .12s; }
+.mj-tip.on { opacity: 1; }
+.mj-msg { padding: 24px; text-align: center; color: var(--muted); }
+.mj [hidden] { display: none !important; }
+.mj-foot { max-width: 1100px; margin: 0 auto; padding: 0 max(16px, 4vw) 26px; color: var(--muted); font-size: 12.5px; }
+</style>
+
+<div class="mj" id="mj">
+  <header class="mj-head">
+    <div class="mj-sun" aria-hidden="true"></div>
+    <div class="mj-petals" id="mj-petals" aria-hidden="true"></div>
+    <div class="mj-brand">
+      <div class="mj-kanji" aria-hidden="true"><span>未</span><span>来</span></div>
+      <div>
+        <p class="mj-kana">インドのアニメグッズ市場</p>
+        <h1 class="mj-title">MIRAI Merchandise Dojo</h1>
+        <p class="mj-take" id="mj-take">Loading the survey results…</p>
+      </div>
+    </div>
+    <div class="mj-wave" aria-hidden="true"></div>
+  </header>
+
+  <nav class="mj-tabs" role="tablist" aria-label="Dashboard sections" id="mj-tabs">
+    <button class="mj-tab" role="tab" data-tab="overview"><span>概要</span><span>Overview</span></button>
+    <button class="mj-tab" role="tab" data-tab="purchases"><span>購入</span><span>Purchases</span></button>
+    <button class="mj-tab" role="tab" data-tab="spending"><span>支出</span><span>Spending</span></button>
+    <button class="mj-tab" role="tab" data-tab="market"><span>市場</span><span>Market</span></button>
+    <button class="mj-tab" role="tab" data-tab="retail"><span>小売</span><span>Retail</span></button>
+    <button class="mj-tab" role="tab" data-tab="pricing"><span>価格</span><span>Pricing</span></button>
+    <button class="mj-tab" role="tab" data-tab="trust"><span>信頼</span><span>Trust</span></button>
+  </nav>
+
+  <main class="mj-main">
+    <p class="mj-msg" id="mj-msg" hidden></p>
+
+    <!-- OVERVIEW -->
+    <section class="mj-page" id="overview" data-page>
+      <div class="mj-sec"><span class="k">概要</span><h2>The survey at a glance</h2>
+        <p>What a selected group of anime-engaged urban viewers said they have bought. Open any tab for the detail; the seal on each fact says how far to trust it.</p></div>
+      <div class="mj-kpis">
+        <div class="mj-kpi"><span class="jp">人</span><b class="n" data-source="survey_facts" data-field="value" data-where="key=sample">—</b><span class="l">Respondents</span></div>
+        <div class="mj-kpi"><span class="jp">街</span><b class="n" data-source="survey_facts" data-field="value" data-where="key=cities">—</b><span class="l">Indian cities surveyed</span></div>
+        <div class="mj-kpi"><span class="jp">衣</span><b class="n" data-source="survey_categories" data-field="pct" data-where="id=apparel">—</b><span class="l">Reported buying apparel, the top category</span></div>
+        <div class="mj-kpi"><span class="jp">円</span><b class="n" data-source="spend_bands" data-field="band" data-where="id=wp_common">—</b><span class="l">Most common six-month anime spend, working professionals</span></div>
+      </div>
+      <div class="mj-grid">
+        <div class="mj-card">
+          <h3>Who was asked</h3>
+          <p class="sub">Ages <span data-source="survey_facts" data-field="value" data-where="key=age_min">—</span> to <span data-source="survey_facts" data-field="value" data-where="key=age_max">—</span>, interviewed face to face, <span data-source="survey_facts" data-field="value" data-where="key=fieldwork">—</span>.</p>
+          <p style="margin-top:10px">Every respondent watched anime in the previous three months, could name a title unaided and had an OTT subscription. That makes this a sample of engaged urban viewers. It does not describe every anime fan in India.</p>
+        </div>
+        <div class="mj-card">
+          <h3>How to read the seals</h3>
+          <p class="sub">Every data point in this dashboard carries one.</p>
+          <div id="mj-seals" style="display:grid;gap:8px;margin-top:10px"></div>
+        </div>
+      </div>
+      <div class="mj-card">
+        <h3>Where to look next</h3>
+        <div class="mj-ctl" id="mj-jump"></div>
+      </div>
+    </section>
+
+    <!-- PURCHASES -->
+    <section class="mj-page" id="purchases" data-page hidden>
+      <div class="mj-sec"><span class="k">購入</span><h2>What fans have bought</h2>
+        <p>Respondents could pick several categories, so the bars are separate shares of the sample and do not add up to a whole. Select a bar for the detail.</p></div>
+      <div class="mj-card">
+        <div class="mj-ctl" role="group" aria-label="Filter categories">
+          <button class="mj-chip" data-cg="all" aria-pressed="true">All eight</button>
+          <button class="mj-chip" data-cg="Everyday use" aria-pressed="false">Everyday use</button>
+          <button class="mj-chip" data-cg="Collector / display" aria-pressed="false">Collector / display</button>
+          <label class="mj-lbl" for="mj-csort" style="margin-left:auto">Order</label>
+          <select class="mj-sel" id="mj-csort"><option value="rank">Highest first</option><option value="name">A to Z</option></select>
+        </div>
+        <div class="mj-bars" id="mj-cbars" data-source="survey_categories"></div>
+        <div class="mj-legend" id="mj-clegend"></div>
+      </div>
+      <div class="mj-card"><div class="mj-detail" id="mj-cdetail" data-source="survey_categories"></div></div>
+    </section>
+
+    <!-- SPENDING -->
+    <section class="mj-page" id="spending" data-page hidden>
+      <div class="mj-sec"><span class="k">支出</span><h2>What fans spend</h2>
+        <p>Six-month spending covers all anime-related activity, not only merchandise, and each bar is a share of its own group.</p></div>
+      <div class="mj-card">
+        <div class="mj-ctl" role="group" aria-label="Filter groups">
+          <button class="mj-chip" data-sg="all" aria-pressed="true">Both groups</button>
+          <button class="mj-chip" data-sg="Working professionals" aria-pressed="false">Working professionals</button>
+          <button class="mj-chip" data-sg="Students and homemakers" aria-pressed="false">Students and homemakers</button>
+        </div>
+        <div class="mj-bars" id="mj-sbars" data-source="spend_bands"></div>
+      </div>
+      <div class="mj-card mj-sim">
+        <div><h3>Budget quest</h3><p class="sub">Pick a price and see how long it takes to match it at the typical reported spend. An illustration that treats the whole band as one purchase budget.</p></div>
+        <div class="mj-ctl">
+          <label class="mj-lbl" for="mj-sg">Group</label>
+          <select class="mj-sel" id="mj-sg"><option value="Working professionals">Working professionals</option><option value="Students and homemakers">Students and homemakers</option></select>
+        </div>
+        <div>
+          <label class="mj-lbl" for="mj-price">Item price: <b id="mj-pricev" style="color:var(--text)">—</b></label>
+          <input class="mj-range" type="range" id="mj-price" min="100" max="10000" step="100" value="5000">
+        </div>
+        <div id="mj-simout" data-source="spend_bands"></div>
+      </div>
+    </section>
+
+    <!-- MARKET -->
+    <section class="mj-page" id="market" data-page hidden>
+      <div class="mj-sec"><span class="k">市場</span><h2>How big is the market?</h2>
+        <p>These are third-party estimates with undisclosed methods. They show the range of published views and are not measured sales.</p></div>
+      <div class="mj-seg" role="group" aria-label="Market view" id="mj-mseg">
+        <button data-m="india" aria-pressed="true">India anime market</button>
+        <button data-m="merch" aria-pressed="false">Merchandise</button>
+        <button data-m="cats" aria-pressed="false">Naruto by product</button>
+        <button data-m="chan" aria-pressed="false">Naruto by channel</button>
+      </div>
+      <div class="mj-card" id="mj-mview" data-source="market_data"></div>
+    </section>
+
+    <!-- RETAIL -->
+    <section class="mj-page" id="retail" data-page hidden>
+      <div class="mj-sec"><span class="k">小売</span><h2>Where fans buy, and who is moving</h2>
+        <p>A qualitative map from trade and news coverage. No source found publishes retailer-level sales or market shares.</p></div>
+      <div class="mj-card">
+        <div class="mj-ctl" role="group" aria-label="Filter channels" id="mj-rchips"></div>
+        <div class="mj-list" id="mj-rlist" data-source="landscape"></div>
+      </div>
+      <div class="mj-card">
+        <h3>Licensing and manufacturing timeline</h3>
+        <div class="mj-time" id="mj-time" data-source="landscape"></div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="mj-page" id="pricing" data-page hidden>
+      <div class="mj-sec"><span class="k">価格</span><h2>What import duty does to a price tag</h2>
+        <p>Imported figures reportedly cost far more in India than in Japan. Move the slider to see the reported uplift applied to any base price.</p></div>
+      <div class="mj-card mj-sim">
+        <div>
+          <label class="mj-lbl" for="mj-jp">Price in Japan or the US: <b id="mj-jpv" style="color:var(--text)">—</b></label>
+          <input class="mj-range" type="range" id="mj-jp" min="10" max="200" step="5" value="40">
+        </div>
+        <div id="mj-dutyout" data-source="market_data"></div>
+      </div>
+      <div class="mj-grid">
+        <div class="mj-card">
+          <h3>Two-tier market</h3>
+          <p class="sub">What the coverage describes</p>
+          <p style="margin-top:10px">Serious collectors pay for authentic imports. Budget-conscious fans are reported to split between authentic and counterfeit goods, and one Kolkata retailer says collectible sales have fallen partly because of fakes.</p>
+        </div>
+        <div class="mj-card">
+          <h3>What is not known</h3>
+          <p class="sub">Gaps to fill with MIRAI data</p>
+          <p style="margin-top:10px">No source found sizes the counterfeit market in India. The survey did not measure price sensitivity either, so the link between price and lower collectible purchases remains a hypothesis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="mj-page" id="trust" data-page hidden>
+      <div class="mj-sec"><span class="k">信頼</span><h2>Claim register</h2>
+        <p>Each claim used in this dashboard and the merchandise report, sorted by how it is known. Filter by seal to see only one kind.</p></div>
+      <div class="mj-card">
+        <div class="mj-ctl" role="group" aria-label="Filter by seal" id="mj-tchips"></div>
+        <div class="mj-stack" id="mj-tstack" aria-hidden="true"></div>
+        <div class="mj-reg" id="mj-reg" data-source="confidence_register"></div>
+      </div>
+    </section>
+  </main>
+
+  <p class="mj-foot">Source: Hakuhodo India consumer study of Japanese anime IP (Dec 2025 to Jan 2026), with vendor reports and news coverage as context. Survey figures describe the sampled viewers only.</p>
+  <div class="mj-tip" id="mj-tip" role="tooltip"></div>
+</div>
+
+<script>
+dash.calc('market_spread', {
+  inputs: ['market_data'],
+  title: 'India market estimate spread',
+  description: 'Highest India anime-market estimate divided by the lowest for the same year.',
+  fn: (market_data) => {
+    const out = [];
+    [2024, 2025].forEach((y) => {
+      const v = market_data.filter((r) => r.series === 'india_market' && Number(r.year) === y).map((r) => Number(r.value));
+      out.push({ metric: 'spread_' + y, value: Math.max(...v) / Math.min(...v) });
+    });
+    return out;
+  },
+});
+dash.calc('online_share', {
+  inputs: ['market_data'],
+  title: 'Online share of Naruto sales',
+  description: 'Brand-owned online stores plus marketplaces as a share of projected 2033 Naruto merchandise sales.',
+  fn: (market_data) => {
+    const ch = market_data.filter((r) => r.series === 'naruto_channel');
+    const total = ch.reduce((a, r) => a + Number(r.value), 0);
+    const online = ch.filter((r) => r.label === 'Brand-owned online stores' || r.label === 'E-commerce marketplaces').reduce((a, r) => a + Number(r.value), 0);
+    return [{ metric: 'online_share_pct', value: (100 * online) / total }];
+  },
+});
+dash.calc('implied_cagr', {
+  inputs: ['market_data'],
+  title: 'Implied India merchandise growth',
+  description: 'Annual growth implied by the reported India anime merchandise values for 2025 and 2030.',
+  fn: (market_data) => {
+    const a = market_data.find((r) => r.id === 'imerch_2025');
+    const b = market_data.find((r) => r.id === 'imerch_2030');
+    return [{ metric: 'cagr_pct', value: 100 * (Math.pow(Number(b.value) / Number(a.value), 1 / (b.year - a.year)) - 1) }];
+  },
+});
+</script>
+
+<script>
+(function () {
+  const root = document.getElementById('mj');
+  const IDS = ['survey_facts', 'survey_categories', 'spend_bands', 'market_data', 'landscape', 'confidence_register', 'market_spread', 'online_share', 'implied_cagr'];
+  const TABS = ['overview', 'purchases', 'spending', 'market', 'retail', 'pricing', 'trust'];
+  const TABNAME = { overview: '概要 Overview', purchases: '購入 Purchases', spending: '支出 Spending', market: '市場 Market', retail: '小売 Retail', pricing: '価格 Pricing', trust: '信頼 Trust' };
+  const SEALS = {
+    'Published survey finding': { k: '調', c: '--matcha', d: 'Reported in the Hakuhodo survey release.' },
+    'Analyst report': { k: '析', c: '--kin', d: 'A research vendor estimate. Method not disclosed.' },
+    'News report': { k: '報', c: '--fuji', d: 'Reported by a news or trade outlet.' },
+    'Derived': { k: '算', c: '--sakura', d: 'Arithmetic on published numbers, with stated assumptions.' },
+    'Hypothesis': { k: '仮', c: '--shu', d: 'An idea for MIRAI to test. Not evidence.' },
+  };
+  const S = { tab: 'overview', cg: 'all', csort: 'rank', csel: 'apparel', sg: 'all', simG: 'Working professionals', price: 5000, m: 'india', rg: 'all', tl: 'all', jp: 40, inited: false, reduce: false };
+  let D = null;
+
+  const h = (tag, props, ...kids) => {
+    const e = document.createElement(tag);
+    if (props) for (const k in props) {
+      const v = props[k];
+      if (v == null || v === false) continue;
+      if (k === 'class') e.className = v;
+      else if (k === 'style') e.style.cssText = v;
+      else if (k.slice(0, 2) === 'on') e.addEventListener(k.slice(2), v);
+      else e.setAttribute(k, v === true ? '' : v);
+    }
+    kids.flat().forEach((c) => { if (c != null && c !== false) e.append(c.nodeType ? c : document.createTextNode(String(c))); });
+    return e;
+  };
+  const $ = (s, r) => (r || root).querySelector(s);
+  const $$ = (s, r) => [...(r || root).querySelectorAll(s)];
+  const clear = (e) => e.replaceChildren();
+  const pct = (v) => Number(v).toFixed(1) + '%';
+  const usd = (v) => {
+    v = Number(v);
+    if (v >= 1000) { const b = v / 1000; return '$' + (b >= 10 ? b.toFixed(1) : String(+b.toFixed(3))) + 'B'; }
+    return '$' + (v < 100 ? v.toFixed(1) : String(Math.round(v))) + 'M';
+  };
+  const inr = (v) => '₹' + Math.round(v).toLocaleString('en-IN');
+  const num = (v) => Number(v).toLocaleString('en-US');
+  const seal = (label) => {
+    const s = SEALS[label] || { k: '?', c: '--muted' };
+    return h('span', { class: 'mj-seal', style: '--c:var(' + s.c + ')' }, h('b', null, s.k), label);
+  };
+
+  // tooltip
+  const tip = document.getElementById('mj-tip');
+  root.addEventListener('pointerover', (ev) => {
+    const t = ev.target.closest && ev.target.closest('[data-tip]');
+    if (!t) { tip.classList.remove('on'); return; }
+    tip.textContent = t.getAttribute('data-tip');
+    tip.classList.add('on');
+    place(ev);
+  });
+  root.addEventListener('pointermove', (ev) => { if (tip.classList.contains('on')) place(ev); });
+  root.addEventListener('pointerleave', () => tip.classList.remove('on'));
+  function place(ev) {
+    const r = root.getBoundingClientRect();
+    let x = ev.clientX - r.left + 14, y = ev.clientY - r.top + 16;
+    const w = tip.offsetWidth;
+    if (x + w > r.width - 8) x = Math.max(8, ev.clientX - r.left - w - 14);
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  }
+
+  // animate fills after insertion
+  function grow(scope) {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      $$('.mj-fill[data-w]', scope).forEach((f) => { f.style.width = f.getAttribute('data-w') + '%'; });
+    }));
+  }
+  const rowEl = (o) => {
+    const lab = h('div', { class: 'mj-lab' }, o.badge ? h('i', null, o.badge) : null, h('span', null, o.label));
+    const body = [lab, h('div', { class: 'mj-track' }, h('div', { class: 'mj-fill', 'data-w': Math.max(0.5, o.w).toFixed(2), style: '--c:' + (o.color || 'var(--sakura)') })), h('div', { class: 'mj-val' }, o.val)];
+    const attrs = { class: 'mj-row' + (o.sm ? ' sm' : ''), 'data-tip': o.tip };
+    if (o.onclick) { attrs.onclick = o.onclick; attrs['aria-pressed'] = o.pressed ? 'true' : 'false'; return h('button', attrs, ...body); }
+    return h('div', attrs, ...body);
+  };
+
+  function load() {
+    const out = {};
+    for (const id of IDS) {
+      const r = dash.data(id);
+      if (r.status !== 'ok') return { bad: r.status, id };
+      out[id] = r.data;
+    }
+    return { ok: out };
+  }
+  const calcVal = (id, metric) => { const r = (D[id] || []).find((x) => x.metric === metric); return r ? Number(r.value) : NaN; };
+  const mrow = (id) => D.market_data.find((r) => r.id === id);
+
+  // ---------- header + overview ----------
+  function renderHead() {
+    const cats = [...D.survey_categories].sort((a, b) => b.pct - a.pct);
+    const a = cats[0], b = cats[1], z = cats[cats.length - 1];
+    $('#mj-take').textContent = 'Everyday goods lead: ' + pct(a.pct) + ' of surveyed viewers bought ' + a.category.toLowerCase() + ' and ' + pct(b.pct) + ' bought ' + b.category.toLowerCase() + ', while ' + z.category.toLowerCase() + ' trail at ' + pct(z.pct) + '.';
+  }
+  function fillKpis() {
+    const f = (sel, text) => { const e = $(sel); if (e) e.textContent = text; };
+    const fact = (k) => D.survey_facts.find((r) => r.key === k).value;
+    f('[data-where="key=sample"]', num(fact('sample')));
+    f('[data-where="key=cities"]', num(fact('cities')));
+    f('[data-where="key=age_min"]', String(fact('age_min')));
+    f('[data-where="key=age_max"]', String(fact('age_max')));
+    f('[data-where="key=fieldwork"]', String(fact('fieldwork')));
+    f('[data-source="survey_categories"][data-where="id=apparel"]', pct(D.survey_categories.find((r) => r.id === 'apparel').pct));
+    f('[data-where="id=wp_common"]', D.spend_bands.find((r) => r.id === 'wp_common').band);
+  }
+  function renderOverview() {
+    fillKpis();
+    const sealBox = $('#mj-seals');
+    if (!sealBox.childElementCount) Object.keys(SEALS).forEach((k) => sealBox.append(h('div', { style: 'display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center' }, seal(k), h('span', { class: 'mj-note' }, SEALS[k].d))));
+    const j = $('#mj-jump');
+    if (!j.childElementCount) TABS.slice(1).forEach((t) => j.append(h('button', { class: 'mj-chip', onclick: () => go(t) }, TABNAME[t])));
+  }
+
+  // ---------- purchases ----------
+  const GROUPCOLOR = { 'Everyday use': 'var(--sakura)', 'Collector / display': 'var(--sora)' };
+  function renderPurchases() {
+    let rows = D.survey_categories.slice();
+    const all = rows;
+    if (S.cg !== 'all') rows = rows.filter((r) => r.group === S.cg);
+    rows.sort(S.csort === 'name' ? (a, b) => a.category.localeCompare(b.category) : (a, b) => b.pct - a.pct);
+    const rank = {}; [...all].sort((a, b) => b.pct - a.pct).forEach((r, i) => { rank[r.id] = i + 1; });
+    const max = 80;
+    const box = $('#mj-cbars'); clear(box);
+    rows.forEach((r) => box.append(rowEl({
+      label: r.category, badge: r.badge, w: (100 * r.pct) / max, val: pct(r.pct), color: GROUPCOLOR[r.group],
+      tip: r.category + ': ' + pct(r.pct) + ' of surveyed viewers. Rank ' + rank[r.id] + ' of ' + all.length + '. ' + r.group + '.',
+      pressed: r.id === S.csel, onclick: () => { S.csel = r.id; renderPurchases(); },
+    })));
+    grow(box);
+    const lg = $('#mj-clegend'); clear(lg);
+    Object.keys(GROUPCOLOR).forEach((g) => lg.append(h('em', { style: '--c:' + GROUPCOLOR[g] }, g)));
+    const sel = all.find((r) => r.id === S.csel) || all[0];
+    const d = $('#mj-cdetail'); clear(d);
+    d.append(h('div', { class: 'mj-stamp', 'aria-hidden': 'true' }, sel.badge),
+      h('div', null,
+        h('div', { class: 'jpn' }, sel.jp),
+        h('h3', null, sel.category),
+        h('div', { class: 'mj-big' }, pct(sel.pct)),
+        h('p', null, sel.examples + '. ' + sel.reading + '. Rank ' + rank[sel.id] + ' of ' + all.length + '.'),
+        h('p', { style: 'margin-top:6px' }, 'This shows the share who had ever bought the category. It does not show how much they spent, how often, or whether they would buy again.')));
+  }
+
+  // ---------- spending ----------
+  function renderSpending() {
+    const sb = $('#mj-sbars'); clear(sb);
+    const groups = ['Working professionals', 'Students and homemakers'].filter((g) => S.sg === 'all' || S.sg === g);
+    groups.forEach((g) => {
+      const rows = D.spend_bands.filter((r) => r.group === g);
+      sb.append(h('div', { style: 'margin:10px 8px 2px;font-family:var(--serif);color:var(--kin)' }, rows[0].jp + '  ' + g));
+      rows.forEach((r) => sb.append(rowEl({
+        label: r.kind + ', ' + r.band, w: (100 * r.pct) / 40, val: pct(r.pct), color: r.kind === 'Heavy spenders' ? 'var(--shu)' : 'var(--sora)',
+        tip: pct(r.pct) + ' of ' + g.toLowerCase() + ' reported six-month anime spending of ' + r.band + '.',
+      })));
+    });
+    grow(sb);
+    renderSim();
+  }
+  function renderSim() {
+    $('#mj-pricev').textContent = inr(S.price);
+    const common = D.spend_bands.find((r) => r.group === S.simG && r.kind === 'Most common band');
+    const heavy = D.spend_bands.find((r) => r.group === S.simG && r.kind === 'Heavy spenders');
+    const lo = (S.price / Number(common.high_inr)) * 6, hi = (S.price / Number(common.low_inr)) * 6;
+    const hv = (S.price / Number(heavy.low_inr)) * 6;
+    const fm = (v) => (v < 10 ? v.toFixed(1) : String(Math.round(v)));
+    const o = $('#mj-simout'); clear(o);
+    o.append(h('div', { class: 'mj-out' }, fm(lo) + ' to ' + fm(hi) + ' months'),
+      h('p', { class: 'mj-note' }, 'at the most common band (' + common.band + ' per six months).'),
+      h('p', { style: 'margin-top:8px' }, 'At the heavy-spender threshold (' + heavy.band + ' per six months) it takes up to ' + fm(hv) + ' months.'),
+      h('div', { class: 'mj-bars' },
+        rowEl({ label: 'Typical, low end', w: Math.min(100, (100 * lo) / Math.max(hi, hv, 1) ), val: fm(lo) + ' mo', sm: true, color: 'var(--sora)', tip: fm(lo) + ' months at the top of the common band' }),
+        rowEl({ label: 'Typical, high end', w: Math.min(100, (100 * hi) / Math.max(hi, hv, 1)), val: fm(hi) + ' mo', sm: true, color: 'var(--sora)', tip: fm(hi) + ' months at the bottom of the common band' }),
+        rowEl({ label: 'Heavy spender', w: Math.min(100, (100 * hv) / Math.max(hi, hv, 1)), val: fm(hv) + ' mo', sm: true, color: 'var(--shu)', tip: 'Up to ' + fm(hv) + ' months at the heavy-spender threshold' })));
+    grow(o);
+  }
+
+  // ---------- market ----------
+  function renderMarket() {
+    const v = $('#mj-mview'); clear(v);
+    const rows = D.market_data;
+    if (S.m === 'india') {
+      const im = rows.filter((r) => r.series === 'india_market');
+      const past = im.filter((r) => r.year <= 2025), fut = im.filter((r) => r.year > 2025);
+      const max = Math.max(...past.map((r) => Number(r.value))) * 1.05;
+      v.append(h('h3', null, 'The whole India anime market, all revenue streams'), h('p', { class: 'sub' }, 'Streaming, theatrical, manga and merchandise together. Not merchandise only.'));
+      const box = h('div', { class: 'mj-bars' });
+      [2024, 2025].forEach((y) => {
+        box.append(h('div', { style: 'margin:10px 8px 2px;font-family:var(--serif);color:var(--kin)' }, String(y)));
+        past.filter((r) => r.year === y).sort((a, b) => b.value - a.value).forEach((r) => box.append(rowEl({
+          label: r.label, w: (100 * r.value) / max, val: (r.id === 'im_imarc_2025' ? '>' : '') + usd(r.value), color: 'var(--sakura)',
+          tip: r.source + '. ' + r.note,
+        })));
+      });
+      v.append(box);
+      const sp = (y) => calcVal('market_spread', 'spread_' + y);
+      v.append(h('div', { class: 'mj-call', style: 'margin-top:14px' },
+        h('p', null, 'Estimates for 2024 differ by ', h('b', { 'data-source': 'market_spread', 'data-field': 'value', 'data-where': 'metric=spread_2024' }, sp(2024).toFixed(1) + '×'),
+          ' and for 2025 by ', h('b', { 'data-source': 'market_spread', 'data-field': 'value', 'data-where': 'metric=spread_2025' }, sp(2025).toFixed(1) + '×'),
+          '. Quote a range with sources, never a single figure.')));
+      v.append(h('h3', { style: 'margin-top:18px' }, 'Forecasts'), h('div', { class: 'mj-list' }, fut.map((r) => h('div', { class: 'mj-item' },
+        h('h4', null, r.label), h('div', { class: 'g' }, r.year + ' forecast'), h('div', { class: 'mj-out', style: 'font-size:26px' }, usd(r.value)),
+        h('p', null, pct(r.cagr) + ' a year, as published.'), seal(r.confidence)))));
+      grow(v);
+    } else if (S.m === 'merch') {
+      v.append(h('h3', null, 'Anime merchandise estimates'), h('p', { class: 'sub' }, 'Each chart has its own scale. Do not compare bar lengths across the two.'));
+      const g = h('div', { class: 'mj-grid', style: 'margin-top:12px' });
+      const cg = calcVal('implied_cagr', 'cagr_pct');
+      const a = h('div', { class: 'mj-item' }, h('h4', null, 'India merchandise, as reported'), h('p', null, 'Attributed to Grand View Research by Outlook Respawn; not found on the vendor’s public page.'));
+      const im = rows.filter((r) => r.series === 'india_merch'); const imax = Math.max(...im.map((r) => r.value)) * 1.05;
+      const ab = h('div', { class: 'mj-bars' }); im.forEach((r) => ab.append(rowEl({ label: String(r.year), w: (100 * r.value) / imax, val: usd(r.value), color: 'var(--sakura)', tip: r.source + '. ' + r.note, sm: true })));
+      a.append(ab, h('p', null, 'Implied growth: ', h('b', { 'data-source': 'implied_cagr', 'data-field': 'value', 'data-where': 'metric=cagr_pct' }, pct(cg)), ' a year (derived).'), seal('News report'));
+      const gm = rows.filter((r) => r.series === 'global_merch'); const gmax = Math.max(...gm.map((r) => r.value)) * 1.05;
+      const b = h('div', { class: 'mj-item' }, h('h4', null, 'Global merchandising'), h('p', null, 'Two vendors, different base values for the same year.'));
+      const bb = h('div', { class: 'mj-bars' });
+      gm.sort((x, y) => x.year - y.year || x.label.localeCompare(y.label)).forEach((r) => bb.append(rowEl({ label: r.label.replace(' (cited secondhand)', '*') + ', ' + r.year, w: (100 * r.value) / gmax, val: usd(r.value), color: 'var(--sora)', tip: r.source + '. ' + r.note, sm: true })));
+      b.append(bb, h('p', { class: 'mj-note' }, '* as cited by MyAnimeThoughts.'), seal('Analyst report'));
+      g.append(a, b); v.append(g); grow(v);
+    } else if (S.m === 'cats') {
+      const seg = rows.filter((r) => r.series === 'naruto_segment');
+      const names = [...new Set(seg.map((r) => r.label))];
+      const t25 = mrow('nt_2025'), t33 = mrow('nt_2033');
+      v.append(h('h3', null, 'India Naruto merchandise by product type'),
+        h('p', { class: 'sub' }, 'One franchise, vendor estimate: ', h('span', { 'data-source': 'market_data', 'data-field': 'value', 'data-where': 'id=nt_2025' }, usd(t25.value)), ' in 2025 to ', h('span', { 'data-source': 'market_data', 'data-field': 'value', 'data-where': 'id=nt_2033' }, usd(t33.value)), ' in 2033.'));
+      const ctl = h('div', { class: 'mj-ctl' }, h('span', { class: 'mj-lbl' }, 'Year'));
+      [['2026', '2026'], ['2033', '2033'], ['both', 'Both']].forEach(([k, l]) => ctl.append(h('button', { class: 'mj-chip', 'aria-pressed': S.ny === k ? 'true' : 'false', onclick: () => { S.ny = k; renderMarket(); } }, l)));
+      v.append(ctl);
+      const years = S.ny === 'both' ? [2026, 2033] : [Number(S.ny)];
+      const max = Math.max(...seg.map((r) => r.value)) * 1.05;
+      const box = h('div', { class: 'mj-bars' });
+      names.sort((a, b) => seg.find((r) => r.label === b && r.year === years[years.length - 1]).value - seg.find((r) => r.label === a && r.year === years[years.length - 1]).value);
+      names.forEach((n) => {
+        years.forEach((y, i) => {
+          const r = seg.find((s) => s.label === n && s.year === y);
+          box.append(rowEl({ label: i === 0 ? n : '', w: (100 * r.value) / max, val: usd(r.value), sm: years.length > 1, color: y === 2033 ? 'var(--sakura)' : 'var(--sora)',
+            tip: n + ', ' + y + ': ' + usd(r.value) + '. Projected growth ' + pct(r.cagr) + ' a year, 2026 to 2033.' }));
+        });
+      });
+      v.append(box);
+      if (S.ny === 'both') v.append(h('div', { class: 'mj-legend' }, h('em', { style: '--c:var(--sora)' }, '2026 estimate'), h('em', { style: '--c:var(--sakura)' }, '2033 projection')));
+      v.append(h('div', { style: 'margin-top:10px' }, seal('Analyst report')));
+      grow(v);
+    } else {
+      const chn = rows.filter((r) => r.series === 'naruto_channel').sort((a, b) => b.value - a.value);
+      const max = chn[0].value * 1.05;
+      v.append(h('h3', null, 'Projected 2033 sales channels, India Naruto merchandise'), h('p', { class: 'sub' }, 'No earlier channel values are published, so there is no trend line.'));
+      const box = h('div', { class: 'mj-bars' });
+      chn.forEach((r) => box.append(rowEl({ label: r.label, w: (100 * r.value) / max, val: usd(r.value), color: /online|marketplace/i.test(r.label) ? 'var(--sakura)' : 'var(--sora)',
+        tip: r.label + ': ' + usd(r.value) + ' in 2033, growing ' + pct(r.cagr) + ' a year.' })));
+      v.append(box, h('div', { class: 'mj-legend' }, h('em', { style: '--c:var(--sakura)' }, 'Online'), h('em', { style: '--c:var(--sora)' }, 'Other channels')));
+      v.append(h('div', { class: 'mj-call', style: 'margin-top:14px' }, h('p', null, 'Online stores and marketplaces together make up about ',
+        h('b', { 'data-source': 'online_share', 'data-field': 'value', 'data-where': 'metric=online_share_pct' }, calcVal('online_share', 'online_share_pct').toFixed(0) + '%'), ' of projected 2033 sales (derived).')));
+      v.append(h('div', { style: 'margin-top:10px' }, seal('Analyst report')));
+      grow(v);
+    }
+  }
+
+  // ---------- retail ----------
+  function renderRetail() {
+    const retail = D.landscape.filter((r) => r.kind === 'retail');
+    const chips = $('#mj-rchips');
+    if (!chips.childElementCount) {
+      ['all', ...new Set(retail.map((r) => r.group))].forEach((g) => chips.append(h('button', { class: 'mj-chip', 'data-rg': g, onclick: () => { S.rg = g; renderRetail(); } }, g === 'all' ? 'All channels' : g)));
+    }
+    $$('[data-rg]', chips).forEach((c) => c.setAttribute('aria-pressed', c.getAttribute('data-rg') === S.rg ? 'true' : 'false'));
+    const list = $('#mj-rlist'); clear(list);
+    retail.filter((r) => S.rg === 'all' || r.group === S.rg).forEach((r) => list.append(h('div', { class: 'mj-item' },
+      h('div', { class: 'g' }, r.group), h('h4', null, r.name), h('p', null, r.detail), seal(r.label), h('div', { class: 'src' }, r.source))));
+    const tl = $('#mj-time'); clear(tl);
+    D.landscape.filter((r) => r.kind === 'timeline').sort((a, b) => a.ord - b.ord).forEach((r) => tl.append(h('div', { class: 'mj-ev' },
+      h('div', { class: 'd' }, r.date), h('h4', null, r.name), h('p', null, r.detail), h('div', { style: 'margin-top:4px' }, seal(r.label)), h('div', { class: 'mj-note', style: 'margin-top:2px' }, r.source))));
+  }
+
+  // ---------- pricing ----------
+  function renderPricing() {
+    $('#mj-jpv').textContent = '$' + S.jp;
+    const lo = Number(mrow('duty_low').value), hi = Number(mrow('duty_high').value);
+    const rep_inr = Number(mrow('fig_in_inr').value), rep_usd = Number(mrow('fig_in_usd').value), base = Number(mrow('fig_jp_usd').value);
+    const fx = rep_inr / rep_usd;
+    const a = S.jp * (1 + lo / 100), b = S.jp * (1 + hi / 100);
+    const o = $('#mj-dutyout'); clear(o);
+    o.append(h('div', { class: 'mj-out' }, '$' + a.toFixed(0) + ' to $' + b.toFixed(0)),
+      h('p', { class: 'mj-note' }, 'in India after the reported ' + lo + '–' + hi + '% duty uplift, about ' + inr(a * fx) + ' to ' + inr(b * fx) + ' at the article’s implied rate of ' + inr(fx) + ' per US$.'));
+    const max = Math.max(b, rep_usd, S.jp) * 1.05;
+    o.append(h('div', { class: 'mj-bars' },
+      rowEl({ label: 'Price in Japan or the US', w: (100 * S.jp) / max, val: '$' + S.jp, color: 'var(--sora)', sm: true, tip: 'Base price' }),
+      rowEl({ label: 'India, low uplift', w: (100 * a) / max, val: '$' + a.toFixed(0), color: 'var(--sakura)', sm: true, tip: 'Base price plus ' + lo + '%' }),
+      rowEl({ label: 'India, high uplift', w: (100 * b) / max, val: '$' + b.toFixed(0), color: 'var(--shu)', sm: true, tip: 'Base price plus ' + hi + '%' })));
+    o.append(h('p', { class: 'mj-note', style: 'margin-top:8px' }, 'Reported example: a $' + base + ' figurine retails for over ' + inr(rep_inr) + ' (about $' + rep_usd + ') in India. Applied here as arithmetic, not as a measured price.'), h('div', { style: 'margin-top:6px' }, seal('News report')));
+    grow(o);
+  }
+
+  // ---------- trust ----------
+  function renderTrust() {
+    const reg = D.confidence_register;
+    const labels = Object.keys(SEALS);
+    const chips = $('#mj-tchips');
+    if (!chips.childElementCount) {
+      ['all', ...labels].forEach((l) => chips.append(h('button', { class: 'mj-chip', 'data-tl': l, onclick: () => { S.tl = l; renderTrust(); } })));
+    }
+    $$('[data-tl]', chips).forEach((c) => {
+      const l = c.getAttribute('data-tl');
+      c.setAttribute('aria-pressed', l === S.tl ? 'true' : 'false');
+      c.textContent = (l === 'all' ? 'All claims' : SEALS[l].k + ' ' + l) + ' (' + (l === 'all' ? reg.length : reg.filter((r) => r.label === l).length) + ')';
+    });
+    const st = $('#mj-tstack'); clear(st);
+    labels.forEach((l) => { const n = reg.filter((r) => r.label === l).length; if (n) st.append(h('div', { style: 'flex:' + n + ';--c:var(' + SEALS[l].c + ')', 'data-tip': l + ': ' + n })); });
+    const box = $('#mj-reg'); clear(box);
+    reg.filter((r) => S.tl === 'all' || r.label === S.tl).forEach((r) => box.append(h('div', { class: 'mj-claim' }, seal(r.label), h('div', null, h('p', null, r.claim), h('div', { class: 's' }, r.source + ', report section ' + r.section)))));
+  }
+
+  // ---------- routing ----------
+  function show() {
+    $$('[data-page]').forEach((p) => { p.hidden = p.id !== S.tab; });
+    $$('.mj-tab').forEach((t) => t.setAttribute('aria-selected', t.getAttribute('data-tab') === S.tab ? 'true' : 'false'));
+  }
+  function go(t) { S.tab = t; show(); render(); try { dash.setLink(t); } catch (e) {} window.scrollTo && root.scrollIntoView({ block: 'start' }); }
+  $$('.mj-tab').forEach((t) => t.addEventListener('click', () => go(t.getAttribute('data-tab'))));
+
+  // static controls
+  $$('[data-cg]').forEach((b) => b.addEventListener('click', () => { S.cg = b.getAttribute('data-cg'); $$('[data-cg]').forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); render(); }));
+  $('#mj-csort').addEventListener('change', (e) => { S.csort = e.target.value; render(); });
+  $$('[data-sg]').forEach((b) => b.addEventListener('click', () => { S.sg = b.getAttribute('data-sg'); $$('[data-sg]').forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); render(); }));
+  $('#mj-sg').addEventListener('change', (e) => { S.simG = e.target.value; if (D) renderSim(); });
+  $('#mj-price').addEventListener('input', (e) => { S.price = Number(e.target.value); if (D) renderSim(); });
+  $('#mj-jp').addEventListener('input', (e) => { S.jp = Number(e.target.value); if (D) renderPricing(); });
+  $$('[data-m]').forEach((b) => b.addEventListener('click', () => { S.m = b.getAttribute('data-m'); $$('[data-m]').forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); render(); }));
+  S.ny = 'both';
+
+  // petals
+  const pe = document.getElementById('mj-petals');
+  for (let i = 0; i < 14; i++) {
+    const s = h('span', { class: 'mj-petal' });
+    s.style.left = (4 + i * 7 + (i % 3) * 2) + '%';
+    s.style.setProperty('--d', (7 + (i * 37) % 6) + 's');
+    s.style.setProperty('--dl', '-' + ((i * 53) % 9) + 's');
+    s.style.setProperty('--x', ((i % 2 ? 1 : -1) * (30 + (i * 17) % 60)) + 'px');
+    pe.append(s);
+  }
+
+  function render() {
+    const res = load();
+    const msg = $('#mj-msg');
+    if (!res.ok) {
+      msg.hidden = false;
+      msg.textContent = res.bad === 'loading' ? 'Loading the data…' : 'Some data did not load. Open Sources to see which.';
+      $$('[data-page]').forEach((p) => { p.hidden = true; });
+      return;
+    }
+    D = res.ok; msg.hidden = true; show();
+    if (!S.inited) {
+      S.inited = true;
+      S.price = Number(mrow('fig_in_inr').value); S.jp = Number(mrow('fig_jp_usd').value);
+      $('#mj-price').value = String(S.price); $('#mj-jp').value = String(S.jp);
+    }
+    renderHead();
+    if (S.tab === 'overview') renderOverview();
+    else if (S.tab === 'purchases') renderPurchases();
+    else if (S.tab === 'spending') renderSpending();
+    else if (S.tab === 'market') renderMarket();
+    else if (S.tab === 'retail') renderRetail();
+    else if (S.tab === 'pricing') renderPricing();
+    else if (S.tab === 'trust') renderTrust();
+  }
+  const named = (location.hash || '').slice(1);
+  if (TABS.indexOf(named) >= 0) S.tab = named;
+  show();
+  dash.onData(render);
+})();
+</script>
+
+</div>
+</body>
+</html>

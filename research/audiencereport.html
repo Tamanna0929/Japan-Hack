@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIRAI Audience Atlas</title>
+<style>html,body{margin:0;padding:0;background:#0b0e2e;}</style>
+<script>
+/* Standalone data layer: replaces the dashboard host. Data is embedded below. */
+(function(){
+  var D = {"audience_facts": [{"key": "est_audience", "label": "Active anime audience", "value": 150, "unit": "million", "seal": "Industry estimate", "note": "Industry estimate reported by Hakuhodo India from expert interviews. Not a census or a count of verified viewers."}, {"key": "growth", "label": "Growth in total anime viewing time, year on year", "value": 16, "unit": "%", "seal": "Industry estimate", "note": "Attributed to industry estimates in a related public report."}, {"key": "sample", "label": "Survey respondents", "value": 1200, "unit": "people", "seal": "Survey finding", "note": "Anime-engaged, OTT-subscribed viewers in eight cities."}, {"key": "cities", "label": "Cities", "value": 8, "unit": "cities", "seal": "Survey finding", "note": "Delhi, Mumbai, Bengaluru, Kolkata, Hyderabad, Guwahati, Nagpur and Kochi."}, {"key": "age_min", "label": "Youngest respondent age", "value": 15, "unit": "years", "seal": "Survey finding", "note": ""}, {"key": "age_max", "label": "Oldest respondent age", "value": 39, "unit": "years", "seal": "Survey finding", "note": ""}, {"key": "band_teens", "label": "Ages 15–19", "value": 400, "unit": "respondents", "seal": "Survey finding", "note": "Sample allocation, not a national age split."}, {"key": "band_20s", "label": "Ages 20–29", "value": 400, "unit": "respondents", "seal": "Survey finding", "note": "Sample allocation, not a national age split."}, {"key": "band_30s", "label": "Ages 30–39", "value": 400, "unit": "respondents", "seal": "Survey finding", "note": "Sample allocation, not a national age split."}, {"key": "fieldwork", "label": "Fieldwork", "value": "Dec 2025–Jan 2026", "unit": "", "seal": "Survey finding", "note": "Offline survey, plus home visits and expert interviews."}], "audience_metrics": [{"id": "smartphone", "topic": "device", "label": "Smartphone", "pct": 95.9, "seal": "Survey finding", "type": "", "note": "Multiple responses allowed, so shares do not add to 100%.", "supports": "Design discovery and community for mobile screens first.", "not_proof": "That people watch only on phones.", "band": "", "who": ""}, {"id": "tv", "topic": "device", "label": "Television", "pct": 72.3, "seal": "Survey finding", "type": "", "note": "Multiple responses allowed, so shares do not add to 100%.", "supports": "Living-room viewing is still common alongside phones.", "not_proof": "How many hours are spent on each screen.", "band": "", "who": ""}, {"id": "computer", "topic": "device", "label": "Computer", "pct": 37.8, "seal": "Survey finding", "type": "", "note": "Multiple responses allowed, so shares do not add to 100%.", "supports": "A desktop view is a secondary need.", "not_proof": "Whether computer users watch more or less than others.", "band": "", "who": ""}, {"id": "tablet", "topic": "device", "label": "Tablet", "pct": 19.8, "seal": "Survey finding", "type": "", "note": "Multiple responses allowed, so shares do not add to 100%.", "supports": "Tablet is the least used of the four devices.", "not_proof": "That tablet layouts can be ignored.", "band": "", "who": ""}, {"id": "netflix", "topic": "platform", "label": "Netflix", "pct": 74.0, "seal": "Survey finding", "type": "Streaming app", "note": "Reported usage among surveyed viewers; multiple responses. Not market share.", "supports": "Most-used platform among surveyed viewers.", "not_proof": "Subscriber numbers or exclusive share.", "band": "", "who": ""}, {"id": "jiohotstar", "topic": "platform", "label": "JioHotstar / Disney+", "pct": 69.1, "seal": "Survey finding", "type": "Streaming app", "note": "Reported usage among surveyed viewers; multiple responses. Not market share.", "supports": "Used by roughly seven in ten surveyed viewers.", "not_proof": "That Netflix and JioHotstar audiences differ.", "band": "", "who": ""}, {"id": "youtube", "topic": "platform", "label": "YouTube", "pct": 68.8, "seal": "Survey finding", "type": "Streaming app", "note": "Reported usage among surveyed viewers; multiple responses. Not market share.", "supports": "Free video is a major route to anime.", "not_proof": "Whether the anime watched is licensed.", "band": "", "who": ""}, {"id": "prime", "topic": "platform", "label": "Amazon Prime Video", "pct": 56.4, "seal": "Survey finding", "type": "Streaming app", "note": "Reported usage among surveyed viewers; multiple responses. Not market share.", "supports": "More than half of respondents use it.", "not_proof": "Title availability on the service.", "band": "", "who": ""}, {"id": "cartoon", "topic": "platform", "label": "Cartoon Network", "pct": 48.0, "seal": "Survey finding", "type": "TV channel", "note": "Reported usage among surveyed viewers; multiple responses. Not market share.", "supports": "Broadcast TV remains a route to anime.", "not_proof": "How often respondents tune in.", "band": "", "who": ""}, {"id": "other_tv", "topic": "platform", "label": "Other TV channels", "pct": 41.0, "seal": "Survey finding", "type": "TV channel", "note": "Reported usage among surveyed viewers; multiple responses. Not market share.", "supports": "Several channels contribute.", "not_proof": "Which channels.", "band": "", "who": ""}, {"id": "dubbed", "topic": "audio", "label": "Dubbed versions", "pct": 61.1, "seal": "Survey finding", "type": "", "note": "", "supports": "Dubbing is the most common preferred format.", "not_proof": "That all Indians prefer dubs.", "band": "", "who": ""}, {"id": "subtitled", "topic": "audio", "label": "Subtitled, original Japanese audio", "pct": 35.1, "seal": "Survey finding", "type": "", "note": "", "supports": "A sizeable minority prefer original audio with subtitles.", "not_proof": "Which subtitle language they read.", "band": "", "who": ""}, {"id": "raw", "topic": "audio", "label": "Original Japanese audio, no subtitles", "pct": 3.8, "seal": "Survey finding", "type": "", "note": "", "supports": "Very few watch without subtitles.", "not_proof": "Their Japanese skill.", "band": "", "who": ""}, {"id": "dub_hindi", "topic": "dub_lang", "label": "Hindi", "pct": 73.1, "seal": "Survey finding", "type": "", "note": "", "supports": "Hindi dubbing is a strong localization signal.", "not_proof": "Demand for other Indian languages.", "band": "", "who": ""}, {"id": "dub_english", "topic": "dub_lang", "label": "English", "pct": 21.6, "seal": "Survey finding", "type": "", "note": "", "supports": "English dubs matter for a fifth of dub watchers.", "not_proof": "Regional demand.", "band": "", "who": ""}, {"id": "dub_other", "topic": "dub_lang", "label": "Other / not itemized", "pct": 5.3, "seal": "Calculated remainder", "type": "", "note": "Calculated as the remainder to 100%. The public summary does not itemize it.", "supports": "", "not_proof": "", "band": "", "who": ""}, {"id": "sub_english", "topic": "sub_lang", "label": "English", "pct": 68.9, "seal": "Survey finding", "type": "", "note": "", "supports": "English subtitles are the strong signal for original-audio viewers.", "not_proof": "Demand for other subtitle languages.", "band": "", "who": ""}, {"id": "sub_hindi", "topic": "sub_lang", "label": "Hindi", "pct": 23.3, "seal": "Survey finding", "type": "", "note": "", "supports": "Hindi subtitles reach nearly a quarter of that group.", "not_proof": "Regional demand.", "band": "", "who": ""}, {"id": "sub_other", "topic": "sub_lang", "label": "Other / not itemized", "pct": 7.8, "seal": "Calculated remainder", "type": "", "note": "Calculated as the remainder to 100%. The public summary does not itemize it.", "supports": "", "not_proof": "", "band": "", "who": ""}, {"id": "friends", "topic": "social", "label": "Discuss anime with friends", "pct": 66.0, "seal": "Survey finding", "type": "", "note": "", "supports": "Anime is a shared, social interest. Supports exploring discussion and sharing features.", "not_proof": "That users want a specific community feature.", "band": "", "who": ""}, {"id": "posting", "topic": "social", "label": "Post anime content on social media", "pct": 44.0, "seal": "Survey finding", "type": "", "note": "", "supports": "Many viewers publish content. Supports exploring shareable profiles and recommendations.", "not_proof": "That they would post inside MIRAI.", "band": "", "who": ""}, {"id": "creators", "topic": "social", "label": "Follow anime creators online", "pct": 43.4, "seal": "Survey finding", "type": "", "note": "", "supports": "Creator discovery is worth testing.", "not_proof": "Which creators or platforms.", "band": "", "who": ""}, {"id": "apparel", "topic": "merch", "label": "Apparel purchased", "pct": 72.1, "seal": "Survey finding", "type": "", "note": "Public summaries vary between 72.1% and 72.2%. Verify the question denominator before quoting.", "supports": "Apparel is the leading merchandise category among surveyed viewers.", "not_proof": "That 72% of India buys anime apparel.", "band": "", "who": ""}, {"id": "wp_common", "topic": "spend", "label": "Working professionals, most common band", "pct": 35.3, "seal": "Survey finding", "type": "", "note": "Six-month anime-related spending.", "supports": "", "not_proof": "", "band": "₹1,500–₹2,000", "who": "Working professionals"}, {"id": "sh_common", "topic": "spend", "label": "Students and homemakers, most common band", "pct": 36.8, "seal": "Survey finding", "type": "", "note": "Six-month anime-related spending.", "supports": "", "not_proof": "", "band": "₹500–₹1,000", "who": "Students and homemakers"}, {"id": "wp_heavy", "topic": "spend", "label": "Working professionals, heavy spenders", "pct": 2.1, "seal": "Survey finding", "type": "", "note": "Six-month anime-related spending.", "supports": "", "not_proof": "", "band": "₹6,000 or more", "who": "Working professionals"}, {"id": "sh_heavy", "topic": "spend", "label": "Students and homemakers, heavy spenders", "pct": 2.9, "seal": "Survey finding", "type": "", "note": "Six-month anime-related spending.", "supports": "", "not_proof": "", "band": "₹6,000 or more", "who": "Students and homemakers"}], "claim_checker": [{"id": "aud150", "claim": "India has 150 million active anime viewers", "verdict": "Needs a label", "label_to_use": "Industry estimate (Hakuhodo reporting expert estimates)", "avoid_saying": "Verified count of Indian anime viewers", "why": "The figure is an expert estimate. It is not derived from the 1,200-person survey and has no published confidence interval."}, {"id": "apparel72", "claim": "72% of Indian anime fans buy apparel", "verdict": "Not supported", "label_to_use": "Approximately 72% reported in public study summaries; verify denominator", "avoid_saying": "72% of India buys anime apparel", "why": "The share is of the surveyed sample, which excludes anyone without an OTT subscription, outside eight cities, or outside ages 15–39."}, {"id": "netflix74", "claim": "Netflix has 74% of the market", "verdict": "Not supported", "label_to_use": "Reported platform usage among surveyed viewers; multiple responses", "avoid_saying": "Platform market share", "why": "Respondents could pick several platforms, so shares overlap and do not describe subscribers or revenue."}, {"id": "hindi", "claim": "Indians prefer Hindi dubs", "verdict": "Not supported", "label_to_use": "Language preferences among the relevant surveyed subgroup", "avoid_saying": "All Indians prefer Hindi or English", "why": "Hindi leads among dub viewers in this sample. State-wise and regional-language demand was not measured."}, {"id": "age", "claim": "A third of Indian anime viewers are teenagers", "verdict": "Not supported", "label_to_use": "Sample allocation unless weighted national estimates are available", "avoid_saying": "National age distribution", "why": "Equal bands of 400 are the survey design, not the audience mix."}, {"id": "phone", "claim": "Surveyed viewers mostly watch on smartphones", "verdict": "Supported", "label_to_use": "Survey finding; n=1,200; ages 15–39; eight cities; Dec 2025–Jan 2026", "avoid_saying": "All Indian anime fans watch on phones", "why": "95.9% reported using a smartphone. Respondents could name several devices, so this is not exclusive use."}, {"id": "dubbed", "claim": "Most surveyed viewers prefer dubbed anime", "verdict": "Supported", "label_to_use": "Survey finding; n=1,200; ages 15–39; eight cities", "avoid_saying": "All Indians prefer dubs", "why": "61.1% preferred dubbed versions in this sample."}, {"id": "growth", "claim": "Anime viewing in India grew 16% in a year", "verdict": "Needs a label", "label_to_use": "Industry estimate of total viewing-time growth", "avoid_saying": "Measured year-on-year audience growth", "why": "The figure comes from industry estimates cited in a related public report, not from the survey."}, {"id": "social", "claim": "Two thirds of viewers discuss anime with friends", "verdict": "Supported", "label_to_use": "Survey finding among surveyed viewers", "avoid_saying": "Two thirds of all Indians", "why": "66% reported discussing anime with friends. This is a reported activity among the sample."}, {"id": "watchlist", "claim": "Users want a MIRAI watchlist feature", "verdict": "Not supported", "label_to_use": "Hypothesis to validate with user testing", "avoid_saying": "Users demand watchlists", "why": "Social behaviour supports exploring features, but no survey item measured demand for any specific MIRAI feature."}]};
+  var calcs = {}, cbs = [];
+  window.dash = {
+    data: function(id){ if (calcs[id]) return {status:'ok', data:calcs[id]}; if (D[id]) return {status:'ok', data:D[id]}; return {status:'missing', data:[]}; },
+    calc: function(id, o){ calcs[id] = o.fn.apply(null, o.inputs.map(function(i){ return D[i]; })); },
+    onData: function(fn){ cbs.push(fn); fn(); },
+    setLink: function(){}, params: function(){ return {}; }, setParams: function(){}, colors: []
+  };
+  window.addEventListener('resize', function(){ cbs.forEach(function(f){ f(); }); });
+})();
+</script>
+</head>
+<body>
+<div id="dash-root">
+<style>
+#dash-root { --dash-gutter: 0; }
+.au {
+  /* Layout: anime twilight city. Dusk-sky header with skyline, moon and a single shooting star; parallelogram manga tabs; hard-shadow panels. */
+  --night: #0b0e2e; --panel: #12163f; --panel2: #1a1f52; --edge: #3a4290; --text: #f6f1ff; --muted: #b6bce6;
+  --sky: #5fd4ff; --pink: #ff7eb6; --peach: #ffb38a; --gold: #ffd166; --mint: #7ee8c1; --violet: #a78bfa;
+  --serif: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", "Noto Serif CJK JP", "Source Han Serif", var(--font-anthropic-serif), serif;
+  --sans: var(--font-anthropic-sans), "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Noto Sans CJK JP", system-ui, sans-serif;
+  position: relative; color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.5; background: var(--night); overflow: hidden; min-height: 70vh;
+}
+.au *, .au *::before, .au *::after { box-sizing: border-box; }
+.au button { font: inherit; color: inherit; cursor: pointer; }
+.au :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.au p, .au h1, .au h2, .au h3, .au h4 { margin: 0; }
+.au [hidden] { display: none !important; }
+
+/* header */
+.au-head { position: relative; min-height: 290px; padding: 26px max(16px, 4vw) 0; overflow: hidden;
+  background:
+    radial-gradient(1.4px 1.4px at 12% 18%, #fff 50%, transparent 52%), radial-gradient(1.2px 1.2px at 27% 9%, #fff 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 41% 24%, #fff 50%, transparent 52%), radial-gradient(1.2px 1.2px at 58% 12%, #fff 50%, transparent 52%),
+    radial-gradient(1.4px 1.4px at 66% 30%, #fff 50%, transparent 52%), radial-gradient(1.2px 1.2px at 78% 8%, #fff 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 91% 22%, #fff 50%, transparent 52%), radial-gradient(1.2px 1.2px at 5% 34%, #fff 50%, transparent 52%),
+    linear-gradient(180deg, #14105a 0%, #3b1d78 45%, #b0407f 78%, #ff9a9e 100%); }
+.au-moon { position: absolute; right: 9%; top: 26px; width: 74px; height: 74px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #fffdf2, #ffe9b8 70%, #f3cf8c);
+  box-shadow: 0 0 40px 12px rgba(255,233,184,.35); }
+.au-dots { position: absolute; inset: 0 0 0 45%; background-image: radial-gradient(rgba(255,255,255,.2) 1.2px, transparent 1.6px); background-size: 9px 9px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 60%, transparent); mask-image: linear-gradient(90deg, transparent, #000 60%, transparent); opacity: .6; pointer-events: none; }
+.au-shoot { position: absolute; top: 40px; left: 20%; width: 110px; height: 2px; background: linear-gradient(90deg, transparent, #fff); border-radius: 2px; opacity: 0; transform: rotate(24deg); }
+@media (prefers-reduced-motion: no-preference) { .au-shoot { animation: au-shoot 1.6s ease-out .7s 1 both; } }
+@keyframes au-shoot { 0% { opacity: 0; transform: translate(0, 0) rotate(24deg); } 15% { opacity: 1; } 100% { opacity: 0; transform: translate(380px, 170px) rotate(24deg); } }
+.au-sky { position: absolute; left: 0; right: 0; bottom: 0; height: 84px; pointer-events: none; }
+.au-bld { position: absolute; bottom: 0; background: #0a0c26; }
+.au-bld.lit { background-image: radial-gradient(circle, rgba(255,209,102,.85) 1.1px, transparent 1.6px); background-size: 9px 11px; background-color: #0a0c26; }
+.au-brand { position: relative; display: flex; gap: 18px; align-items: flex-start; max-width: calc(1100px - 2 * max(16px, 4vw)); margin: 0 auto; }
+.au-kanji { flex: none; display: flex; flex-direction: column; align-items: center; font-family: var(--serif); font-size: clamp(44px, 7vw, 64px); line-height: .98; color: #fff; text-shadow: 3px 3px 0 var(--pink); }
+.au-kana { font-family: var(--serif); color: var(--gold); font-size: 14px; letter-spacing: .12em; }
+.au-title { font-family: var(--serif); font-weight: 600; font-size: clamp(28px, 4.8vw, 46px); line-height: 1.12; margin-top: 2px; text-wrap: balance; text-shadow: 2px 2px 0 rgba(10,12,38,.55); }
+.au-take { margin-top: 10px; max-width: 54ch; font-size: 16px; text-wrap: pretty; text-shadow: 0 1px 6px rgba(10,12,38,.8); }
+
+/* tabs */
+.au-tabs { display: flex; gap: 10px; overflow-x: auto; padding: 18px max(16px, 4vw) 12px; max-width: 1100px; margin: 0 auto; scrollbar-width: thin; }
+.au-tab { flex: none; min-width: 92px; padding: 7px 18px; background: var(--panel); border: 2px solid var(--edge); transform: skewX(-10deg); }
+.au-tab > span { display: grid; justify-items: center; transform: skewX(10deg); }
+.au-tab b { font-family: var(--serif); font-weight: 600; font-size: 21px; line-height: 1.15; color: var(--pink); }
+.au-tab i { font-style: normal; font-size: 12px; color: var(--muted); }
+.au-tab:hover { border-color: var(--pink); }
+.au-tab[aria-selected="true"] { background: var(--pink); border-color: var(--pink); box-shadow: 4px 4px 0 rgba(95,212,255,.5); }
+.au-tab[aria-selected="true"] b, .au-tab[aria-selected="true"] i { color: #1b0f2e; }
+
+/* page */
+.au-main { max-width: 1100px; margin: 0 auto; padding: 8px max(16px, 4vw) 36px; }
+.au-page { display: grid; gap: 20px; }
+.au-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+.au-panel { background: var(--panel); border: 2px solid var(--edge); border-radius: 3px; box-shadow: 6px 6px 0 rgba(255,126,182,.22); padding: 18px 20px; min-width: 0; }
+.au-panel h3 { font-family: var(--serif); font-size: 19px; font-weight: 600; }
+.au-sub { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.au-tag { display: inline-flex; transform: skewX(-10deg); background: var(--pink); color: #1b0f2e; padding: 2px 14px; font-family: var(--serif); font-size: 26px; font-weight: 600; line-height: 1.2; }
+.au-tag > span { transform: skewX(10deg); }
+.au-sec { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.au-sec h2 { font-family: var(--serif); font-size: 24px; font-weight: 600; }
+.au-sec p { width: 100%; color: var(--muted); max-width: 70ch; }
+.au-ctl { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 12px 0 6px; }
+.au-chip { padding: 5px 14px; background: transparent; border: 2px solid var(--edge); border-radius: 2px; color: var(--muted); font-size: 13px; transform: skewX(-8deg); }
+.au-chip:hover { border-color: var(--sky); color: var(--text); }
+.au-chip[aria-pressed="true"] { background: var(--sky); border-color: var(--sky); color: #04202e; font-weight: 700; }
+.au-lbl { color: var(--muted); font-size: 13px; }
+.au-sel { background: var(--panel2); color: var(--text); border: 2px solid var(--edge); border-radius: 2px; padding: 5px 9px; font: inherit; font-size: 13px; max-width: 100%; }
+
+/* kpi */
+.au-kpis { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr)); }
+.au-kpi { background: linear-gradient(160deg, var(--panel2), var(--panel)); border: 2px solid var(--edge); box-shadow: 5px 5px 0 rgba(95,212,255,.25); padding: 14px 16px; display: grid; gap: 4px; align-content: start; }
+.au-kpi .n { font-family: var(--serif); font-size: 40px; line-height: 1.05; font-variant-numeric: tabular-nums; }
+.au-kpi .n small { font-size: 18px; color: var(--sky); margin-left: 4px; font-family: var(--sans); }
+.au-kpi .l { color: var(--muted); font-size: 13px; }
+
+/* bars */
+.au-bars { display: grid; gap: 4px; margin-top: 10px; }
+.au-row { display: grid; grid-template-columns: minmax(8rem, 15rem) 1fr 4.6rem; gap: 12px; align-items: center; width: 100%; text-align: left; background: transparent; border: 0; padding: 6px 8px; border-radius: 2px; }
+button.au-row:hover, .au-row[aria-pressed="true"] { background: rgba(255,255,255,.07); }
+.au-rl { min-width: 0; font-size: 14px; overflow-wrap: anywhere; }
+.au-rl small { display: block; color: var(--muted); font-size: 12px; }
+.au-track { height: 16px; background: rgba(255,255,255,.08); clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
+.au-fill { height: 100%; width: 0; background: var(--c, var(--sky)); transition: width .7s cubic-bezier(.2,.8,.2,1); clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
+.au-val { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .au-fill { transition: none; } }
+@media (max-width: 540px) {
+  .au-row { grid-template-columns: 1fr 4.4rem; row-gap: 4px; }
+  .au-row .au-rl { grid-column: 1 / -1; }
+  .au-moon { width: 52px; height: 52px; right: 6%; }
+  .au-brand { gap: 12px; }
+}
+.au-legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; font-size: 13px; color: var(--muted); }
+.au-legend em { font-style: normal; display: inline-flex; align-items: center; gap: 6px; }
+.au-legend em::before { content: ""; width: 12px; height: 12px; background: var(--c); transform: skewX(-10deg); }
+
+/* seal */
+.au-seal { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; white-space: nowrap; }
+.au-seal b { width: 22px; height: 22px; display: grid; place-items: center; font-family: var(--serif); font-size: 13px; font-weight: 600; color: #160d28; background: var(--c); transform: skewX(-8deg); }
+
+/* detail */
+.au-detail { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; }
+.au-big { font-family: var(--serif); font-size: 52px; line-height: 1; font-variant-numeric: tabular-nums; color: var(--gold); }
+.au-two { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); margin-top: 10px; }
+.au-two div { background: var(--panel2); border-left: 4px solid var(--c); padding: 8px 12px; }
+.au-two b { display: block; font-size: 12px; color: var(--muted); font-weight: 600; }
+.au-two p { font-size: 14px; }
+@media (max-width: 480px) { .au-detail { grid-template-columns: 1fr; } }
+
+/* gauge */
+.au-gauge { --p: 0; width: 160px; height: 160px; border-radius: 50%; position: relative; display: grid; place-items: center;
+  background: conic-gradient(var(--sky) calc(var(--p) * 1%), rgba(255,255,255,.1) 0); }
+.au-gauge::after { content: ""; position: absolute; inset: 16px; border-radius: 50%; background: var(--panel); }
+.au-gauge > div { position: relative; z-index: 1; text-align: center; }
+.au-gauge .n { font-family: var(--serif); font-size: 32px; line-height: 1; font-variant-numeric: tabular-nums; }
+.au-gauge .l { font-size: 12px; color: var(--muted); }
+.au-flex { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+
+/* dots */
+.au-dots100 { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; max-width: 360px; margin-top: 12px; }
+.au-dot { aspect-ratio: 1; background: rgba(255,255,255,.09); border-radius: 3px 8px 3px 8px; }
+.au-dot.on { background: var(--c, var(--sky)); }
+
+/* ages */
+.au-ages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.au-age { background: var(--panel2); border: 2px solid var(--edge); padding: 12px 8px; text-align: center; }
+.au-age b { display: block; font-family: var(--serif); font-size: 24px; font-variant-numeric: tabular-nums; color: var(--sky); }
+.au-age span { font-size: 12px; color: var(--muted); }
+
+/* donut */
+.au-donut { width: min(100%, 260px); aspect-ratio: 1; display: block; }
+.au-donut circle { cursor: pointer; transition: opacity .2s; }
+.au-donut circle:focus-visible { outline: none; stroke-width: 34; }
+.au-call { border-left: 4px solid var(--gold); background: rgba(255,209,102,.09); padding: 10px 14px; }
+.au-note { color: var(--muted); font-size: 13px; }
+.au-stack { display: flex; height: 26px; gap: 2px; margin-top: 12px; }
+.au-stack div { background: var(--c); min-width: 6px; display: grid; place-items: center; font-size: 12px; color: #130a24; font-weight: 700; transform: skewX(-10deg); }
+
+/* checker */
+.au-verdict { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start; }
+.au-stamp { width: 92px; height: 92px; display: grid; place-items: center; font-family: var(--serif); font-size: 52px; font-weight: 600; color: #130a24; background: var(--c); border: 4px double rgba(19,10,36,.45); transform: rotate(-6deg); }
+.au-cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); margin-top: 10px; }
+.au-card { text-align: left; background: var(--panel2); border: 2px solid var(--edge); padding: 12px 14px; display: grid; gap: 6px; align-content: start; }
+.au-card:hover, .au-card[aria-pressed="true"] { border-color: var(--sky); }
+.au-card p { font-size: 14px; }
+@media (max-width: 480px) { .au-verdict { grid-template-columns: 1fr; } }
+
+.au-tip { position: absolute; z-index: 20; pointer-events: none; background: #070920; color: var(--text); border: 2px solid var(--pink); padding: 6px 10px; font-size: 12.5px; max-width: 18rem; opacity: 0; transition: opacity .12s; }
+.au-tip.on { opacity: 1; }
+.au-msg { padding: 24px; text-align: center; color: var(--muted); }
+.au-foot { max-width: 1100px; margin: 0 auto; padding: 0 max(16px, 4vw) 26px; color: var(--muted); font-size: 12.5px; }
+</style>
+
+<div class="au" id="au">
+  <header class="au-head">
+    <div class="au-dots" aria-hidden="true"></div>
+    <div class="au-moon" aria-hidden="true"></div>
+    <div class="au-shoot" aria-hidden="true"></div>
+    <div class="au-brand">
+      <div class="au-kanji" aria-hidden="true"><span>視</span><span>聴</span></div>
+      <div>
+        <p class="au-kana">インドのアニメ視聴者</p>
+        <h1 class="au-title">MIRAI Audience Atlas</h1>
+        <p class="au-take" id="au-take">Loading the survey results…</p>
+      </div>
+    </div>
+    <div class="au-sky" id="au-sky" aria-hidden="true"></div>
+  </header>
+
+  <nav class="au-tabs" role="tablist" aria-label="Dashboard sections">
+    <button class="au-tab" role="tab" data-tab="overview"><span><b>概要</b><i>Overview</i></span></button>
+    <button class="au-tab" role="tab" data-tab="devices"><span><b>端末</b><i>Devices</i></span></button>
+    <button class="au-tab" role="tab" data-tab="platforms"><span><b>配信</b><i>Platforms</i></span></button>
+    <button class="au-tab" role="tab" data-tab="language"><span><b>言語</b><i>Language</i></span></button>
+    <button class="au-tab" role="tab" data-tab="community"><span><b>交流</b><i>Community</i></span></button>
+    <button class="au-tab" role="tab" data-tab="verify"><span><b>検証</b><i>Claim check</i></span></button>
+  </nav>
+
+  <main class="au-main">
+    <p class="au-msg" id="au-msg" hidden></p>
+
+    <section class="au-page" id="overview" data-page>
+      <div class="au-sec"><span class="au-tag"><span>概要</span></span><h2>Who watches anime in India</h2>
+        <p>A selected group of anime-engaged, OTT-subscribed viewers in eight cities, plus one industry estimate of the wider audience. Each fact carries a seal that says how it is known.</p></div>
+      <div class="au-kpis">
+        <div class="au-kpi"><span class="n"><span data-source="audience_facts" data-field="value" data-where="key=est_audience">—</span><small>million</small></span><span class="l">Active anime audience, industry estimate</span><span id="au-seal-est"></span></div>
+        <div class="au-kpi"><span class="n" data-source="audience_facts" data-field="value" data-where="key=sample">—</span><span class="l">Surveyed viewers, ages <span data-source="audience_facts" data-field="value" data-where="key=age_min">—</span> to <span data-source="audience_facts" data-field="value" data-where="key=age_max">—</span></span><span id="au-seal-n"></span></div>
+        <div class="au-kpi"><span class="n" data-source="audience_metrics" data-field="pct" data-where="id=dubbed">—</span><span class="l">Prefer dubbed anime</span><span id="au-seal-dub"></span></div>
+        <div class="au-kpi"><span class="n" data-source="audience_metrics" data-field="pct" data-where="id=netflix">—</span><span class="l">Use Netflix, the most-used platform</span><span id="au-seal-nf"></span></div>
+      </div>
+      <div class="au-grid">
+        <div class="au-panel">
+          <h3>Mobile-first meter</h3><p class="au-sub">Share of surveyed viewers who watch on a smartphone</p>
+          <div class="au-flex" style="margin-top:14px">
+            <div class="au-gauge" id="au-gauge" role="img" aria-label="Smartphone share"><div><div class="n" data-source="audience_metrics" data-field="pct" data-where="id=smartphone">—</div><div class="l">smartphone</div></div></div>
+            <p class="au-note" style="flex:1;min-width:12rem">Respondents could name several devices. Phones lead, television follows, so mobile screens come first without ignoring the living room.</p>
+          </div>
+        </div>
+        <div class="au-panel">
+          <h3>Age bands are a sample design</h3><p class="au-sub">Equal groups were recruited on purpose</p>
+          <div class="au-ages" id="au-ages" data-source="audience_facts"></div>
+          <div class="au-call" style="margin-top:12px"><p>These bands show how the survey was built. They are not the national age split of anime viewers.</p></div>
+        </div>
+      </div>
+      <div class="au-grid">
+        <div class="au-panel"><h3>Where and when</h3><p class="au-sub" id="au-where">—</p></div>
+        <div class="au-panel"><h3>How to read the seals</h3><div id="au-seals" style="display:grid;gap:8px;margin-top:10px"></div></div>
+      </div>
+    </section>
+
+    <section class="au-page" id="devices" data-page hidden>
+      <div class="au-sec"><span class="au-tag"><span>端末</span></span><h2>What they watch on</h2>
+        <p>Respondents could name several devices, so the shares do not add up to a whole. Select a device for what it supports and what it does not prove.</p></div>
+      <div class="au-panel">
+        <div class="au-ctl">
+          <span class="au-lbl">View as</span>
+          <button class="au-chip" data-dv="bars" aria-pressed="true">Bars</button>
+          <button class="au-chip" data-dv="dots" aria-pressed="false">100 viewers</button>
+        </div>
+        <div id="au-dev" data-source="audience_metrics"></div>
+      </div>
+      <div class="au-panel"><div id="au-devd" data-source="audience_metrics"></div></div>
+    </section>
+
+    <section class="au-page" id="platforms" data-page hidden>
+      <div class="au-sec"><span class="au-tag"><span>配信</span></span><h2>Where they watch</h2>
+        <p>Usage reported by surveyed viewers, with several platforms allowed per person. This is not market share.</p></div>
+      <div class="au-panel">
+        <div class="au-ctl">
+          <button class="au-chip" data-pt="all" aria-pressed="true">All six</button>
+          <button class="au-chip" data-pt="Streaming app" aria-pressed="false">Streaming apps</button>
+          <button class="au-chip" data-pt="TV channel" aria-pressed="false">TV channels</button>
+          <label class="au-lbl" for="au-psort" style="margin-left:auto">Order</label>
+          <select class="au-sel" id="au-psort"><option value="rank">Highest first</option><option value="name">A to Z</option></select>
+        </div>
+        <div class="au-bars" id="au-plat" data-source="audience_metrics"></div>
+        <div class="au-legend" id="au-plegend"></div>
+      </div>
+      <div class="au-panel"><div id="au-platd" data-source="audience_metrics"></div></div>
+    </section>
+
+    <section class="au-page" id="language" data-page hidden>
+      <div class="au-sec"><span class="au-tag"><span>言語</span></span><h2>How they like it sounding</h2>
+        <p>Select a slice of the ring to see which languages those viewers prefer.</p></div>
+      <div class="au-grid">
+        <div class="au-panel">
+          <h3>Preferred audio format</h3><p class="au-sub">Each viewer picks one format</p>
+          <div class="au-flex" style="margin-top:12px">
+            <div id="au-donut" data-source="audience_metrics" style="flex:none;width:min(100%,260px)"></div>
+            <div class="au-bars" id="au-dlegend" style="flex:1;min-width:11rem"></div>
+          </div>
+        </div>
+        <div class="au-panel">
+          <h3 id="au-lh">Language preference</h3><p class="au-sub" id="au-ls">—</p>
+          <div id="au-lang" data-source="audience_metrics"></div>
+        </div>
+      </div>
+      <div class="au-panel"><div class="au-call"><p>Hindi dubbing is a strong signal and English subtitles are a strong signal for original-audio viewers. Neither shows demand for other Indian languages, which needs separate regional research.</p></div></div>
+    </section>
+
+    <section class="au-page" id="community" data-page hidden>
+      <div class="au-sec"><span class="au-tag"><span>交流</span></span><h2>Fandom, sharing and spending</h2>
+        <p>Reported activities among surveyed viewers. They support exploring features and merchandise, but they are not proof of demand.</p></div>
+      <div class="au-panel">
+        <h3>Social behaviour</h3>
+        <div class="au-bars" id="au-soc" data-source="audience_metrics"></div>
+      </div>
+      <div class="au-panel"><div id="au-socd" data-source="audience_metrics"></div></div>
+      <div class="au-grid">
+        <div class="au-panel">
+          <h3>Merchandise signal</h3><p class="au-sub">The leading category in the survey</p>
+          <div class="au-flex" style="margin-top:12px"><div class="au-big" data-source="audience_metrics" data-field="pct" data-where="id=apparel">—</div><p class="au-note" style="flex:1;min-width:10rem" id="au-apn">—</p></div>
+        </div>
+        <div class="au-panel">
+          <h3>Six-month anime spending</h3><p class="au-sub">Most common bands and heavy spenders, as shares of each group</p>
+          <div class="au-bars" id="au-spend" data-source="audience_metrics"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="au-page" id="verify" data-page hidden>
+      <div class="au-sec"><span class="au-tag"><span>検証</span></span><h2>Can we say that?</h2>
+        <p>Pick a claim to see whether the data supports it and the wording to use in MIRAI.</p></div>
+      <div class="au-panel">
+        <div class="au-ctl"><label class="au-lbl" for="au-cq">Claim</label><select class="au-sel" id="au-cq" style="flex:1;min-width:12rem"></select></div>
+        <div class="au-verdict" id="au-verdict" data-source="claim_checker" style="margin-top:12px"></div>
+      </div>
+      <div class="au-panel">
+        <h3>All claims</h3>
+        <div class="au-ctl" role="group" aria-label="Filter claims">
+          <button class="au-chip" data-cv="all" aria-pressed="true">All</button>
+          <button class="au-chip" data-cv="Supported" aria-pressed="false">Supported</button>
+          <button class="au-chip" data-cv="Needs a label" aria-pressed="false">Needs a label</button>
+          <button class="au-chip" data-cv="Not supported" aria-pressed="false">Not supported</button>
+        </div>
+        <div class="au-cards" id="au-cards" data-source="claim_checker"></div>
+      </div>
+    </section>
+  </main>
+
+  <p class="au-foot">Source: Hakuhodo India, The Time Is Now study (fieldwork Dec 2025 to Jan 2026), as compiled in the MIRAI India Anime Audience report. Survey figures describe surveyed viewers only.</p>
+  <div class="au-tip" id="au-tip" role="tooltip"></div>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('au');
+  const IDS = ['audience_facts', 'audience_metrics', 'claim_checker'];
+  const TABS = ['overview', 'devices', 'platforms', 'language', 'community', 'verify'];
+  const SEALS = {
+    'Survey finding': { k: '調', c: '--mint', d: 'Reported in the Hakuhodo survey of 1,200 viewers.' },
+    'Industry estimate': { k: '推', c: '--gold', d: 'An expert estimate quoted by the study. Not a count.' },
+    'Calculated remainder': { k: '算', c: '--pink', d: 'What is left to reach 100%. The summary does not itemize it.' },
+    'Hypothesis': { k: '仮', c: '--violet', d: 'An idea to test with MIRAI users. Not evidence.' },
+  };
+  const VERD = { 'Supported': { k: '可', c: '--mint' }, 'Needs a label': { k: '要', c: '--gold' }, 'Not supported': { k: '否', c: '--pink' } };
+  const S = { tab: 'overview', dv: 'bars', dsel: 'smartphone', pt: 'all', psort: 'rank', psel: 'netflix', amode: 'dubbed', ssel: 'friends', cq: 'aud150', cv: 'all', inited: false };
+  let D = null;
+
+  const h = (tag, props, ...kids) => {
+    const e = document.createElement(tag);
+    if (props) for (const k in props) {
+      const v = props[k];
+      if (v == null || v === false) continue;
+      if (k === 'class') e.className = v;
+      else if (k === 'style') e.style.cssText = v;
+      else if (k.slice(0, 2) === 'on') e.addEventListener(k.slice(2), v);
+      else e.setAttribute(k, v === true ? '' : v);
+    }
+    kids.flat().forEach((c) => { if (c != null && c !== false) e.append(c.nodeType ? c : document.createTextNode(String(c))); });
+    return e;
+  };
+  const NS = 'http://www.w3.org/2000/svg';
+  const sv = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+  const $ = (s, r) => (r || root).querySelector(s);
+  const $$ = (s, r) => [...(r || root).querySelectorAll(s)];
+  const clear = (e) => e.replaceChildren();
+  const pct = (v) => Number(v).toFixed(1) + '%';
+  const num = (v) => Number(v).toLocaleString('en-US');
+  const seal = (label) => { const s = SEALS[label] || { k: '?', c: '--muted' }; return h('span', { class: 'au-seal', style: '--c:var(' + s.c + ')' }, h('b', null, s.k), label); };
+  const rows = (topic) => D.audience_metrics.filter((r) => r.topic === topic);
+  const met = (id) => D.audience_metrics.find((r) => r.id === id);
+  const fact = (k) => D.audience_facts.find((r) => r.key === k);
+
+  const tip = document.getElementById('au-tip');
+  root.addEventListener('pointerover', (ev) => {
+    const t = ev.target.closest && ev.target.closest('[data-tip]');
+    if (!t) { tip.classList.remove('on'); return; }
+    tip.textContent = t.getAttribute('data-tip'); tip.classList.add('on'); place(ev);
+  });
+  root.addEventListener('pointermove', (ev) => { if (tip.classList.contains('on')) place(ev); });
+  root.addEventListener('pointerleave', () => tip.classList.remove('on'));
+  function place(ev) {
+    const r = root.getBoundingClientRect();
+    let x = ev.clientX - r.left + 14; const y = ev.clientY - r.top + 16; const w = tip.offsetWidth;
+    if (x + w > r.width - 8) x = Math.max(8, ev.clientX - r.left - w - 14);
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  }
+  function grow(scope) {
+    requestAnimationFrame(() => requestAnimationFrame(() => { $$('.au-fill[data-w]', scope).forEach((f) => { f.style.width = f.getAttribute('data-w') + '%'; }); }));
+  }
+  const row = (o) => {
+    const body = [h('div', { class: 'au-rl' }, o.label, o.sub ? h('small', null, o.sub) : null),
+      h('div', { class: 'au-track' }, h('div', { class: 'au-fill', 'data-w': Math.max(0.6, o.w).toFixed(2), style: '--c:' + (o.color || 'var(--sky)') })),
+      h('div', { class: 'au-val' }, o.val)];
+    const attrs = { class: 'au-row', 'data-tip': o.tip };
+    if (o.onclick) { attrs.onclick = o.onclick; attrs['aria-pressed'] = o.pressed ? 'true' : 'false'; return h('button', attrs, ...body); }
+    return h('div', attrs, ...body);
+  };
+  const detail = (box, r) => {
+    clear(box);
+    box.append(h('div', { class: 'au-detail' }, h('div', { class: 'au-big' }, pct(r.pct)),
+      h('div', null, h('h3', null, r.label), r.note ? h('p', { class: 'au-note' }, r.note) : null, h('div', { style: 'margin-top:6px' }, seal(r.seal)))));
+    if (r.supports || r.not_proof) box.append(h('div', { class: 'au-two' },
+      h('div', { style: '--c:var(--mint)' }, h('b', null, 'What it supports'), h('p', null, r.supports || 'Nothing further is stated.')),
+      h('div', { style: '--c:var(--pink)' }, h('b', null, 'What it does not prove'), h('p', null, r.not_proof || 'Nothing further is stated.'))));
+  };
+
+  function load() {
+    const out = {};
+    for (const id of IDS) { const r = dash.data(id); if (r.status !== 'ok') return { bad: r.status }; out[id] = r.data; }
+    return { ok: out };
+  }
+
+  function renderHead() {
+    const dev = [...rows('device')].sort((a, b) => b.pct - a.pct)[0];
+    const plat = [...rows('platform')].sort((a, b) => b.pct - a.pct)[0];
+    const du = met('dubbed');
+    $('#au-take').textContent = 'Surveyed viewers watch mostly on ' + dev.label.toLowerCase() + 's (' + pct(dev.pct) + '), favour dubbed anime (' + pct(du.pct) + ') and use ' + plat.label + ' most (' + pct(plat.pct) + ').';
+  }
+  function renderOverview() {
+    const f = (sel, text) => { const e = $(sel); if (e) e.textContent = text; };
+    f('[data-where="key=est_audience"]', String(fact('est_audience').value));
+    f('[data-where="key=sample"]', num(fact('sample').value));
+    f('[data-where="key=age_min"]', String(fact('age_min').value));
+    f('[data-where="key=age_max"]', String(fact('age_max').value));
+    f('[data-where="id=dubbed"]', pct(met('dubbed').pct));
+    f('[data-where="id=netflix"]', pct(met('netflix').pct));
+    const sm = met('smartphone');
+    f('#au-gauge [data-where="id=smartphone"]', pct(sm.pct));
+    $('#au-gauge').style.setProperty('--p', String(sm.pct));
+    const put = (id, label) => { const e = $(id); clear(e); e.append(seal(label)); };
+    put('#au-seal-est', fact('est_audience').seal); put('#au-seal-n', fact('sample').seal); put('#au-seal-dub', met('dubbed').seal); put('#au-seal-nf', met('netflix').seal);
+    const ages = $('#au-ages'); clear(ages);
+    ['band_teens', 'band_20s', 'band_30s'].forEach((k) => { const r = fact(k); ages.append(h('div', { class: 'au-age', 'data-tip': r.note }, h('b', null, num(r.value)), h('span', null, r.label))); });
+    $('#au-where').textContent = fact('cities').note + ' ' + fact('fieldwork').note + ' Fieldwork ran ' + fact('fieldwork').value + '.';
+    const sb = $('#au-seals');
+    if (!sb.childElementCount) Object.keys(SEALS).forEach((k) => sb.append(h('div', { style: 'display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center' }, seal(k), h('span', { class: 'au-note' }, SEALS[k].d))));
+  }
+
+  function renderDevices() {
+    const list = [...rows('device')].sort((a, b) => b.pct - a.pct);
+    const box = $('#au-dev'); clear(box);
+    if (S.dv === 'bars') {
+      const bars = h('div', { class: 'au-bars' });
+      list.forEach((r) => bars.append(row({ label: r.label, w: r.pct, val: pct(r.pct), tip: r.label + ': ' + pct(r.pct) + ' of surveyed viewers', color: r.id === S.dsel ? 'var(--pink)' : 'var(--sky)', pressed: r.id === S.dsel, onclick: () => { S.dsel = r.id; renderDevices(); } })));
+      box.append(bars); grow(box);
+    } else {
+      const sel = list.find((r) => r.id === S.dsel) || list[0];
+      const n = Math.round(sel.pct);
+      box.append(h('div', { class: 'au-ctl' }, ...list.map((r) => h('button', { class: 'au-chip', 'aria-pressed': r.id === sel.id ? 'true' : 'false', onclick: () => { S.dsel = r.id; renderDevices(); } }, r.label))));
+      const g = h('div', { class: 'au-dots100', role: 'img', 'aria-label': 'If 100 surveyed viewers, about ' + n + ' use ' + sel.label });
+      for (let i = 0; i < 100; i++) g.append(h('span', { class: 'au-dot' + (i < n ? ' on' : ''), style: '--c:var(--pink)' }));
+      box.append(g, h('p', { class: 'au-note', style: 'margin-top:10px' }, 'Out of every 100 surveyed viewers, about ' + n + ' use a ' + sel.label.toLowerCase() + '. Rounded to whole viewers.'));
+    }
+    detail($('#au-devd'), list.find((r) => r.id === S.dsel) || list[0]);
+  }
+
+  function renderPlatforms() {
+    let list = rows('platform');
+    const all = list;
+    if (S.pt !== 'all') list = list.filter((r) => r.type === S.pt);
+    list = [...list].sort(S.psort === 'name' ? (a, b) => a.label.localeCompare(b.label) : (a, b) => b.pct - a.pct);
+    const TC = { 'Streaming app': 'var(--sky)', 'TV channel': 'var(--peach)' };
+    const box = $('#au-plat'); clear(box);
+    list.forEach((r) => box.append(row({ label: r.label, sub: r.type, w: r.pct, val: pct(r.pct), color: TC[r.type], tip: r.label + ': ' + pct(r.pct) + ' of surveyed viewers reported using it.', pressed: r.id === S.psel, onclick: () => { S.psel = r.id; renderPlatforms(); } })));
+    grow(box);
+    const lg = $('#au-plegend'); clear(lg); Object.keys(TC).forEach((k) => lg.append(h('em', { style: '--c:' + TC[k] }, k)));
+    detail($('#au-platd'), all.find((r) => r.id === S.psel) || all[0]);
+  }
+
+  function renderLanguage() {
+    const audio = rows('audio');
+    const box = $('#au-donut'); clear(box);
+    const R = 70, C = 2 * Math.PI * R, COL = ['var(--sky)', 'var(--pink)', 'var(--gold)'];
+    const svg = sv('svg', { viewBox: '0 0 200 200', class: 'au-donut', role: 'group', 'aria-label': 'Preferred audio format' });
+    svg.append(sv('circle', { cx: 100, cy: 100, r: R, fill: 'none', stroke: 'rgba(255,255,255,.08)', 'stroke-width': 28 }));
+    let off = 0;
+    const total = audio.reduce((a, r) => a + r.pct, 0);
+    audio.forEach((r, i) => {
+      const len = (r.pct / total) * C;
+      const c = sv('circle', { cx: 100, cy: 100, r: R, fill: 'none', stroke: COL[i], 'stroke-width': r.id === S.amode ? 34 : 26, 'stroke-dasharray': Math.max(1, len - 3) + ' ' + C, 'stroke-dashoffset': -off, transform: 'rotate(-90 100 100)', tabindex: 0, role: 'button', 'aria-label': r.label + ' ' + pct(r.pct), 'data-tip': r.label + ': ' + pct(r.pct) });
+      c.addEventListener('click', () => { S.amode = r.id; renderLanguage(); });
+      c.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); S.amode = r.id; renderLanguage(); } });
+      svg.append(c); off += len;
+    });
+    const sel = audio.find((r) => r.id === S.amode) || audio[0];
+    const t1 = sv('text', { x: 100, y: 104, 'text-anchor': 'middle', fill: '#f6f1ff', 'font-size': 26, 'font-family': 'serif' }); t1.textContent = pct(sel.pct);
+    svg.append(t1); box.append(svg);
+    const lg = $('#au-dlegend'); clear(lg);
+    audio.forEach((r, i) => lg.append(row({ label: r.label, w: r.pct, val: pct(r.pct), color: COL[i], tip: r.label, pressed: r.id === S.amode, onclick: () => { S.amode = r.id; renderLanguage(); } })));
+    grow(lg);
+    const lang = $('#au-lang'); clear(lang);
+    const topic = S.amode === 'dubbed' ? 'dub_lang' : S.amode === 'subtitled' ? 'sub_lang' : null;
+    $('#au-lh').textContent = topic ? 'Language among ' + (S.amode === 'dubbed' ? 'dub' : 'subtitle') + ' viewers' : 'Original audio without subtitles';
+    $('#au-ls').textContent = topic ? 'Shares within this group. Remainders are calculated, not itemized.' : 'No language split was published for this group.';
+    if (topic) {
+      const lr = rows(topic);
+      const st = h('div', { class: 'au-stack' });
+      const LC = ['var(--sky)', 'var(--pink)', 'var(--muted)'];
+      lr.forEach((r, i) => st.append(h('div', { style: 'flex:' + r.pct + ';--c:' + LC[i], 'data-tip': r.label + ': ' + pct(r.pct) }, r.pct >= 15 ? Math.round(r.pct) + '%' : '')));
+      lang.append(st);
+      const bars = h('div', { class: 'au-bars' });
+      lr.forEach((r, i) => bars.append(row({ label: r.label, w: r.pct, val: pct(r.pct), color: LC[i], tip: r.note || r.label + ': ' + pct(r.pct) })));
+      lang.append(bars, h('div', { style: 'margin-top:10px;display:flex;gap:14px;flex-wrap:wrap' }, seal('Survey finding'), seal('Calculated remainder')));
+      grow(lang);
+    } else lang.append(h('p', { class: 'au-note' }, sel.supports));
+  }
+
+  function renderCommunity() {
+    const soc = rows('social');
+    const box = $('#au-soc'); clear(box);
+    soc.forEach((r) => box.append(row({ label: r.label, w: r.pct, val: pct(r.pct), color: r.id === S.ssel ? 'var(--pink)' : 'var(--sky)', tip: r.label + ': ' + pct(r.pct), pressed: r.id === S.ssel, onclick: () => { S.ssel = r.id; renderCommunity(); } })));
+    grow(box);
+    detail($('#au-socd'), soc.find((r) => r.id === S.ssel) || soc[0]);
+    const ap = met('apparel');
+    $('[data-where="id=apparel"]').textContent = pct(ap.pct);
+    $('#au-apn').textContent = ap.note + ' ' + ap.not_proof;
+    const sp = $('#au-spend'); clear(sp);
+    ['Working professionals', 'Students and homemakers'].forEach((g) => {
+      sp.append(h('div', { style: 'margin:10px 8px 2px;font-family:var(--serif);color:var(--gold)' }, g));
+      rows('spend').filter((r) => r.who === g).forEach((r) => sp.append(row({ label: r.band, sub: r.label.indexOf('heavy') >= 0 ? 'Heavy spenders' : 'Most common band', w: (100 * r.pct) / 40, val: pct(r.pct), color: r.label.indexOf('heavy') >= 0 ? 'var(--pink)' : 'var(--sky)', tip: pct(r.pct) + ' of ' + g.toLowerCase() + ' reported ' + r.band + ' over six months.' })));
+    });
+    grow(sp);
+  }
+
+  function renderVerify() {
+    const cl = D.claim_checker;
+    const sel = $('#au-cq');
+    if (!sel.options.length) cl.forEach((c) => sel.append(new Option(c.claim, c.id)));
+    sel.value = S.cq;
+    const c = cl.find((x) => x.id === S.cq) || cl[0];
+    const v = VERD[c.verdict] || { k: '?', c: '--muted' };
+    const box = $('#au-verdict'); clear(box);
+    box.append(h('div', { class: 'au-stamp', style: '--c:var(' + v.c + ')', 'aria-hidden': 'true' }, v.k),
+      h('div', null, h('h3', null, c.verdict + ': ' + c.claim),
+        h('div', { class: 'au-two' },
+          h('div', { style: '--c:var(--mint)' }, h('b', null, 'Say instead'), h('p', null, c.label_to_use)),
+          h('div', { style: '--c:var(--pink)' }, h('b', null, 'Avoid saying'), h('p', null, c.avoid_saying)),
+          h('div', { style: '--c:var(--sky)' }, h('b', null, 'Why'), h('p', null, c.why)))));
+    const cards = $('#au-cards'); clear(cards);
+    cl.filter((x) => S.cv === 'all' || x.verdict === S.cv).forEach((x) => {
+      const vv = VERD[x.verdict] || { k: '?', c: '--muted' };
+      cards.append(h('button', { class: 'au-card', 'aria-pressed': x.id === S.cq ? 'true' : 'false', onclick: () => { S.cq = x.id; renderVerify(); root.scrollIntoView({ block: 'start' }); } },
+        h('span', { class: 'au-seal', style: '--c:var(' + vv.c + ')' }, h('b', null, vv.k), x.verdict), h('p', null, x.claim)));
+    });
+  }
+
+  function show() {
+    $$('[data-page]').forEach((p) => { p.hidden = p.id !== S.tab; });
+    $$('.au-tab').forEach((t) => t.setAttribute('aria-selected', t.getAttribute('data-tab') === S.tab ? 'true' : 'false'));
+  }
+  function go(t) { S.tab = t; show(); render(); try { dash.setLink(t); } catch (e) {} root.scrollIntoView({ block: 'start' }); }
+  $$('.au-tab').forEach((t) => t.addEventListener('click', () => go(t.getAttribute('data-tab'))));
+  const pressGroup = (attr, key) => $$('[' + attr + ']').forEach((b) => b.addEventListener('click', () => { S[key] = b.getAttribute(attr); $$('[' + attr + ']').forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); render(); }));
+  pressGroup('data-dv', 'dv'); pressGroup('data-pt', 'pt'); pressGroup('data-cv', 'cv');
+  $('#au-psort').addEventListener('change', (e) => { S.psort = e.target.value; render(); });
+  $('#au-cq').addEventListener('change', (e) => { S.cq = e.target.value; render(); });
+
+  // skyline
+  const sky = $('#au-sky');
+  let x = -10, i = 0;
+  while (x < 1400) {
+    const w = 26 + ((i * 29) % 40), hgt = 24 + ((i * 47) % 58);
+    const b = h('div', { class: 'au-bld' + (i % 3 === 0 ? ' lit' : '') }); b.style.left = x + 'px'; b.style.width = w + 'px'; b.style.height = hgt + 'px';
+    sky.append(b); x += w - 2 + ((i * 7) % 6); i++;
+  }
+
+  function render() {
+    const res = load();
+    const msg = $('#au-msg');
+    if (!res.ok) { msg.hidden = false; msg.textContent = res.bad === 'loading' ? 'Loading the data…' : 'Some data did not load. Open Sources to see which.'; $$('[data-page]').forEach((p) => { p.hidden = true; }); return; }
+    D = res.ok; msg.hidden = true; show();
+    renderHead();
+    if (S.tab === 'overview') renderOverview();
+    else if (S.tab === 'devices') renderDevices();
+    else if (S.tab === 'platforms') renderPlatforms();
+    else if (S.tab === 'language') renderLanguage();
+    else if (S.tab === 'community') renderCommunity();
+    else if (S.tab === 'verify') renderVerify();
+  }
+  const named = (location.hash || '').slice(1);
+  if (TABS.indexOf(named) >= 0) S.tab = named;
+  show();
+  dash.onData(render);
+})();
+</script>
+
+</div>
+</body>
+</html>

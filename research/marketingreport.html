@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>India Anime Market Fit Engine</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#f6f4fb;--card:#fff;--tx:#1d1a2b;--mu:#6b6882;--bd:#e4e0f0;--a:#7c3aed;--b:#ec4899;--c:#06b6d4;--g:#10b981;--o:#f59e0b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0d1a;--card:#1a1730;--tx:#f1eefc;--mu:#a29fc0;--bd:#2c2850}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+.w{max-width:1100px;margin:0 auto;padding:16px}
+.hero{background:linear-gradient(120deg,#4c1d95,#be185d 60%,#f59e0b);color:#fff;border-radius:22px;padding:28px 24px}
+.hero h1{margin:0 0 6px;font-size:clamp(24px,5vw,38px);letter-spacing:-.5px}.hero p{margin:0;opacity:.92;max-width:680px}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:18px}
+.kp div{background:rgba(255,255,255,.16);border-radius:14px;padding:10px 12px}.kp b{font-size:24px;display:block}.kp span{font-size:12px;opacity:.9}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:18px;margin-top:14px}
+h2{margin:0 0 4px;font-size:19px}.sub{color:var(--mu);font-size:13px;margin:0 0 12px}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:14px}
+.cv{position:relative;height:270px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.chips label{cursor:pointer}.chips input{display:none}
+.chips span{display:inline-block;padding:5px 12px;border:1px solid var(--bd);border-radius:99px;font-size:13px;background:var(--bg)}
+.chips input:checked+span{background:var(--a);color:#fff;border-color:var(--a)}
+select{background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:6px 10px;font:inherit}
+.score{text-align:center}.score .n{font-size:58px;font-weight:800;line-height:1;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{display:inline-block;padding:3px 12px;border-radius:99px;font-weight:600;font-size:13px;color:#fff}
+.bars div{margin:7px 0;font-size:13px}.bars i{display:block;height:9px;border-radius:9px;background:var(--bd);overflow:hidden;margin-top:3px}.bars i u{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--b))}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--bd)}th{color:var(--mu);font-weight:600}
+.pill{padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;color:#fff}
+.ph{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.ph div{border:1px solid var(--bd);border-left:5px solid var(--a);border-radius:12px;padding:10px 12px;background:var(--bg)}.ph b{display:block}
+ul{margin:6px 0 0;padding-left:20px}li{margin:4px 0}
+input[type=range]{width:100%;accent-color:var(--a)}.big{font-size:34px;font-weight:800;color:var(--g)}
+.note{font-size:12.5px;color:var(--mu);border-left:4px solid var(--o);padding:8px 12px;background:var(--bg);border-radius:8px}
+</style></head><body><div class="w">
+<div class="hero"><h1>🎌 India Anime Market-Fit Engine</h1><p>Enter an unreleased title’s DNA. Get an Indian-audience score, the states to launch in, which dub to fund first, and where the money is.</p>
+<div class="kp" id="kp"></div></div>
+
+<div class="card"><h2>① Describe the title</h2><p class="sub">Pick genres, source and format. Everything below recalculates instantly.</p>
+<div class="chips" id="gc"></div>
+Source: <select id="src"></select> &nbsp; Format: <select id="fmt"><option value="TV">TV series</option><option value="MOVIE">Movie</option><option value="ONA">Streaming original (ONA)</option></select></div>
+
+<div class="g2">
+<div class="card score"><h2>② Market potential</h2><p class="sub">Likelihood of attracting Indian anime fans</p><div class="n" id="mp">–</div><div style="margin:8px 0"><span class="tag" id="tg"></span></div>
+<div class="bars" id="mb" style="text-align:left"></div></div>
+<div class="card"><h2>③ Commercial opportunity radar</h2><p class="sub">Streaming · Theatrical · Merchandise · Licensing</p><div class="cv"><canvas id="rd"></canvas></div></div></div>
+
+<div class="card"><h2>④ Regional demand: where to launch first</h2><p class="sub">Demand Index = average of spend per fan, paying-fan share, heavy-viewing share and cinema willingness (0–100, min–max across states)</p>
+<div class="g2"><div class="cv"><canvas id="st"></canvas></div><div style="overflow-x:auto"><table id="tb"></table></div></div></div>
+
+<div class="card"><h2>⑤ Localization: which language to fund</h2><p class="sub">Preferred way to watch, by state (% of respondents)</p>
+<div class="g2"><div class="cv"><canvas id="lg"></canvas></div><div><div class="big" id="hb"></div><ul id="lu"></ul></div></div></div>
+
+<div class="g2"><div class="card"><h2>⑥ Where Indian fans watch</h2><p class="sub">Platform used most (%)</p><div class="cv"><canvas id="pl"></canvas></div></div>
+<div class="card"><h2>⑦ Wallet: 6-month anime spend</h2><p class="sub">% of fans per spend band</p><div class="cv"><canvas id="sd"></canvas></div></div></div>
+
+<div class="card"><h2>⑧ Genre strength (global catalog)</h2><p class="sub">Average audience (members) per title across 820 titles from 2025–26; your picks are highlighted</p><div class="cv" style="height:300px"><canvas id="gn"></canvas></div></div>
+
+<div class="card"><h2>⑨ Revenue scenario simulator</h2><p class="sub">Illustrative only: audience and wallet-share are <b>your assumptions</b>; per-fan spend comes from the survey.</p>
+<div class="g2"><div>Reachable Indian fans: <b id="v1"></b><input type="range" id="r1" min="100000" max="5000000" step="50000" value="1000000">
+Share of a fan’s anime wallet won by this title: <b id="v2"></b><input type="range" id="r2" min="1" max="30" value="8"></div>
+<div style="text-align:center"><div class="sub">Estimated yearly merchandise &amp; licensed-goods revenue</div><div class="big" id="rv"></div><div class="sub" id="rs"></div></div></div></div>
+
+<div class="card"><h2>⑩ Launch strategy &amp; risks</h2><div class="ph" id="ph"></div><h2 style="margin-top:16px">Risks to manage</h2><ul id="rk"></ul></div>
+<div class="card"><div class="note"><b>Read as directional, not final.</b> Survey: 200 existing anime fans in 7 states (Tamil Nadu is not covered, so Tamil demand cannot be measured). “Other dubbed language” is not broken down, so Telugu, Bengali and similar needs are inferred from state. Spend uses range midpoints. Catalog metrics are global (AniList), not India-specific; larger audiences on streamers partly reflect licensing selection. State samples are 16–41, so differences of ±10 points are within noise.</div></div>
+</div>
+<script>
+const D={"S": {"Telangana": {"n": 30.0, "hi": 0.4, "ot": 0.233, "sb": 0.367, "hv": 0.767, "th": 0.533, "sp": 1050.0, "py": 0.633, "idx": 82.981}, "Maharashtra": {"n": 41.0, "hi": 0.659, "ot": 0.122, "sb": 0.22, "hv": 0.659, "th": 0.439, "sp": 939.024, "py": 0.659, "idx": 60.542}, "West Bengal": {"n": 24.0, "hi": 0.542, "ot": 0.25, "sb": 0.208, "hv": 0.458, "th": 0.625, "sp": 791.667, "py": 0.625, "idx": 54.64}, "Delhi": {"n": 39.0, "hi": 0.59, "ot": 0.103, "sb": 0.308, "hv": 0.462, "th": 0.59, "sp": 871.795, "py": 0.59, "idx": 50.083}, "Karnataka": {"n": 33.0, "hi": 0.697, "ot": 0.121, "sb": 0.182, "hv": 0.515, "th": 0.545, "sp": 780.303, "py": 0.545, "idx": 38.525}, "Assam": {"n": 17.0, "hi": 0.647, "ot": 0.294, "sb": 0.059, "hv": 0.588, "th": 0.647, "sp": 617.647, "py": 0.471, "idx": 38.361}, "Kerala": {"n": 16.0, "hi": 0.25, "ot": 0.25, "sb": 0.5, "hv": 0.5, "th": 0.562, "sp": 562.5, "py": 0.5, "idx": 22.129}}, "cov": {"000": 0.0, "001": 24.5, "010": 37.0, "011": 53.0, "100": 24.5, "101": 42.5, "110": 54.5, "111": 64.5}, "G": {"Action": {"m": 39829.3, "f": 14.9, "n": 263}, "Adventure": {"m": 39701.9, "f": 14.2, "n": 176}, "Comedy": {"m": 26206.9, "f": 14.9, "n": 342}, "Drama": {"m": 41778.1, "f": 15.5, "n": 196}, "Fantasy": {"m": 33013.2, "f": 14.4, "n": 271}, "Mystery": {"m": 28529.4, "f": 13.4, "n": 72}, "Psychological": {"m": 43252.2, "f": 20.9, "n": 35}, "Romance": {"m": 35086.4, "f": 15.7, "n": 197}, "Sci-Fi": {"m": 24492.0, "f": 12.8, "n": 114}, "Slice of Life": {"m": 19715.5, "f": 14.7, "n": 204}, "Sports": {"m": 19266.3, "f": 16.1, "n": 34}, "Supernatural": {"m": 37690.7, "f": 14.9, "n": 112}}, "Sr": {"MANGA": {"m": 34011.9, "f": 15.5, "n": 352}, "LIGHT_NOVEL": {"m": 41105.9, "f": 15.2, "n": 153}, "ORIGINAL": {"m": 7313.6, "f": 11.0, "n": 163}, "OTHER": {"m": 10184.3, "f": 10.8, "n": 105}}, "plat": {"Netflix": 29.5, "Crunchyroll": 23.0, "YouTube": 18.0, "Amazon Prime Video": 15.0, "Other": 14.5}, "spd": {"₹0": 21.0, "₹1–500": 20.0, "₹500–1,000": 24.5, "₹1,000–2,000": 25.5, "₹2,000+": 9.0}, "age": {"18–24": 680.0, "25–35": 1053.0, "36–44": 875.0, "45–54": 364.0}, "ov": {"hi": 56.5, "ot": 17.5, "sb": 26.0, "th": 55.0, "df": 20.0, "sp": 841, "py": 59.0, "wk": 88.5, "cu": 88.0, "zero": 21.0, "sm": 65.5}, "cat": {"n": 820, "cr": [25654, 1989], "mv": 2792, "tv": 25178}};
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const $=i=>document.getElementById(i);const f1=x=>Math.round(x);
+const GL=Object.keys(D.G);GL.forEach(g=>{$('gc').insertAdjacentHTML('beforeend',`<label><input type=checkbox value="${g}" ${['Action','Adventure','Fantasy'].includes(g)?'checked':''}><span>${g}</span></label>`)});
+const SN={MANGA:'Manga adaptation',LIGHT_NOVEL:'Light-novel adaptation',ORIGINAL:'Original story',OTHER:'Web novel / other'};
+Object.keys(D.Sr).forEach(k=>$('src').insertAdjacentHTML('beforeend',`<option value="${k}">${SN[k]}</option>`));
+const ov=D.ov,st=D.S,sk=Object.keys(st);
+const nm=(v,l,h)=>Math.max(0,Math.min(100,(v-l)/(h-l)*100));
+const gm=GL.map(g=>D.G[g].m),gf=GL.map(g=>D.G[g].f),sm=Object.values(D.Sr).map(x=>x.m),sf=Object.values(D.Sr).map(x=>x.f);
+const mn=a=>Math.min(...a),mx=a=>Math.max(...a);
+let C={};
+function mk(id,cfg){if(C[id])C[id].destroy();C[id]=new Chart($(id),cfg)}
+Chart.defaults.color=css('--mu');Chart.defaults.font.family='system-ui';Chart.defaults.maintainAspectRatio=false;
+const P=['#7c3aed','#ec4899','#06b6d4','#10b981','#f59e0b','#6366f1'];
+function calc(){
+ const sel=[...document.querySelectorAll('#gc input:checked')].map(i=>i.value);if(!sel.length){document.querySelector('#gc input').checked=true;return calc()}
+ const src=$('src').value,fm=$('fmt').value;
+ const G=sel.reduce((a,g)=>a+nm(D.G[g].m,10000,43500),0)/sel.length;
+ const S=nm(D.Sr[src].m,mn(sm),mx(sm));
+ const reach=.65*G+.35*S;
+ const k=(sel.some(g=>g=='Action'||g=='Adventure')?'1':'0')+(sel.includes('Comedy')?'1':'0')+(sel.includes('Fantasy')?'1':'0');
+ const fit=D.cov[k]/64.5*100;
+ const mp=.6*reach+.4*fit;
+ const fan=.5*(sel.reduce((a,g)=>a+nm(D.G[g].f,mn(gf),mx(gf)),0)/sel.length)+.5*nm(D.Sr[src].f,mn(sf),mx(sf));
+ const fx={st:{TV:1,ONA:1,MOVIE:.9},th:{MOVIE:1,TV:.7,ONA:.6}};
+ const ch={Streaming:(.6*mp+.4*ov.wk)*fx.st[fm],Theatrical:(.6*mp+.4*ov.th)*fx.th[fm],Merchandise:.5*fan+.5*.5*(ov.py+mp),Licensing:.6*fan+.4*(.5*ov.cu+.5*mp)};
+ return{sel,src,fm,G,S,reach,fit,mp,fan,ch,k}}
+function lbl(m){return m>=75?['Breakout potential','#10b981']:m>=55?['Strong potential','#7c3aed']:m>=35?['Niche / test-market','#f59e0b']:['High risk','#ef4444']}
+function draw(){
+ const r=calc(),[t,c]=lbl(r.mp);$('mp').textContent=f1(r.mp);$('tg').textContent=t;$('tg').style.background=c;
+ $('mb').innerHTML=[['Global appeal of genre + source',r.reach],['Fit with Indian fan tastes (survey)',r.fit],['Fandom depth (favourites per member)',r.fan]].map(([a,b])=>`<div>${a} <b style="float:right">${f1(b)}</b><i><u style="width:${b}%"></u></i></div>`).join('')+(r.k=='000'?'<div class="note">Genre not measured in the Indian survey (only action/adventure, comedy, fantasy are), so India fit is treated as 0. Validate with a test screening.</div>':'');
+ mk('rd',{type:'radar',data:{labels:Object.keys(r.ch),datasets:[{data:Object.values(r.ch).map(f1),backgroundColor:'rgba(124,58,237,.25)',borderColor:'#7c3aed',pointBackgroundColor:'#ec4899',borderWidth:2}]},options:{scales:{r:{min:0,max:100,ticks:{display:false},grid:{color:css('--bd')},angleLines:{color:css('--bd')},pointLabels:{font:{size:13,weight:'600'},color:css('--tx')}}},plugins:{legend:{display:false}}}});
+ const ss=sk.map(k=>[k,st[k]]);
+ mk('st',{type:'bar',data:{labels:sk,datasets:[{data:sk.map(k=>f1(st[k].idx)),backgroundColor:sk.map((k,i)=>i<3?'#7c3aed':'#c4b5fd'),borderRadius:8}]},options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{max:100,grid:{color:css('--bd')}},y:{grid:{display:false}}}}});
+ $('tb').innerHTML='<tr><th>State</th><th>n</th><th>Index</th><th>₹/fan/6mo</th><th>Cinema yes</th></tr>'+sk.map(k=>`<tr><td><b>${k}</b></td><td>${st[k].n}</td><td><span class="pill" style="background:${st[k].idx>=50?'#10b981':st[k].idx>=35?'#f59e0b':'#94a3b8'}">${f1(st[k].idx)}</span></td><td>₹${f1(st[k].sp)}</td><td>${f1(st[k].th*100)}%</td></tr>`).join('');
+ mk('lg',{type:'bar',data:{labels:sk,datasets:[['Hindi dub','hi','#7c3aed'],['Other-language dub','ot','#ec4899'],['Subtitles / original','sb','#06b6d4']].map(([n,key,col])=>({label:n,data:sk.map(k=>f1(st[k][key]*100)),backgroundColor:col}))},options:{indexAxis:'y',scales:{x:{stacked:true,max:100,grid:{color:css('--bd')}},y:{stacked:true,grid:{display:false}}},plugins:{legend:{position:'bottom'}}}});
+ $('hb').textContent=ov.hi+'% prefer Hindi dub';
+ const reg=sk.filter(k=>st[k].ot>=.23||st[k].hi<.5).map(k=>`${k} (${f1(st[k].ot*100)}% other dub, ${f1(st[k].sb*100)}% subs)`);
+ $('lu').innerHTML=`<li><b>Priority 1: Hindi dub.</b> Largest single preference overall (${ov.hi}%) and the majority choice in 5 of 7 states.</li><li><b>Priority 2: Telugu.</b> Telangana is the top-demand state, only ${f1(st.Telangana.hi*100)}% choose Hindi, and ${f1(st.Telangana.ot*100)}% want another dub. Inferred, not directly measured.</li><li><b>Subtitle-first:</b> Kerala (${f1(st.Kerala.sb*100)}% subs, ${f1(st.Kerala.hi*100)}% Hindi) suggests English or Malayalam subtitles before funding a dub.</li><li><b>Pilot only:</b> Bengali and Assamese show ${f1(st['West Bengal'].ot*100)}–${f1(st.Assam.ot*100)}% other-dub demand but on small samples.</li><li><b>Tamil:</b> not testable, no Tamil Nadu respondents. Run a Chennai/Coimbatore survey before deciding.</li>`;
+ mk('pl',{type:'doughnut',data:{labels:Object.keys(D.plat),datasets:[{data:Object.values(D.plat),backgroundColor:P,borderWidth:0}]},options:{cutout:'58%',plugins:{legend:{position:'right'}}}});
+ mk('sd',{type:'bar',data:{labels:Object.keys(D.spd),datasets:[{data:Object.values(D.spd),backgroundColor:['#94a3b8','#c4b5fd','#a78bfa','#8b5cf6','#ec4899'],borderRadius:8}]},options:{plugins:{legend:{display:false}},scales:{y:{grid:{color:css('--bd')},ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}}}});
+ const o=GL.slice().sort((a,b)=>D.G[b].m-D.G[a].m);
+ mk('gn',{type:'bar',data:{labels:o,datasets:[{data:o.map(g=>f1(D.G[g].m)),backgroundColor:o.map(g=>r.sel.includes(g)?'#ec4899':'#c4b5fd'),borderRadius:6}]},options:{plugins:{legend:{display:false}},scales:{y:{grid:{color:css('--bd')}},x:{grid:{display:false}}}}});
+ const top=sk.slice(0,3),th=sk.slice().sort((a,b)=>st[b].th-st[a].th).slice(0,3);
+ const ch=Object.entries(r.ch).sort((a,b)=>b[1]-a[1]);
+ $('ph').innerHTML=`<div><b>Phase 1: Prove it (0–3 mo)</b>Hindi dub + subs on Netflix/Crunchyroll (${D.plat.Netflix}% / ${D.plat.Crunchyroll}% of fans), trailer push on YouTube. Seed in ${top.join(', ')}. Design for smartphones (${ov.sm}% use them).</div><div style="border-left-color:#ec4899"><b>Phase 2: Expand (3–9 mo)</b>Add Telugu, then regional subs for Kerala. Target 25–35s (₹${f1(D.age['25–35'])}/6mo, the top spenders) and 18–24s (largest viewing base).</div><div style="border-left-color:#06b6d4"><b>Phase 3: Monetise (6–12 mo)</b>Lead channel for this title: <b>${ch[0][0]}</b> (${f1(ch[0][1])}), then ${ch[1][0]} (${f1(ch[1][1])}). Cinema events fit best in ${th.join(', ')} (highest “yes”).</div>`;
+ $('rk').innerHTML=`<li><b>Revenue gap:</b> ${ov.zero}% of fans spent ₹0 in 6 months; only ${ov.py}% spent ₹750+. Merch must be priced for the middle.</li><li><b>Genre is not a spend predictor</b> here: comedy fans spent less per head than others. Do not over-weight genre in budgets.</li><li><b>Theatrical is tentpole-only:</b> median movie audience is ${(D.cat.mv/1000).toFixed(1)}k vs ${(D.cat.tv/1000).toFixed(1)}k for TV. Only ${ov.df}% say “definitely” to a Japanese film.</li><li><b>Maharashtra paradox:</b> big spenders (₹${f1(st.Maharashtra.sp)}) but lowest cinema interest (${f1(st.Maharashtra.th*100)}%). Sell merch there, not tickets.</li><li><b>Data risk:</b> small state samples, no Tamil Nadu, fan-only respondents (not general public).</li>${r.sel.some(g=>['Romance','Drama','Sci-Fi','Slice of Life','Supernatural','Psychological','Mystery','Sports'].includes(g))?'<li><b>Unmeasured genres:</b> some selected genres are absent from the Indian survey.</li>':''}`;
+ sim()}
+function sim(){const fans=+$('r1').value,sh=+$('r2').value;$('v1').textContent=fans.toLocaleString('en-IN');$('v2').textContent=sh+'%';
+ const rev=fans*ov.sp*2*sh/100;$('rv').textContent='₹'+(rev/1e7).toFixed(1)+' crore';$('rs').textContent=`= ${fans.toLocaleString('en-IN')} fans × ₹${(ov.sp*2).toLocaleString('en-IN')} yearly anime spend × ${sh}%`}
+$('kp').innerHTML=[[ov.hi+'%','prefer Hindi dub'],[ov.th+'%','open to a Japanese film'],['₹'+ov.sp,'avg spend / fan / 6 mo'],[ov.cu+'%','say anime raised interest in Japan'],[ov.wk+'%','watch weekly or more']].map(a=>`<div><b>${a[0]}</b><span>${a[1]}</span></div>`).join('');
+document.querySelectorAll('input[type=checkbox],select').forEach(e=>e.onchange=draw);$('r1').oninput=sim;$('r2').oninput=sim;draw();
+</script></body></html>

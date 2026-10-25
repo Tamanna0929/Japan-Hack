@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIRAI — India Market-Fit Engine for Japanese Anime</title>
+<meta name="description" content="Score an anime title's Indian market fit using a real trained model: regional demand, localization priority, revenue trend and launch strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0b10; --panel:#12141d; --panel2:#171a26; --panel3:#1d2030; --line:#262a3a;
+  --text:#e9ebf3; --mute:#8a90a8; --red:#ff2d4f; --cyan:#22d3ee; --gold:#fbbf24; --green:#34d399; --purple:#a78bfa;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:17px}
+body{background:radial-gradient(1200px 600px at 80% -10%,#2a0c16 0%,transparent 60%),var(--bg);
+  color:var(--text);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.55;overflow-x:hidden;font-size:1rem}
+a{color:inherit;text-decoration:none}
+.mono{font-family:'JetBrains Mono',monospace}
+button,select,input{font-family:inherit}
+.petal{position:fixed;top:-30px;width:14px;height:18px;background:var(--red);opacity:.35;border-radius:0 100% 0 100%;
+  animation:fall linear infinite;pointer-events:none;z-index:0}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+.topbar{position:sticky;top:0;z-index:20}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;
+  background:rgba(10,11,16,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-mark{width:42px;height:42px;border-radius:11px;background:var(--red);display:grid;place-items:center;
+  font-size:22px;font-weight:700;box-shadow:0 0 24px rgba(255,45,79,.5)}
+.logo b{display:block;font-size:20px;letter-spacing:.2em;font-weight:700}
+.logo small{display:block;font-size:10px;letter-spacing:.25em;color:var(--mute)}
+.headerRight{display:flex;align-items:center;gap:12px;flex:none;margin-left:auto}
+nav{display:flex;gap:4px;padding:8px 24px;overflow-x:auto;
+  background:rgba(10,11,16,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);scrollbar-width:thin}
+nav a{padding:9px 14px;border-radius:8px;font-size:16px;font-weight:600;color:var(--mute);white-space:nowrap;position:relative}
+nav a:hover{color:var(--text);background:var(--panel2)}
+nav a.active{color:var(--text);background:var(--panel2)}
+nav a .pro{font-size:8px;color:var(--gold);letter-spacing:.1em;margin-left:4px;border:1px solid var(--gold);padding:1px 4px;border-radius:5px;vertical-align:middle}
+nav a.locked{opacity:.4;pointer-events:none}
+.beta{border:1px solid #0e7490;color:var(--cyan);background:rgba(34,211,238,.08);padding:6px 14px;border-radius:999px;
+  font-size:11px;letter-spacing:.12em;white-space:nowrap}
+.langToggle{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:none}
+.langToggle button{background:var(--panel2);color:var(--mute);border:0;padding:8px 11px;cursor:pointer;font-size:12px;font-weight:700}
+.langToggle button.on{background:var(--cyan);color:#06222a}
+[data-page]{display:none}
+[data-page].active-page{display:block}
+main,.hero,footer{position:relative;z-index:1}
+section,.pagewrap{max-width:1100px;margin:0 auto;padding:40px 24px 0}
+.kicker{font-size:12px;letter-spacing:.25em;color:var(--red);text-transform:uppercase}
+h1{font-size:clamp(34px,6vw,64px);line-height:1.02;margin:12px 0;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--red)}
+h2{font-size:clamp(24px,3.6vw,34px);margin:4px 0 6px}
+h3{font-size:18px}
+.sub{color:var(--mute);max-width:680px}
+.hero{max-width:1100px;margin:0 auto;padding:56px 24px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:12px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;font-size:12px;cursor:pointer;border:1px solid var(--line);
+  background:var(--panel2);color:var(--cyan)}
+.btn.primary{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 0 22px rgba(255,45,79,.35)}
+.btn.ghost{background:transparent}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn:hover:not(:disabled){filter:brightness(1.15)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:36px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.stat b{font-size:27px;display:block}
+.stat span{color:var(--mute);font-size:12.5px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.grid2,.grid3{grid-template-columns:1fr}}
+label.l{display:block;margin:18px 0 7px;font-size:11px;letter-spacing:.16em;color:var(--mute);text-transform:uppercase}
+input[type=text],select{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--text);
+  padding:12px 14px;border-radius:12px;font-size:16px}
+select[multiple]{height:168px}
+input:focus,select:focus{outline:2px solid var(--red);outline-offset:1px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--mute);
+  cursor:pointer;font-size:13px}
+.chip.on{background:rgba(255,45,79,.15);border-color:var(--red);color:#fff}
+.toggle2{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.toggle2 button{background:var(--panel2);color:var(--mute);border:0;padding:10px 18px;cursor:pointer;font-size:13px}
+.toggle2 button.on{background:var(--red);color:#fff}
+.note{font-size:13px;color:var(--mute);margin-top:10px;line-height:1.55}
+details{margin-top:10px}
+details summary{cursor:pointer;color:var(--cyan);font-size:12.5px;letter-spacing:.06em;list-style:none;display:inline-flex;align-items:center;gap:5px;user-select:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"▸";font-size:10px;transition:transform .15s}
+details[open] summary::before{transform:rotate(90deg)}
+details .note{margin-top:8px}
+/* gist header shown at the top of every detail tab */
+.gist{display:flex;align-items:center;gap:22px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin-top:14px}
+.gist .gicon{font-size:38px;line-height:1;flex:none}
+.gist .gnum{font-size:44px;font-weight:700;line-height:1}
+.gist .glabel{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.14em;margin-bottom:2px}
+.gist .gsub{font-size:15px;color:var(--text);margin-top:3px;max-width:520px}
+.gist .gright{margin-left:auto;text-align:right}
+/* premium PRO styling */
+.proWrap .pagewrap{position:relative}
+.proBanner{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,rgba(251,191,36,.14),rgba(255,45,79,.1));
+  border:1px solid rgba(251,191,36,.4);border-radius:14px;padding:10px 16px;margin-top:14px;font-size:12px;letter-spacing:.1em;color:var(--gold);text-transform:uppercase}
+.proCard{background:linear-gradient(165deg,#1b1309,#12141d 45%);border:1px solid rgba(251,191,36,.35);box-shadow:0 0 0 1px rgba(251,191,36,.05),0 10px 30px -14px rgba(251,191,36,.25)}
+.proCard h3{color:var(--gold)}
+.badge{display:inline-block;font-size:10px;letter-spacing:.1em;padding:3px 9px;border-radius:99px;border:1px solid var(--cyan);color:var(--cyan)}
+.badge.gold{border-color:var(--gold);color:var(--gold)}
+.badge.green{border-color:var(--green);color:var(--green)}
+.badge.red{border-color:var(--red);color:var(--red)}
+.badge.purple{border-color:var(--purple);color:var(--purple)}
+/* gauge */
+.gauge{display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.ring{position:relative;width:170px;height:170px;flex:none}
+.ring .n{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.ring .n b{font-size:50px;line-height:1}
+.ring .n small{color:var(--mute);letter-spacing:.15em;font-size:10px}
+.bar{margin:14px 0}
+.bar .top{display:flex;justify-content:space-between;font-size:13px}
+.bar .top span:last-child{font-family:'JetBrains Mono',monospace;color:var(--cyan)}
+.bar .t{height:8px;background:var(--panel2);border-radius:99px;margin:5px 0 3px;overflow:hidden}
+.bar .t i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:99px;transition:width .5s}
+/* dashboard */
+.dashTop{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:18px}
+.dashId h2{font-size:clamp(26px,4vw,38px);margin:0}
+.dashScoreBox{text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px 26px;flex:none;min-width:150px}
+.dashScoreBox .dsNum{font-size:60px;font-weight:700;line-height:1;background:linear-gradient(90deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.dashScoreBox .dsOf{font-size:12px;color:var(--mute);letter-spacing:.1em;margin-top:2px}
+.dashScoreBox .dsPctl{font-size:12px;color:var(--cyan);margin-top:6px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+@media(max-width:860px){.tiles{grid-template-columns:1fr}.dashTop{flex-direction:column}.dashScoreBox{align-self:flex-start}}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;cursor:pointer;transition:.15s;display:flex;flex-direction:column;gap:6px}
+.tile:hover{border-color:var(--red);transform:translateY(-2px)}
+.tile.premium{background:linear-gradient(165deg,#1b1309,#12141d 45%);border:1px solid rgba(251,191,36,.35)}
+.tile .ti{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--mute);display:flex;justify-content:space-between;align-items:center}
+.tile .tico{font-size:26px;margin-bottom:2px}
+.tile .tv{font-size:32px;font-weight:700}
+.tile .ts{color:var(--mute);font-size:13px}
+.tile .tcta{font-size:12px;color:var(--cyan);margin-top:auto;padding-top:6px}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);text-align:left;padding:7px 9px;border-bottom:1px solid var(--line)}
+td{padding:9px;border-bottom:1px solid var(--line)}
+.sbar{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:12px}
+.sbar .nm{width:110px;color:var(--mute);flex:none}
+.sbar .st{flex:1;height:14px;display:flex;border-radius:5px;overflow:hidden;background:var(--panel2)}
+.sbar .st i{display:block;height:100%}
+.sbar .val{width:40px;text-align:right;font-family:'JetBrains Mono',monospace;color:var(--cyan);flex:none}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--mute);margin-top:8px}
+.legend s{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;text-decoration:none}
+.rules{list-style:none}
+.rules li{padding:12px 0;border-bottom:1px solid var(--line)}
+.rules b{display:block}
+.rules p{font-size:13px;color:var(--mute);margin-top:3px}
+.tag{font-size:10px;letter-spacing:.1em;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mute);margin:2px 4px 2px 0;display:inline-block}
+.loading{display:flex;align-items:center;gap:10px;color:var(--mute);font-size:13px;padding:16px 0}
+.spin{width:16px;height:16px;border-radius:50%;border:2px solid var(--line);border-top-color:var(--red);animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.gen-text{font-size:14px;line-height:1.7;color:var(--text)}
+.gen-text p{margin:0 0 10px}
+.risk{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}
+.risk .lv{min-width:64px;font-size:10px;letter-spacing:.1em;font-weight:700}
+.HIGH{color:var(--red)}.MEDIUM{color:var(--gold)}.WATCH{color:var(--cyan)}.LOW{color:var(--green)}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.phases{grid-template-columns:1fr}}
+.phase{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:18px}
+.phase small{color:var(--cyan)}
+.phase ul{margin:9px 0 0 16px;font-size:13px;color:var(--mute)}
+.phase li{margin:5px 0}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.crumb{color:var(--mute);font-size:13px;margin-bottom:6px}
+.crumb a{color:var(--cyan)}
+footer{max-width:1100px;margin:0 auto;padding:56px 24px 44px;color:var(--mute);font-size:12px}
+footer b{color:var(--text);letter-spacing:.2em}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--panel2);
+  border:1px solid var(--line);padding:11px 18px;border-radius:12px;transition:.3s;z-index:50;font-size:13px}
+#toast.show{transform:translateX(-50%) translateY(0)}
+#emptyState{text-align:center;padding:60px 20px;color:var(--mute)}
+#emptyState .em{font-size:40px;margin-bottom:10px}
+.srcbox{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--mute)}
+.srcbox b{color:var(--text);font-weight:600}
+/* splash */
+#splash{position:fixed;inset:0;z-index:999;background:radial-gradient(1200px 600px at 50% 20%,#2a0c16 0%,#0a0b10 65%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s ease,visibility .6s;overflow:hidden}
+#splash.hide{opacity:0;visibility:hidden;pointer-events:none}
+#splash .mark{width:88px;height:88px;border-radius:22px;background:var(--red);display:grid;place-items:center;
+  font-size:44px;font-weight:700;box-shadow:0 0 50px rgba(255,45,79,.55);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 0 50px rgba(255,45,79,.55)}50%{transform:scale(1.06);box-shadow:0 0 70px rgba(255,45,79,.8)}}
+#splash .sname{font-size:30px;letter-spacing:.35em;font-weight:700}
+#splash .skick{font-size:11px;letter-spacing:.25em;color:var(--mute)}
+#splash .sbarwrap{width:200px;height:3px;background:var(--panel2);border-radius:99px;overflow:hidden;margin-top:10px}
+#splash .sbarwrap i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--red),var(--gold));animation:load 1.4s ease forwards}
+@keyframes load{to{width:100%}}
+#splash .sjp{position:absolute;font-size:220px;font-weight:700;color:rgba(255,45,79,.06);letter-spacing:.1em;user-select:none}
+#splash .sprog{font-size:11px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div id="splash" aria-hidden="true">
+  <div class="sjp">未来</div>
+  <div class="mark">未</div>
+  <div style="text-align:center">
+    <div class="sname mono">MIRAI</div>
+    <div class="skick mono">loading trained model + 825 titles…</div>
+  </div>
+  <div class="sbarwrap"><i></i></div>
+  <div class="sprog mono" id="splashProg">0 / 5 datasets</div>
+</div>
+
+<div class="topbar">
+<header id="top">
+  <a class="logo" href="#analyzer">
+    <div class="logo-mark">未</div>
+    <div><b>MIRAI</b><small>未 来 · MARKET-FIT ENGINE</small></div>
+  </a>
+  <div class="headerRight">
+    <span class="beta mono" data-i18n="beta.badge">β · trained on 825 titles</span>
+    <div class="langToggle" id="langToggle">
+      <button data-lang="en" class="on">EN</button>
+      <button data-lang="hi">हिं</button>
+      <button data-lang="ja">日本語</button>
+    </div>
+  </div>
+</header>
+<nav id="mainNav">
+  <a href="#analyzer"><span data-i18n="nav.analyzer">Analyzer</span></a>
+  <a href="#dashboard"><span data-i18n="nav.dashboard">Dashboard</span></a>
+  <a href="#score"><span data-i18n="nav.score">Market Score</span></a>
+  <a href="#regions"><span data-i18n="nav.regions">Regions</span></a>
+  <a href="#localization"><span data-i18n="nav.localization">Localization</span></a>
+  <a href="#revenue"><span data-i18n="nav.revenue">Revenue</span><span class="pro">PRO</span></a>
+  <a href="#launch"><span data-i18n="nav.launch">Launch</span><span class="pro">PRO</span></a>
+</nav>
+</div>
+
+<div class="hero" data-page="analyzer">
+  <div class="kicker mono">将来予測 — JAPAN × INDIA</div>
+  <h1 data-i18n-html="hero.h1">MIRAI.<br>Market-Fit <em>for Indian Audiences</em></h1>
+  <p class="sub" data-i18n="hero.sub">Pick a real title, or describe a new one — scored against a model trained on 825 real titles and 5 years of India search data.</p>
+  <div class="stats" id="heroStats"></div>
+
+  <div class="card" style="margin-top:28px">
+    <div class="toggle2" id="modeToggle">
+      <button id="modeExisting" class="on" data-i18n="mode.existing">Pick a real title</button>
+      <button id="modeCustom" data-i18n="mode.custom">Describe a new concept</button>
+    </div>
+
+    <div id="existingPanel">
+      <label class="l" for="catFilter" data-i18n="lbl.catFilter">Filter by category</label>
+      <select id="catFilter"></select>
+      <label class="l" for="titleSearch" data-i18n="lbl.titleSearch">Title</label>
+      <input type="text" id="titleSearch" list="titleList" data-i18n-ph="ph.titleSearch" placeholder="Start typing… e.g. Solo Leveling, Naruto">
+      <datalist id="titleList"></datalist>
+      <p class="note" id="titleHint"></p>
+    </div>
+
+    <div id="customPanel" style="display:none">
+      <label class="l" for="customName" data-i18n="lbl.customName">Working title</label>
+      <input type="text" id="customName" data-i18n-ph="ph.customName" placeholder="e.g. Kaiju Requiem: Tokyo Protocol" value="Untitled Project">
+      <div class="grid2">
+        <div>
+          <label class="l" for="genreSelect" data-i18n="lbl.genreSelect">Category / genre (pick several)</label>
+          <select id="genreSelect" multiple></select>
+        </div>
+        <div>
+          <label class="l" for="fmtSelect" data-i18n="lbl.fmtSelect">Format</label>
+          <select id="fmtSelect"></select>
+          <label class="l" for="srcSelect" data-i18n="lbl.srcSelect">Source material</label>
+          <select id="srcSelect"></select>
+        </div>
+      </div>
+      <p class="note" data-i18n="note.custom">Estimated from the nearest real comparable titles.</p>
+    </div>
+
+    <button class="btn primary" id="runBtn" style="margin-top:18px" data-i18n="btn.run">Run analysis ⟳</button>
+    <button class="btn" id="copyBtn" style="margin-top:18px" data-i18n="btn.copy">Copy summary ⧉</button>
+  </div>
+</div>
+
+<main>
+
+<div class="pagewrap" data-page="dashboard">
+  <div class="kicker mono">ダッシュボード · <span data-i18n="dash.gist">one-glance summary</span></div>
+  <div id="dashBody"></div>
+</div>
+
+<div class="pagewrap" data-page="score">
+  <div class="crumb"><a href="#dashboard" data-i18n="crumb.dashboard">← Dashboard</a></div>
+  <div class="kicker mono">市場適合性</div>
+  <div id="scoreBody"></div>
+</div>
+
+<div class="pagewrap" data-page="regions">
+  <div class="crumb"><a href="#dashboard" data-i18n="crumb.dashboard">← Dashboard</a></div>
+  <div class="kicker mono">地域別需要</div>
+  <div id="regionsBody"></div>
+</div>
+
+<div class="pagewrap" data-page="localization">
+  <div class="crumb"><a href="#dashboard" data-i18n="crumb.dashboard">← Dashboard</a></div>
+  <div class="kicker mono">ローカライズ戦略</div>
+  <div id="localizationBody"></div>
+</div>
+
+<div class="pagewrap proWrap" data-page="revenue">
+  <div class="crumb"><a href="#dashboard" data-i18n="crumb.dashboard">← Dashboard</a></div>
+  <div class="kicker mono">収益予測</div>
+  <div class="proBanner">✦ <span data-i18n="pro.revenue.banner">PRO · Revenue trend</span></div>
+  <div id="revenueBody"></div>
+</div>
+
+<div class="pagewrap proWrap" data-page="launch">
+  <div class="crumb"><a href="#dashboard" data-i18n="crumb.dashboard">← Dashboard</a></div>
+  <div class="kicker mono">展開ロードマップ</div>
+  <div class="proBanner">✦ <span data-i18n="pro.launch.banner">PRO · Launch strategy</span></div>
+  <div id="launchBody"></div>
+</div>
+
+</main>
+
+<footer>
+  <b>MIRAI</b> <span class="mono">未 来 — "THE FUTURE"</span>
+  <p style="margin-top:10px" id="footNote" data-i18n="footer.note">Scores are relative rankings, not revenue guarantees.</p>
+</footer>
+<div id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
